@@ -2,11 +2,11 @@
 
 # Beyond Identity React Native SDK
 
-Goodbye, passwords! The Beyond Identity SDK for React Native is a wrapper around our Native Embedded SDKs ([iOS](https://github.com/gobeyondidentity/bi-sdk-swift) and [Android](https://github.com/gobeyondidentity/bi-sdk-android)), which allows you to embedded the Passwordless experience into your product. Users will not need to download the [Beyond Identity Authenticator](https://app.byndid.com/downloads).
+Goodbye, passwords! The Beyond Identity SDK for React Native is a wrapper around our Native Embedded SDKs ([iOS](https://github.com/gobeyondidentity/bi-sdk-swift) and [Android](https://github.com/gobeyondidentity/bi-sdk-android)), which allows you to embedded the Passwordless experience into your product. This SDK supports OIDC and OAuth2.
 
 ## Installation
 
-Install the library:
+### Install the library:
 
 ```sh
 yarn add @beyondidentity/embedded-react-native
@@ -17,6 +17,10 @@ or
 ```
 npm i --save @beyondidentity/embedded-react-native
 ```
+
+> Note that this library is not compatible with Expo projects. This is because Expo's “managed” workflow does not allow usage of React Native libraries that introduce their own native code beyond the React Native APIs and components that are available in the Expo client app. If you have an Expo app and wish to use this project, you must `eject`.
+
+### Update Native:
 
 Make sure your `ios/Podfile` supports iOS 12 or later
 
@@ -57,6 +61,8 @@ allprojects {
 ```js
 import { Embedded } from '@beyondidentity/embedded-react-native';
 ```
+
+A set of functions are provided to you in this SDK. For more info, visit the [Developer Docs](https://developer.beyondidentity.com)
 
 ## Run Examples
 

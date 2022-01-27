@@ -2,7 +2,7 @@
 
 # Beyond Identity React Native SDK
 
-Goodbye, passwords! The Beyond Identity SDK for React Native is a wrapper around our Native Embedded SDKs ([iOS](https://github.com/gobeyondidentity/bi-sdk-swift) and [Android](https://github.com/gobeyondidentity/bi-sdk-android)), which allows you to embedded the Passwordless experience into your product. This SDK supports OIDC and OAuth2.
+Goodbye, passwords! The Beyond Identity SDK for React Native is a wrapper around our Native Embedded SDKs ([iOS](https://github.com/gobeyondidentity/bi-sdk-swift) and [Android](https://github.com/gobeyondidentity/bi-sdk-android)), which allows you to embed the Passwordless experience into your product. This SDK supports OIDC and OAuth2.
 
 ## Installation
 

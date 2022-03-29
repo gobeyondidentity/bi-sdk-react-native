@@ -253,15 +253,16 @@ class BiSdkReactNative: RCTEventEmitter {
 
 private func makeCredentialDictionary(_ credential: Credential) -> [String: Any] {
     return [
-        "created": credential.created,
-        "handle": credential.handle.value,
-        "keyHandle": credential.keyHandle,
+        "created": credential.created ?? "",
+        "handle": credential.handle?.value ?? "",
+        "keyHandle": credential.keyHandle ?? "",
         "name": credential.name,
         "logoURL": credential.logoURL,
         "loginURI": credential.loginURI ?? "",
         "enrollURI": credential.enrollURI ?? "",
         "chain": credential.chain,
-        "rootFingerprint": credential.rootFingerprint
+        "rootFingerprint": credential.rootFingerprint ?? "",
+        "state": credential.state.toPascalCase()
     ]
 }
 
@@ -274,4 +275,21 @@ private func maybeCreatePKCECodeChallenge(
     }
     
     return PKCE.CodeChallenge.init(challenge: challenge, method: method)
+}
+
+extension CredentialState {
+    func toPascalCase() -> String {
+        switch self {
+        case .active:
+            return "Active"
+        case .userSuspended:
+            return "UserSuspended"
+        case .userDeleted:
+            return "UserDeleted"
+        case .deviceDeleted:
+            return "DeviceDeleted"
+        case .invalid:
+            return "Invalid"
+        }
+    }
 }

@@ -10,8 +10,15 @@ import android.content.Intent
 import android.util.Log
 import com.beyondidentity.embedded.sdk.EmbeddedSdk
 import com.beyondidentity.embedded.sdk.models.Credential
-import com.beyondidentity.embedded.sdk.export.ExportCredentialListener
-import com.beyondidentity.embedded.sdk.models.ExportResponse
+import com.beyondidentity.embedded.sdk.extend.ExtendCredentialListener
+import com.beyondidentity.embedded.sdk.models.CredentialState
+import com.beyondidentity.embedded.sdk.models.CredentialState.ACTIVE
+import com.beyondidentity.embedded.sdk.models.CredentialState.DEVICE_DELETED
+import com.beyondidentity.embedded.sdk.models.CredentialState.INVALID
+import com.beyondidentity.embedded.sdk.models.CredentialState.UNKNOWN
+import com.beyondidentity.embedded.sdk.models.CredentialState.USER_DELETED
+import com.beyondidentity.embedded.sdk.models.CredentialState.USER_SUSPENDED
+import com.beyondidentity.embedded.sdk.models.ExtendResponse
 import com.facebook.react.bridge.*
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
 import java.lang.Exception
@@ -191,9 +198,9 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
 
     EmbeddedSdk.extendCredentials(
       handleList,
-      object : ExportCredentialListener {
+      object : ExtendCredentialListener {
 
-        override fun onUpdate(token: ExportResponse?) {
+        override fun onUpdate(token: ExtendResponse?) {
           token?.let { t ->
             sendEvent(Events.TOKEN_RECEIVED, t.rendezvousToken)
           }
@@ -315,6 +322,7 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
     map.putString("loginURI", credential.loginUri ?: "")
     map.putString("enrollURI", credential.enrollUri ?: "")
     map.putString("rootFingerprint", credential.rootFingerprint)
+    map.putString("state", credentialStateToPascalCase(credential.state))
 
     val chainArray = WritableNativeArray()
     credential.chain.forEach { chainArray.pushString(it) }
@@ -322,5 +330,15 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
 
     return map
   }
+
+  private fun credentialStateToPascalCase(state: CredentialState) =
+    when(state){
+      ACTIVE -> "Active"
+      DEVICE_DELETED -> "DeviceDeleted"
+      INVALID -> "Invalid"
+      USER_DELETED -> "UserDeleted"
+      USER_SUSPENDED -> "UserSuspended"
+      UNKNOWN -> "Unknown"
+    }
 }
 

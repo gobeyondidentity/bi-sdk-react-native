@@ -98,6 +98,10 @@ interface Credential {
    * The SHA256 hash of the root certificate as a base64 encoded string.
    */
   rootFingerprint: string;
+  /**
+   * Current state of the Credential
+   */
+  state: CredentialState;
 }
 /**
  * Possible extend events to listen for on the `Embedded.extendCredentialsEventEmitter` after calling `Embedded.extendCredentials`
@@ -107,6 +111,17 @@ type ExtendCredentialsEvents =
   | 'ExtendTokenReceived'
   | 'ExtendCredentialCompleted'
   | 'ExtendError';
+
+/**
+ * The state of the Credential
+ */
+type CredentialState =
+  | 'Active'
+  | 'DeviceDeleted'
+  | 'UserDeleted'
+  | 'UserSuspended'
+  | 'Invalid'
+  | 'Unknown';
 
 /**
  * Proof Key for Code Exchange (PKCE, pronounced "pixy") used by public clients to mitigate authorization code interception attack.
@@ -180,4 +195,5 @@ export {
   ExtendCredentialsEventEmitter,
   LoggerEventEmitter,
   Credential,
+  CredentialState,
 };

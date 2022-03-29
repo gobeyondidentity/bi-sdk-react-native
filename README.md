@@ -62,7 +62,7 @@ allprojects {
 import { Embedded } from '@beyondidentity/embedded-react-native';
 ```
 
-A set of functions are provided to you in this SDK. For more info, visit the [Developer Docs](https://developer.beyondidentity.com)
+A set of functions are provided to you in this SDK. Check out the [documentation](https://developer.beyondidentity.com) for more information.
 
 ## Run Examples
 

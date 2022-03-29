@@ -5,6 +5,8 @@ import {
   ScrollView,
   Text,
   StyleSheet,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 
 import { Embedded } from '@beyondidentity/embedded-react-native';
@@ -43,6 +45,8 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <KeyboardAvoidingView enabled behavior={Platform.OS === "ios" ? "padding" : undefined}
+          style={styles.container}> 
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text style={styles.title}>
           The following functions are available in the Embedded SDK.
@@ -79,6 +83,7 @@ export default function App() {
         <AuthenticationView />
         <MigrationView />
       </ScrollView>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 }

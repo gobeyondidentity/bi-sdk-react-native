@@ -53,7 +53,7 @@ export default function CredentialsView() {
             }
           } catch (e) {
             if (e instanceof Error) {
-              setGetCredentials(e.message as string);
+              setDeleteCredentials(e.message as string);
             }
           }
         }}

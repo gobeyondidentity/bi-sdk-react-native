@@ -1,7 +1,7 @@
 {
   "name": "bi-sdk-react-native-example",
   "description": "Example app for @beyondidentity/embedded-react-native",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",

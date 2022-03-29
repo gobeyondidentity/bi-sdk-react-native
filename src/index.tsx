@@ -10,6 +10,7 @@ import {
   ExtendCredentialsEventEmitter,
   LoggerEventEmitter,
   Credential,
+  CredentialState,
 } from './EmbeddedNativeModules';
 
 /**
@@ -91,8 +92,6 @@ interface Embedded {
   /**
    * Register a Credential.
    * Use this function to register a Credential from one device to another.
-   * Note: If a Credential already exists on a device then registering won't work.
-   * The previous Credential will still be on the device and the new registered Credential will be ignored.
    * @param token the 9 digit code that the user entered. This may represent one or more credentials, but only one credential per device is currently supported.
    */
   registerCredentialsWithToken(token: string): Promise<Credential[]>;
@@ -178,6 +177,7 @@ const Embedded: Embedded = {
 export {
   AuthorizationCode,
   Credential,
+  CredentialState,
   Embedded,
   ExtendCredentialsEvents,
   PKCE,

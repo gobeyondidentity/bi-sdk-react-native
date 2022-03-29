@@ -459,15 +459,11 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BiSdkReactNativeExample/Pods-BiSdkReactNativeExample-frameworks.sh",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/BeyondIdentityCoreSDK/CoreSDK.framework/CoreSDK",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/BeyondIdentityDeviceInfoSDK/DeviceInfoSDK.framework/DeviceInfoSDK",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/BeyondIdentityEnclaveSDK/EnclaveSDK.framework/EnclaveSDK",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceInfoSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EnclaveSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

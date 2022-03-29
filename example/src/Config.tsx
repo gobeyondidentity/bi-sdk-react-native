@@ -5,7 +5,7 @@ export default {
     biometricAskPrompt: "Please verify it's really you before you can set up this credential on another device.",
 
     /// SDK version
-    sdkVersion: "0.1.0",
+    sdkVersion: "0.2.0",
         
     /// Client ID for the confidential client flow
     confidentialClientID: "597c0a3c510b2afae53dc155d18933b5",

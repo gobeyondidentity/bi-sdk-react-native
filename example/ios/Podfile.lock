@@ -1,14 +1,10 @@
 PODS:
-  - BeyondIdentityCoreSDK (0.5.0)
-  - BeyondIdentityDeviceInfoSDK (0.5.0)
-  - BeyondIdentityEmbedded (0.5.0):
-    - BeyondIdentityCoreSDK (= 0.5.0)
-    - BeyondIdentityDeviceInfoSDK (= 0.5.0)
-    - BeyondIdentityEnclaveSDK (= 0.5.0)
-  - BeyondIdentityEmbeddedReactNative (0.1.0):
-    - BeyondIdentityEmbedded (= 0.5.0)
+  - BeyondIdentityCoreSDK (0.7.0)
+  - BeyondIdentityEmbedded (0.7.0):
+    - BeyondIdentityCoreSDK (= 0.7.0)
+  - BeyondIdentityEmbeddedReactNative (0.2.0):
+    - BeyondIdentityEmbedded (= 0.7.0)
     - React-Core
-  - BeyondIdentityEnclaveSDK (0.5.0)
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
@@ -372,9 +368,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - BeyondIdentityCoreSDK
-    - BeyondIdentityDeviceInfoSDK
     - BeyondIdentityEmbedded
-    - BeyondIdentityEnclaveSDK
     - boost-for-react-native
     - CocoaAsyncSocket
     - Flipper
@@ -445,11 +439,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  BeyondIdentityCoreSDK: b66a8810dd753b88795a9c50febaadacbd1e94b1
-  BeyondIdentityDeviceInfoSDK: f6252c6e934733f25f20d105563170dac7484e55
-  BeyondIdentityEmbedded: 20f5c727620c994f69d8e95235fa2445f8236e65
-  BeyondIdentityEmbeddedReactNative: b9d4bcc0a4dfba3ada77aeeee0b7c02ff8e10dc4
-  BeyondIdentityEnclaveSDK: b26142b0da2b9400bc74ed72bcc93dd988930481
+  BeyondIdentityCoreSDK: ea967b5fe72957401370e3a344152dadead7b479
+  BeyondIdentityEmbedded: cf356be569d9a580b8379d2006e3caa23f5840ad
+  BeyondIdentityEmbeddedReactNative: c19baf0291212c81884cce4433afecb6b85a0f4e
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cde416483dac037923206447da6e1454df403714

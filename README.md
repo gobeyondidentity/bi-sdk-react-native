@@ -1,4 +1,4 @@
-![Beyond-Identity-768x268](https://user-images.githubusercontent.com/6456218/111526630-5c826d00-8735-11eb-84ae-809af105b626.jpeg)
+<img src="https://user-images.githubusercontent.com/238738/173244201-e403272c-fa59-4122-91a2-eba4614b8081.svg" width="300px">
 
 # Beyond Identity React Native SDK
 

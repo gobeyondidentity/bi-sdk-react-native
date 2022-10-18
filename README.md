@@ -1,4 +1,12 @@
-<img src="https://user-images.githubusercontent.com/238738/173244201-e403272c-fa59-4122-91a2-eba4614b8081.svg" width="300px">
+<p align="center">
+   <br/>
+   <a href="https://developers.beyondidentity.com" target="_blank"><img src="https://user-images.githubusercontent.com/238738/178780350-489309c5-8fae-4121-a20b-562e8025c0ee.png" width="150px" ></a>
+   <h3 align="center">Beyond Identity</h3>
+   <p align="center">Universal Passkeys for Developers</p>
+   <p align="center">
+   All devices. Any protocol. Zero shared secrets.
+   </p>
+</p>
 
 # Beyond Identity React Native SDK
 
@@ -9,23 +17,23 @@ Goodbye, passwords! The Beyond Identity SDK for React Native is a wrapper around
 ### Install the library:
 
 ```sh
-yarn add @beyondidentity/embedded-react-native
+yarn add @beyondidentity/bi-sdk-react-native
 ```
 
 or
 
 ```
-npm i --save @beyondidentity/embedded-react-native
+npm i --save @beyondidentity/bi-sdk-react-native
 ```
 
 > Note that this library is not compatible with Expo projects. This is because Expo's “managed” workflow does not allow usage of React Native libraries that introduce their own native code beyond the React Native APIs and components that are available in the Expo client app. If you have an Expo app and wish to use this project, you must `eject`.
 
 ### Update Native:
 
-Make sure your `ios/Podfile` supports iOS 12 or later
+Make sure your `ios/Podfile` supports iOS 13 or later
 
 ```sh
-platform :ios, '12.0'
+platform :ios, '13.0'
 ```
 
 Go to your ios folder and run:
@@ -34,12 +42,12 @@ Go to your ios folder and run:
  pod install
 ```
 
-Make sure your `android/build.gradle` supports minSdkVersion 28 or later
+Make sure your `android/build.gradle` supports minSdkVersion 26 or later
 
 ```
 buildscript {
   ext {
-    minSdkVersion = 28
+    minSdkVersion = 26
   }
 }
 ```
@@ -59,7 +67,7 @@ allprojects {
 ## Usage
 
 ```js
-import { Embedded } from '@beyondidentity/embedded-react-native';
+import { Embedded } from '@beyondidentity/bi-sdk-react-native';
 ```
 
 A set of functions are provided to you in this SDK. Check out the [documentation](https://developer.beyondidentity.com) for more information.

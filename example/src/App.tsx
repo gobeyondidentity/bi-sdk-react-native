@@ -1,21 +1,16 @@
-import React, { useEffect } from 'react';
-import {
-  Alert,
-  SafeAreaView,
-  ScrollView,
-  Text,
-  StyleSheet,
-  KeyboardAvoidingView,
-  Platform,
-} from 'react-native';
-
-import { Embedded } from '@beyondidentity/embedded-react-native';
-import AuthenticationView from './Views/AuthenticationView';
-import CredentialsView from './Views/CredentialsView';
-import CreateUserView from './Views/CreateUserView';
-import Config from './Config';
-import MigrationView from './Views/MigrationView';
+import { useEffect } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import AuthenticateView from './Views/AuthenticateView';
+import CredentialManagementView from './Views/CredentialManagementView';
+import Demo from './Views/Demo';
+import Home from './Views/Home';
+import URLValidationView from './Views/URLValidationView';
+import { Support, DevDocs } from './Views/Webviews';
 import useDeepLinkURL from './Linking';
+import { Color } from './Views/styles';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const { linkedURL } = useDeepLinkURL();
@@ -23,20 +18,7 @@ export default function App() {
   useEffect(() => {
     async function register() {
       if (linkedURL !== null) {
-        try {
-          const credential = await Embedded.registerCredentialsWithUrl(
-            linkedURL
-          );
-          Alert.alert('Registered Credential', `${credential.name}`, [
-            { text: 'OK', onPress: () => {} },
-          ]);
-        } catch (e) {
-          if (e instanceof Error) {
-            Alert.alert('Error', e.message, [
-              { text: 'OK', onPress: () => {} },
-            ]);
-          }
-        }
+        console.log('linkedURL', linkedURL);
       }
     }
 
@@ -44,61 +26,40 @@ export default function App() {
   }, [linkedURL]);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <KeyboardAvoidingView enabled behavior={Platform.OS === "ios" ? "padding" : undefined}
-          style={styles.container}> 
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Text style={styles.title}>
-          The following functions are available in the Embedded SDK.
-        </Text>
-        <CredentialsView />
-        <CreateUserView
-          title="Registration"
-          buttonTitle="Create User"
-          endpoint={Config.registrationEndpoint}
-          placeholder="Enter email to create a user"
-          makeBody={(email: string) => {
-            return JSON.stringify({
-              binding_token_delivery_method: 'email',
-              external_id: email,
-              email: email,
-              user_name: email,
-              display_name: email,
-            });
-          }}
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          contentStyle: { backgroundColor: Color.backgroundColor },
+        }}
+      >
+        <Stack.Screen name="Home" component={Home} options={{ title: '' }} />
+        <Stack.Screen name="Demo" component={Demo} options={{ title: '' }} />
+        <Stack.Screen
+          name="CredentialManagement"
+          component={CredentialManagementView}
+          options={{ title: 'Manage Credentials' }}
         />
-        <CreateUserView
-          title="Recovery"
-          buttonTitle="Recover User"
-          endpoint={Config.recoverUserEndpoint}
-          placeholder="Enter email to recover a user"
-          makeBody={(email: string) => {
-            return JSON.stringify({
-              binding_token_delivery_method: 'email',
-              external_id: email,
-              internal_id: email,
-            });
-          }}
+        <Stack.Screen
+          name="Authenticate"
+          component={AuthenticateView}
+          options={{ title: 'Authenticate' }}
         />
-        <AuthenticationView />
-        <MigrationView />
-      </ScrollView>
-      </KeyboardAvoidingView>
-    </SafeAreaView>
+        <Stack.Screen
+          name="URLValidatation"
+          component={URLValidationView}
+          options={{ title: 'URL Validatation' }}
+        />
+        <Stack.Screen
+          name="DevDocs"
+          component={DevDocs}
+          options={{ title: '' }}
+        />
+        <Stack.Screen
+          name="Support"
+          component={Support}
+          options={{ title: '' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'flex-start',
-    marginLeft: 10,
-    marginRight: 10,
-  },
-  title: {
-    fontSize: 22,
-    marginTop: 20,
-    marginBottom: 20,
-    textAlign: 'center',
-  },
-});

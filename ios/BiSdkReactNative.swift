@@ -4,13 +4,11 @@ import React
 
 private let EMBEDDED_REJECT_ERROR = "Embedded Failure: "
 private let INITALIZATION_ERROR = "Please call Embedded.initialize first"
+private let SUCCESS = "success"
+private let INVALID_URL = "doesn’t represent a valid URL."
 
 enum Events: String, CaseIterable {
-    case aborted = "ExtendCredentialAborted"
-    case tokenRecieved = "ExtendTokenReceived"
-    case completed = "ExtendCredentialCompleted"
-    case error = "ExtendError"
-    case log = "Logger"
+    case log = "BeyondIdentityLogger"
 }
 
 @objc(BiSdkReactNative)
@@ -31,10 +29,13 @@ class BiSdkReactNative: RCTEventEmitter {
         Events.allCases.map { $0.rawValue }
     }
     
-    @objc func authorize(
-        _ challenge: String,
-        pkceCodeChallengeMethod method: String,
-        scope: String,
+    @objc override static func requiresMainQueueSetup() -> Bool {
+        return false
+    }
+    
+    @objc func authenticate(
+        _ url: String,
+        credentialID: String,
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ){
@@ -42,38 +43,19 @@ class BiSdkReactNative: RCTEventEmitter {
             return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
         }
         
-        Embedded.shared.authorize(
-            pkceChallenge: maybeCreatePKCECodeChallenge(
-                challenge,
-                method
-            ),
-            scope: scope
-        ) { result in
-            switch result {
-            case let .success(authorizationCode):
-                resolve(["authorizationCode": authorizationCode.value])
-            case let .failure(error):
-                reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
-            }
-        }
-    }
-    
-    @objc func authenticate(
-        _ resolve: @escaping RCTPromiseResolveBlock,
-        rejecter reject: @escaping RCTPromiseRejectBlock
-    ){
-        guard isEmbeddedSdkInitialized else {
-            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
+        guard let url = URL(string: url) else {
+            return reject(EMBEDDED_REJECT_ERROR, "\(url) doesn’t represent a valid URL.", nil)
         }
         
-        Embedded.shared.authenticate { result in
+        Embedded.shared.authenticate(
+            url: url,
+            credentialID: CredentialID(credentialID)
+        ){ result in
             switch result {
-            case let .success(tokenResponse):
+            case let .success(authResponse):
                 let response: [String: Any] = [
-                    "accessToken": tokenResponse.accessToken.value,
-                    "idToken": tokenResponse.idToken,
-                    "tokenType": tokenResponse.accessToken.type,
-                    "expiresIn": tokenResponse.accessToken.expiresIn
+                    "message": authResponse.message ?? "",
+                    "redirectURL": authResponse.redirectURL.absoluteString
                 ]
                 resolve(response)
             case let .failure(error):
@@ -82,41 +64,28 @@ class BiSdkReactNative: RCTEventEmitter {
         }
     }
     
-    @objc func cancelExtendCredentials(
-        _ resolve: @escaping RCTPromiseResolveBlock,
+    @objc func bindCredential(
+        _ url: String,
+        resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
-    ) {
+    ){
         guard isEmbeddedSdkInitialized else {
             return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
         }
         
-        Embedded.shared.cancelExtendCredentials() { result in
-            switch result {
-            case .success():
-                resolve("success")
-            case let .failure(error):
-                reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
-            }
-        }
-    }
-    
-    @objc func createPKCE(
-        _ resolve: @escaping RCTPromiseResolveBlock,
-        rejecter reject: @escaping RCTPromiseRejectBlock
-    ) {
-        guard isEmbeddedSdkInitialized else {
-            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
+        guard let url = URL(string: url) else {
+            reject(EMBEDDED_REJECT_ERROR, "\(url) doesn’t represent a valid URL.", nil)
+            return
         }
         
-        Embedded.shared.createPKCE { result in
+        Embedded.shared.bindCredential(url: url) { result in
             switch result {
-            case let .success(pkce):
-                let pkceDict = [
-                    "codeVerifier": pkce.codeVerifier,
-                    "codeChallenge": pkce.codeChallenge.challenge,
-                    "codeChallengeMethod": pkce.codeChallenge.method
+            case let .success(bindResonse):
+                let response: [String: Any] = [
+                    "credential": makeCredentialDictionary(bindResonse.credential),
+                    "postBindingRedirectUri": bindResonse.postBindingRedirectURI?.absoluteString ?? ""
                 ]
-                resolve(pkceDict)
+                resolve(response)
             case let .failure(error):
                 reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
             }
@@ -124,7 +93,7 @@ class BiSdkReactNative: RCTEventEmitter {
     }
     
     @objc func deleteCredential(
-        _ handle: String,
+        _ id: String,
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ) {
@@ -132,39 +101,12 @@ class BiSdkReactNative: RCTEventEmitter {
             return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
         }
         
-        Embedded.shared.deleteCredential(for: Credential.Handle.init(handle)) { result in
+        Embedded.shared.deleteCredential(for: CredentialID(id)) { result in
             switch result {
-            case let .success(handle):
-                resolve(handle.value)
+            case .success:
+                resolve(id)
             case let .failure(error):
                 reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
-            }
-        }
-    }
-    
-    @objc func extendCredentials(
-        _ handles: [String]
-    ) {
-        guard isEmbeddedSdkInitialized else {
-            return sendEvent(withName: Events.error.rawValue, body: INITALIZATION_ERROR)
-        }
-        
-        Embedded.shared.extendCredentials(handles: handles.map(Credential.Handle.init)) { [weak self] result in
-            guard self?.hasListeners == true else { return }
-            
-            switch result {
-            case let .success(extendCredentialsStatus):
-                switch extendCredentialsStatus {
-                case .aborted:
-                    self?.sendEvent(withName: Events.aborted.rawValue, body: "aborted")
-                case let .started(token, _), let .tokenUpdated(token, _):
-                    self?.sendEvent(withName: Events.tokenRecieved.rawValue, body: token.value)
-                case .done:
-                    self?.sendEvent(withName: Events.completed.rawValue, body: "completed")
-                }
-                
-            case let .failure(error):
-                self?.sendEvent(withName: Events.error.rawValue, body: error.localizedDescription)
             }
         }
     }
@@ -189,41 +131,33 @@ class BiSdkReactNative: RCTEventEmitter {
     }
     
     @objc func initialize(
-        _ biometricAskPrompt: String,
-        clientID: String,
-        redirectURI: String
+        _ allowedDomains: [String],
+        biometricAskPrompt: String,
+        resolver resolve: @escaping RCTPromiseResolveBlock,
+        rejecter reject: @escaping RCTPromiseRejectBlock
     ){
         Embedded.initialize(
+            allowedDomains: allowedDomains,
             biometricAskPrompt: biometricAskPrompt,
-            clientID: clientID,
-            redirectURI: redirectURI,
             logger: { [weak self] (_, message) in
-                self?.sendEvent(withName: Events.log.rawValue, body: message)
-            })
+                guard let self = self else { return }
+                if (!self.hasListeners) { return }
+                self.sendEvent(withName: Events.log.rawValue, body: message)
+            },
+            callback: { result in
+                switch result {
+                case .success():
+                    resolve(SUCCESS)
+                case let .failure(error):
+                    reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
+                }
+            }
+        )
         
         isEmbeddedSdkInitialized = true
     }
     
-    @objc func registerCredentialsWithToken(
-        _ token: String,
-        resolver resolve: @escaping RCTPromiseResolveBlock,
-        rejecter reject: @escaping RCTPromiseRejectBlock
-    ) {
-        guard isEmbeddedSdkInitialized else {
-            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
-        }
-        
-        Embedded.shared.registerCredentials(token: CredentialToken.init(value: token)) { result in
-            switch result {
-            case let .success(credentials):
-                resolve(credentials.map(makeCredentialDictionary))
-            case let .failure(error):
-                reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
-            }
-        }
-    }
-    
-    @objc func registerCredentialsWithUrl(
+    @objc func isAuthenticateUrl(
         _ url: String,
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
@@ -233,18 +167,28 @@ class BiSdkReactNative: RCTEventEmitter {
         }
         
         guard let url = URL(string: url) else {
-            reject(EMBEDDED_REJECT_ERROR, "\(url) doesn’t represent a valid URL.", nil)
+            reject(EMBEDDED_REJECT_ERROR, "\(url) \(INVALID_URL)", nil)
             return
         }
         
-        Embedded.shared.registerCredentials(url) { result in
-            switch result {
-            case let .success(credential):
-                resolve(makeCredentialDictionary(credential))
-            case let .failure(error):
-                reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
-            }
+        resolve(Embedded.shared.isAuthenticateUrl(url))
+    }
+    
+    @objc func isBindCredentialUrl(
+        _ url: String,
+        resolver resolve: @escaping RCTPromiseResolveBlock,
+        rejecter reject: @escaping RCTPromiseRejectBlock
+    ){
+        guard isEmbeddedSdkInitialized else {
+            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
         }
+        
+        guard let url = URL(string: url) else {
+            reject(EMBEDDED_REJECT_ERROR, "\(url) \(INVALID_URL)", nil)
+            return
+        }
+        
+        resolve(Embedded.shared.isBindCredentialUrl(url))
     }
     
 }
@@ -253,28 +197,34 @@ class BiSdkReactNative: RCTEventEmitter {
 
 private func makeCredentialDictionary(_ credential: Credential) -> [String: Any] {
     return [
-        "created": credential.created ?? "",
-        "handle": credential.handle?.value ?? "",
-        "keyHandle": credential.keyHandle ?? "",
-        "name": credential.name,
-        "logoURL": credential.logoURL,
-        "loginURI": credential.loginURI ?? "",
-        "enrollURI": credential.enrollURI ?? "",
-        "chain": credential.chain,
-        "rootFingerprint": credential.rootFingerprint ?? "",
-        "state": credential.state.toPascalCase()
+        "id" : credential.id.value,
+        "localCreated" : credential.localCreated.description,
+        "localUpdated" : credential.localUpdated.description,
+        "apiBaseUrl" : credential.apiBaseURL.absoluteString,
+        "tenantId" : credential.tenantID.value,
+        "realmId" : credential.realmID.value,
+        "identityId" : credential.identityID.value,
+        "keyHandle" : credential.keyHandle.value,
+        "state" : credential.state.toPascalCase(),
+        "created" : credential.created.description,
+        "updated" : credential.updated.description,
+        "realm": [
+            "displayName": credential.realm.displayName
+        ],
+        "identity": [
+            "displayName": credential.identity.displayName,
+            "username": credential.identity.username,
+            "primaryEmailAddress": credential.identity.primaryEmailAddress
+        ],
+        "tenant": [
+            "displayName": credential.tenant.displayName
+        ],
+        "theme": [
+            "logoLightUrl": credential.theme.logoLightURL.absoluteString,
+            "logoDarkUrl": credential.theme.logoDarkURL.absoluteString,
+            "supportUrl": credential.theme.supportURL.absoluteString,
+        ]
     ]
-}
-
-private func maybeCreatePKCECodeChallenge(
-    _ challenge: String,
-    _ method: String
-) -> PKCE.CodeChallenge? {
-    guard !challenge.isEmpty && !method.isEmpty else {
-        return nil
-    }
-    
-    return PKCE.CodeChallenge.init(challenge: challenge, method: method)
 }
 
 extension CredentialState {
@@ -282,14 +232,8 @@ extension CredentialState {
         switch self {
         case .active:
             return "Active"
-        case .userSuspended:
-            return "UserSuspended"
-        case .userDeleted:
-            return "UserDeleted"
-        case .deviceDeleted:
-            return "DeviceDeleted"
-        case .invalid:
-            return "Invalid"
+        case .revoked:
+            return "Revoked"
         }
     }
 }

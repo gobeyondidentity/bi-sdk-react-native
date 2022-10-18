@@ -11,12 +11,12 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => "12.0" }
+  s.platforms    = { :ios => "13.0" }
   s.source       = { :git => "https://github.com/gobeyondidentity/bi-sdk-react-native.git", :tag => s.version.to_s }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
-  s.dependency "BeyondIdentityEmbedded", '0.7.0'
+  s.dependency "BeyondIdentityEmbedded", '1.0.4'
 
 end

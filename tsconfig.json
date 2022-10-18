@@ -2,14 +2,14 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@beyondidentity/embedded-react-native": ["./src/index"]
+      "@beyondidentity/bi-sdk-react-native": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
     "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "lib": ["esnext"],
     "module": "esnext",
     "moduleResolution": "node",

@@ -1,0 +1,42 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Build & Publish TypeDoc
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up TypeScript # Fixes typedoc error
+        run: yarn add -D typescript
+
+      - name: Set up TypeDoc
+        run: yarn add -D typedoc
+
+      - name: Install yarn dependencies # Fixes typedoc error
+        run: yarn install
+
+      - name: Install yarn dependencies (example) # Fixes typedoc error
+        run: cd example && yarn install
+
+      - name: Build TypeDoc
+        run: yarn typedoc --entryPointStrategy expand ./src
+
+      - name: Publish TypeDoc
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs

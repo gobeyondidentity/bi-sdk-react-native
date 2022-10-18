@@ -10,28 +10,19 @@ import android.content.Intent
 import android.util.Log
 import com.beyondidentity.embedded.sdk.EmbeddedSdk
 import com.beyondidentity.embedded.sdk.models.Credential
-import com.beyondidentity.embedded.sdk.extend.ExtendCredentialListener
 import com.beyondidentity.embedded.sdk.models.CredentialState
 import com.beyondidentity.embedded.sdk.models.CredentialState.ACTIVE
-import com.beyondidentity.embedded.sdk.models.CredentialState.DEVICE_DELETED
-import com.beyondidentity.embedded.sdk.models.CredentialState.INVALID
-import com.beyondidentity.embedded.sdk.models.CredentialState.UNKNOWN
-import com.beyondidentity.embedded.sdk.models.CredentialState.USER_DELETED
-import com.beyondidentity.embedded.sdk.models.CredentialState.USER_SUSPENDED
-import com.beyondidentity.embedded.sdk.models.ExtendResponse
+import com.beyondidentity.embedded.sdk.models.CredentialState.REVOKED
 import com.facebook.react.bridge.*
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
-import java.lang.Exception
+
 
 private const val EMBEDDED_KEYGUARD_REQUEST = 2314
 private const val INITIALIZE_ERROR = "Please call Embedded.initializeBiSdk first"
+private const val SUCCESS = "success"
 
 private object Events {
-  const val ABORTED = "ExtendCredentialAborted"
-  const val TOKEN_RECEIVED = "ExtendTokenReceived"
-  const val COMPLETED = "ExtendCredentialCompleted"
-  const val ERROR = "ExtendError"
-  const val LOG = "Logger"
+  const val LOG = "BeyondIdentityLogger"
 }
 
 class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
@@ -42,9 +33,6 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
 
   private var isEmbeddedSdkInitialized = false
   private var isLockSet = true
-
-  private var clientID = ""
-  private var redirectURI = ""
 
   override fun getName(): String {
     return "BiSdkReactNative"
@@ -80,151 +68,58 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun authorize(
-    pkceCodeChallenge: String,
-    pkceCodeChallengeMethod: String,
-    scope: String,
-    promise: Promise
-  ) {
-    if (!isEmbeddedSdkInitialized) {
-      promise.reject(Throwable(INITIALIZE_ERROR))
-      return
-    }
-
-    val codeChallenge = if (pkceCodeChallenge.isNotEmpty()) pkceCodeChallenge else null
-
-    EmbeddedSdk.authorize(
-      clientId = this.clientID,
-      redirectUri = this.redirectURI,
-      pkceS256CodeChallenge = codeChallenge,
-      scope = scope,
-    ) { credResult ->
-      credResult.onSuccess { code ->
-        val n = WritableNativeMap()
-        n.putString("authorizationCode", code)
-        promise.resolve(n)
-      }
-      credResult.onFailure { t -> promise.reject(t) }
-    }
-  }
-
-  @ReactMethod
   fun authenticate(
+    url: String,
+    credentialID: String,
     promise: Promise
   ) {
     if (!isEmbeddedSdkInitialized) {
       promise.reject(Throwable(INITIALIZE_ERROR))
       return
     }
-    EmbeddedSdk.authenticate(
-      clientId = this.clientID,
-      redirectUri = this.redirectURI,
-    ) { credResult ->
-      credResult.onSuccess { tokenResponse ->
+
+    EmbeddedSdk.authenticate(url, credentialID) { authResult ->
+      authResult.onSuccess { authResponse ->
         val n = WritableNativeMap()
-        n.putString("accessToken", tokenResponse.accessToken)
-        n.putString("idToken", tokenResponse.idToken)
-        n.putString("tokenType", tokenResponse.tokenType)
-        n.putDouble("expiresIn", tokenResponse.expiresIn.toDouble())
+        n.putString("redirectURL", authResponse.redirectUrl ?: "")
+        n.putString("message", authResponse.message ?: "")
         promise.resolve(n)
       }
-      credResult.onFailure { t -> promise.reject(t) }
+      authResult.onFailure { t -> promise.reject(t) }
     }
   }
 
   @ReactMethod
-  fun cancelExtendCredentials(promise: Promise) {
-    if (!isEmbeddedSdkInitialized) {
-      promise.reject(Throwable(INITIALIZE_ERROR))
-      return
-    }
-    EmbeddedSdk.cancelExtendCredentials { result ->
-      result.onSuccess { promise.resolve("success") }
-      result.onFailure { t -> promise.reject(t) }
-    }
-  }
-
-  @ReactMethod
-  fun createPKCE(promise: Promise) {
+  fun bindCredential(url: String, promise: Promise) {
     if (!isEmbeddedSdkInitialized) {
       promise.reject(Throwable(INITIALIZE_ERROR))
       return
     }
 
-    EmbeddedSdk.createPkce { resultPkce ->
-      resultPkce.onSuccess { pkce ->
+    EmbeddedSdk.bindCredential(url) { bindResult ->
+      bindResult.onSuccess { bindResponse ->
         val n = WritableNativeMap()
-        n.putString("codeVerifier", pkce.codeVerifier)
-        n.putString("codeChallenge", pkce.codeChallenge)
-        n.putString("codeChallengeMethod", pkce.codeChallengeMethod)
+        n.putMap("credential", makeCredentialMap(bindResponse.credential))
+        n.putString("postBindingRedirectUri", bindResponse.postBindingRedirectUri ?: "")
         promise.resolve(n)
       }
-      resultPkce.onFailure { t -> promise.reject(t) }
+      bindResult.onFailure { t -> promise.reject(t) }
     }
   }
 
   @ReactMethod
-  fun deleteCredential(handle: String, promise: Promise) {
+  fun deleteCredential(id: String, promise: Promise) {
     if (!isEmbeddedSdkInitialized) {
       promise.reject(Throwable(INITIALIZE_ERROR))
       return
     }
 
-    EmbeddedSdk.deleteCredential(handle) { deleteCredResult ->
+    EmbeddedSdk.deleteCredential(id) { deleteCredResult ->
       deleteCredResult.onSuccess {
-        promise.resolve(handle)
+        promise.resolve(id)
       }
       deleteCredResult.onFailure { t -> promise.reject(t) }
     }
-  }
-
-  @ReactMethod
-  fun extendCredentials(handles: ReadableArray) {
-    if (!isEmbeddedSdkInitialized) {
-      sendEvent(Events.ERROR, INITIALIZE_ERROR)
-      return
-    }
-
-    val handleList: List<String> = handles
-      .toArrayList()
-      .toList()
-      .filterIsInstance<String>()
-      .apply {
-        if (size != handles.size()) {
-          sendEvent(Events.ERROR, "handles must be an array of strings")
-          return
-        }
-      }
-
-    EmbeddedSdk.extendCredentials(
-      handleList,
-      object : ExtendCredentialListener {
-
-        override fun onUpdate(token: ExtendResponse?) {
-          token?.let { t ->
-            sendEvent(Events.TOKEN_RECEIVED, t.rendezvousToken)
-          }
-        }
-
-        override fun onFinish() {
-          sendEvent(Events.COMPLETED, "completed")
-        }
-
-        override fun onError(throwable: Throwable) {
-          if (!isLockSet) {
-            sendEvent(Events.ERROR, "Screen lock not set")
-          } else {
-            throwable.message?.let { m ->
-              if (m.contains("most likely user canceled") || m.contains("aborted")) {
-                sendEvent(Events.ABORTED, m)
-              } else {
-                sendEvent(Events.ERROR, m)
-              }
-            }
-          }
-        }
-      }
-    )
   }
 
   @ReactMethod
@@ -247,54 +142,58 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun initialize(
+    allowedDomains: ReadableArray,
     biometricAskPrompt: String,
-    clientID: String,
-    redirectURI: String
+    promise: Promise
   ) {
-    this.clientID = clientID
-    this.redirectURI = redirectURI
     if (isEmbeddedSdkInitialized) {
       return
     }
+
     EmbeddedSdk.init(
       reactApplicationContext.applicationContext as Application,
-      clientID,
       keyguardPrompt,
       { message -> sendEvent(Events.LOG, message) },
-      biometricAskPrompt
+      biometricAskPrompt,
+      allowedDomains.toArrayList().toList() as List<String>
     )
     isEmbeddedSdkInitialized = true
+
+    promise.resolve(SUCCESS)
   }
 
   @ReactMethod
-  fun registerCredentialsWithToken(token: String, promise: Promise) {
+  fun isAuthenticateUrl(
+    url: String,
+    promise: Promise
+  ) {
     if (!isEmbeddedSdkInitialized) {
       promise.reject(Throwable(INITIALIZE_ERROR))
       return
     }
-    EmbeddedSdk.registerCredentialsWithToken(token) { importResult ->
-      importResult.onSuccess { credentials ->
-        val credentialsArray = WritableNativeArray()
-        credentials.map { makeCredentialMap(it) }.forEach { credentialsArray.pushMap(it) }
-        promise.resolve(credentialsArray)
-      }
-      importResult.onFailure { t -> promise.reject(t) }
-    }
+    promise.resolve(EmbeddedSdk.isAuthenticateUrl(url))
   }
 
   @ReactMethod
-  fun registerCredentialsWithUrl(url: String, promise: Promise) {
+  fun isBindCredentialUrl(
+    url: String,
+    promise: Promise
+  ) {
     if (!isEmbeddedSdkInitialized) {
       promise.reject(Throwable(INITIALIZE_ERROR))
       return
     }
+    promise.resolve(EmbeddedSdk.isBindCredentialUrl(url))
+  }
 
-    EmbeddedSdk.registerCredentialsWithUrl(url) { credResult ->
-      credResult.onSuccess { credential ->
-        promise.resolve(makeCredentialMap(credential))
-      }
-      credResult.onFailure { t -> promise.reject(t) }
-    }
+  @ReactMethod
+  fun addListener(eventName: String?) {
+    // Keep: Required for RN built in Event Emitter Calls.
+  }
+
+  @ReactMethod
+  fun removeListeners(count: Int?) {
+    // Keep: Required for RN built in Event Emitter Calls.
   }
 
   private fun sendEvent(
@@ -308,37 +207,61 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
     } catch (e: Exception) {
       Log.e("ReactNative", "Caught Exception: " + e.message)
     }
+  }
 
+  private fun sendEventMap(
+    eventName: String,
+    params: WritableNativeMap
+  ) {
+    try {
+      reactApplicationContext
+        .getJSModule(RCTDeviceEventEmitter::class.java)
+        .emit(eventName, params)
+    } catch (e: Exception) {
+      Log.e("ReactNative", "Caught Exception: " + e.message)
+    }
   }
 
   private fun makeCredentialMap(credential: Credential): WritableNativeMap {
     val map = WritableNativeMap()
-
-    map.putString("created", credential.created)
-    map.putString("handle", credential.handle)
+    map.putString("id", credential.id)
+    map.putString("localCreated", credential.localCreated.toString())
+    map.putString("localUpdated", credential.localUpdated.toString())
+    map.putString("apiBaseUrl", credential.apiBaseURL.toString())
+    map.putString("tenantId", credential.tenantId)
+    map.putString("realmId", credential.realmId)
+    map.putString("identityId", credential.identityId)
     map.putString("keyHandle", credential.keyHandle)
-    map.putString("name", credential.name)
-    map.putString("logoURL", credential.imageUrl)
-    map.putString("loginURI", credential.loginUri ?: "")
-    map.putString("enrollURI", credential.enrollUri ?: "")
-    map.putString("rootFingerprint", credential.rootFingerprint)
     map.putString("state", credentialStateToPascalCase(credential.state))
+    map.putString("created", credential.created.toString())
+    map.putString("updated", credential.updated.toString())
 
-    val chainArray = WritableNativeArray()
-    credential.chain.forEach { chainArray.pushString(it) }
-    map.putArray("chain", chainArray)
+    val realmMap = WritableNativeMap()
+    realmMap.putString("displayName", credential.realm.displayName)
+    map.putMap("realm", realmMap)
+
+    val identityMap = WritableNativeMap()
+    identityMap.putString("displayName", credential.identity.displayName)
+    identityMap.putString("username", credential.identity.username)
+    identityMap.putString("primaryEmailAddress", credential.identity.primaryEmailAddress)
+    map.putMap("identity", identityMap)
+
+    val tenantMap = WritableNativeMap()
+    tenantMap.putString("displayName", credential.tenant.displayName)
+    map.putMap("tenant", tenantMap)
+
+    val themeMap = WritableNativeMap()
+    themeMap.putString("logoLightUrl", credential.theme.logoUrlLight.toString())
+    themeMap.putString("logoDarkUrl", credential.theme.logoUrlDark.toString())
+    themeMap.putString("supportUrl", credential.theme.supportUrl.toString())
+    map.putMap("theme", themeMap)
 
     return map
   }
 
   private fun credentialStateToPascalCase(state: CredentialState) =
-    when(state){
+    when (state) {
       ACTIVE -> "Active"
-      DEVICE_DELETED -> "DeviceDeleted"
-      INVALID -> "Invalid"
-      USER_DELETED -> "UserDeleted"
-      USER_SUSPENDED -> "UserSuspended"
-      UNKNOWN -> "Unknown"
+      REVOKED -> "Revoked"
     }
 }
-

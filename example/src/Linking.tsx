@@ -19,9 +19,9 @@ export default function useDeepLinkURL() {
   // If the app is already open
   useEffect(() => {
     const callback = ({ url }: { url: string }) => setLinkedURL(decodeURI(url));
-    Linking.addEventListener('url', callback);
+    const linkingEventListener = Linking.addEventListener('url', callback);
     return () => {
-      Linking.removeEventListener('url', callback);
+      linkingEventListener.remove();
     };
   }, []);
 

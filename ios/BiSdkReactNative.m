@@ -2,39 +2,32 @@
 
 @interface RCT_EXTERN_MODULE(BiSdkReactNative, NSObject)
 
-RCT_EXTERN_METHOD(authenticate: (RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
-
-RCT_EXTERN_METHOD(authorize: (NSString)challenge
-                  pkceCodeChallengeMethod:(NSString)method
-                  scope:(NSString)scope
+RCT_EXTERN_METHOD(authenticate: (NSString)url
+                  credentialID: (NSString)credentialID
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(cancelExtendCredentials: (RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
-
-RCT_EXTERN_METHOD(createPKCE: (RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
-
-RCT_EXTERN_METHOD(deleteCredential: (NSString)handle
+RCT_EXTERN_METHOD(bindCredential: (NSString)url
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(extendCredentials: (NSArray)handles)
+RCT_EXTERN_METHOD(deleteCredential: (NSString)id
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject)
 
 RCT_EXTERN_METHOD(getCredentials: (RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(initialize: (NSString)biometricAskPrompt
-                  clientID: (NSString)clientID
-                  redirectURI: (NSString)redirectURI)
-
-RCT_EXTERN_METHOD(registerCredentialsWithToken: (NSString)token
+RCT_EXTERN_METHOD(initialize: (NSArray)allowedDomains
+                  biometricAskPrompt: (NSString)biometricAskPrompt
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(registerCredentialsWithUrl: (NSString)url
+RCT_EXTERN_METHOD(isAuthenticateUrl: (NSString)url
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject)
+
+RCT_EXTERN_METHOD(isBindCredentialUrl: (NSString)url
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 @end

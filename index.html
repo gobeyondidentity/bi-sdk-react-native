@@ -6,7 +6,7 @@
 <div id="tsd-toolbar-links"></div></div>
 <ul class="results">
 <li class="state loading">Preparing search index...</li>
-<li class="state failure">The search index is not available</li></ul><a href="" class="title">@beyondidentity/bi-sdk-react-native</a></div>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@beyondidentity/bi-sdk-react-native</a></div>
 <div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
 <div class="container container-main">
 <div class="col-8 col-content">
@@ -26,61 +26,109 @@
 <a href="#beyond-identity-react-native-sdk" id="beyond-identity-react-native-sdk" style="color: inherit; text-decoration: none;">
   <h1>Beyond Identity React Native SDK</h1>
 </a>
-<p>Goodbye, passwords! The Beyond Identity SDK for React Native is a wrapper around our Native Embedded SDKs (<a href="https://github.com/gobeyondidentity/bi-sdk-swift">iOS</a> and <a href="https://github.com/gobeyondidentity/bi-sdk-android">Android</a>), which allows you to embed the Passwordless experience into your product. This SDK supports OIDC and OAuth2.</p>
+<p><a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a></p>
+
+<a href="#embedded-sdk" id="embedded-sdk" style="color: inherit; text-decoration: none;">
+  <h3>Embedded SDK</h3>
+</a>
+<p>Goodbye, passwords! The Beyond Identity SDK for React Native is a wrapper around our Native Embedded SDKs (<a href="https://github.com/gobeyondidentity/bi-sdk-android">Android</a> and <a href="https://github.com/gobeyondidentity/bi-sdk-swift">iOS</a>), which allows you to embed the Passwordless experience into your product. Users will not need to download the Beyond Identity Authenticator. This SDK supports OIDC and OAuth2.</p>
 
 <a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
   <h2>Installation</h2>
 </a>
 
-<a href="#install-the-library" id="install-the-library" style="color: inherit; text-decoration: none;">
-  <h3>Install the library:</h3>
+<a href="#using-a-bare-expo-or-react-native-init-app" id="using-a-bare-expo-or-react-native-init-app" style="color: inherit; text-decoration: none;">
+  <h3>Using a <a href="https://docs.expo.dev/bare/hello-world/">bare expo</a> or <a href="https://reactnative.dev/docs/environment-setup">react-native init</a> app.</h3>
 </a>
-<pre><code class="language-sh"><span class="hl-0">yarn add @beyondidentity/bi-sdk-react-native</span>
+<ol>
+<li>Install the SDK:</li>
+</ol>
+<pre><code><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-0">add</span><span class="hl-1"> @</span><span class="hl-0">beyondidentity</span><span class="hl-1">/</span><span class="hl-0">bi</span><span class="hl-1">-</span><span class="hl-0">sdk</span><span class="hl-1">-</span><span class="hl-0">react</span><span class="hl-1">-</span><span class="hl-0">native</span>
 </code></pre>
 <p>or</p>
-<pre><code><span class="hl-1">npm</span><span class="hl-0"> </span><span class="hl-1">i</span><span class="hl-0"> --</span><span class="hl-1">save</span><span class="hl-0"> @</span><span class="hl-1">beyondidentity</span><span class="hl-0">/</span><span class="hl-1">bi</span><span class="hl-0">-</span><span class="hl-1">sdk</span><span class="hl-0">-</span><span class="hl-1">react</span><span class="hl-0">-</span><span class="hl-1">native</span>
+<pre><code><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> @</span><span class="hl-0">beyondidentity</span><span class="hl-1">/</span><span class="hl-0">bi</span><span class="hl-1">-</span><span class="hl-0">sdk</span><span class="hl-1">-</span><span class="hl-0">react</span><span class="hl-1">-</span><span class="hl-0">native</span>
 </code></pre>
-<blockquote>
-<p>Note that this library is not compatible with Expo projects. This is because Expo&#39;s “managed” workflow does not allow usage of React Native libraries that introduce their own native code beyond the React Native APIs and components that are available in the Expo client app. If you have an Expo app and wish to use this project, you must <code>eject</code>.</p>
-</blockquote>
-
-<a href="#update-native" id="update-native" style="color: inherit; text-decoration: none;">
-  <h3>Update Native:</h3>
-</a>
-<p>Make sure your <code>ios/Podfile</code> supports iOS 13 or later</p>
-<pre><code class="language-sh"><span class="hl-0">platform :ios, </span><span class="hl-2">&#39;13.0&#39;</span>
+<ol start="2">
+<li>Update Native Requirements in your ios/android folders:</li>
+</ol>
+<p>Please make sure your iOS project supports &quot;minimum deployment target&quot; 13.0 or later.</p>
+<p>In your <code>ios/Podfile</code> set:</p>
+<pre><code class="language-sh"><span class="hl-1">platform </span><span class="hl-2">:ios,</span><span class="hl-1"> </span><span class="hl-2">&#39;13.0&#39;</span>
 </code></pre>
 <p>Go to your ios folder and run:</p>
-<pre><code class="language-sh"><span class="hl-0"> pod install</span>
+<pre><code class="language-sh"><span class="hl-1"> pod </span><span class="hl-2">install</span>
 </code></pre>
 <p>Make sure your <code>android/build.gradle</code> supports minSdkVersion 26 or later</p>
-<pre><code><span class="hl-1">buildscript</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-1">ext</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-1">minSdkVersion</span><span class="hl-0"> = </span><span class="hl-3">26</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span>
+<pre><code><span class="hl-0">buildscript</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-0">ext</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">minSdkVersion</span><span class="hl-1"> = </span><span class="hl-3">26</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
 </code></pre>
 <p>Add the following maven url to your repositories in your <code>android/build.gradle</code></p>
-<pre><code><span class="hl-1">allprojects</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-1">repositories</span><span class="hl-0"> {</span><br/><span class="hl-0">    </span><span class="hl-1">maven</span><span class="hl-0"> {</span><br/><span class="hl-0">      </span><span class="hl-1">url</span><span class="hl-0"> </span><span class="hl-2">&quot;https://packages.beyondidentity.com/public/bi-sdk-android/maven/&quot;</span><br/><span class="hl-0">    }</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span>
+<pre><code><span class="hl-0">allprojects</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-0">repositories</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">maven</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-0">url</span><span class="hl-1"> </span><span class="hl-2">&quot;https://packages.beyondidentity.com/public/bi-sdk-android/maven/&quot;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
 </code></pre>
+
+<a href="#using-expo" id="using-expo" style="color: inherit; text-decoration: none;">
+  <h3>Using <code>expo</code></h3>
+</a>
+<blockquote>
+<p>:warning: This package cannot be used in &quot;Expo Go&quot; because <a href="https://docs.expo.io/workflow/customizing/">it requires custom native code</a>. However you can leverage this library with a <a href="https://docs.expo.dev/development/introduction/">development build</a> or <a href="https://docs.expo.dev/workflow/prebuild/">prebuild</a>.  </p>
+</blockquote>
+<ol>
+<li>Install the SDK:</li>
+</ol>
+<pre><code><span class="hl-0">expo</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> @</span><span class="hl-0">beyondidentity</span><span class="hl-1">/</span><span class="hl-0">bi</span><span class="hl-1">-</span><span class="hl-0">sdk</span><span class="hl-1">-</span><span class="hl-0">react</span><span class="hl-1">-</span><span class="hl-0">native</span>
+</code></pre>
+<ol start="2">
+<li>Add the SDK <a href="https://docs.expo.dev/guides/config-plugins/">config plugin</a> to the <a href="https://docs.expo.dev/versions/latest/config/app/#plugins">plugins array</a> of your app.{json,config.js,config.ts}:</li>
+</ol>
+<pre><code><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-2">&quot;expo&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-2">&quot;plugins&quot;</span><span class="hl-0">:</span><span class="hl-1"> [</span><br/><span class="hl-1">      [</span><span class="hl-2">&quot;@beyondidentity/bi-sdk-react-native&quot;</span><span class="hl-1">],</span><br/><span class="hl-1">    ]</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code></pre>
+<ol start="3">
+<li>Set native requirments either with <a href="https://docs.expo.dev/versions/latest/sdk/build-properties/">expo-build-properties</a> or modify project <a href="https://docs.expo.dev/guides/config-plugins/#static-modification">static files</a></li>
+</ol>
+<p>A. Modify the following static files</p>
+<p>android/gradle.properties</p>
+<pre><code><span class="hl-0">android</span><span class="hl-1">.</span><span class="hl-0">minSdkVersion</span><span class="hl-1">=</span><span class="hl-3">26</span>
+</code></pre>
+<p>ios/Podfile.properties.json</p>
+<pre><code><span class="hl-2">&quot;ios.deploymentTarget&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;13.0&quot;</span>
+</code></pre>
+<p><em>or</em> </p>
+<p>B. Add <a href="https://docs.expo.dev/versions/latest/sdk/build-properties/">expo-build-properties</a> to your app.{json,config.js,config.ts}:</p>
+<pre><code><span class="hl-0">expo</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> </span><span class="hl-0">expo</span><span class="hl-1">-</span><span class="hl-0">build</span><span class="hl-1">-</span><span class="hl-0">properties</span>
+</code></pre>
+<pre><code><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-2">&quot;expo&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">    </span><span class="hl-2">&quot;plugins&quot;</span><span class="hl-0">:</span><span class="hl-1"> [</span><br/><span class="hl-1">      [</span><span class="hl-2">&quot;@beyondidentity/bi-sdk-react-native&quot;</span><span class="hl-1">],</span><br/><span class="hl-1">      [</span><br/><span class="hl-1">        </span><span class="hl-2">&quot;expo-build-properties&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">        {</span><br/><span class="hl-1">          </span><span class="hl-2">&quot;android&quot;</span><span class="hl-0">:</span><span class="hl-1"> {</span><br/><span class="hl-1">            </span><span class="hl-2">&quot;minSdkVersion&quot;</span><span class="hl-0">:</span><span class="hl-1"> </span><span class="hl-3">26</span><br/><span class="hl-1">          },</span><br/><span class="hl-1">          </span><span class="hl-2">&quot;ios&quot;</span><span class="hl-0">:</span><span class="hl-1"> {</span><br/><span class="hl-1">            </span><span class="hl-2">&quot;deploymentTarget&quot;</span><span class="hl-0">:</span><span class="hl-1"> </span><span class="hl-2">&quot;13.0&quot;</span><br/><span class="hl-1">          }</span><br/><span class="hl-1">        }</span><br/><span class="hl-1">      ]</span><br/><span class="hl-1">    ]</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+</code></pre>
+<ol start="4">
+<li>Next, rebuild your app as described in the <a href="https://docs.expo.dev/workflow/customizing/">&quot;Adding custom native code&quot;</a> guide.</li>
+</ol>
 
 <a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
   <h2>Usage</h2>
 </a>
-<pre><code class="language-js"><span class="hl-4">import</span><span class="hl-0"> { </span><span class="hl-1">Embedded</span><span class="hl-0"> } </span><span class="hl-4">from</span><span class="hl-0"> </span><span class="hl-2">&#39;@beyondidentity/bi-sdk-react-native&#39;</span><span class="hl-0">;</span>
-</code></pre>
-<p>A set of functions are provided to you in this SDK. Check out the <a href="https://developer.beyondidentity.com">documentation</a> for more information.</p>
+<p>Check out the <a href="https://developer.beyondidentity.com">Developer Documentation</a> and the <a href="https://gobeyondidentity.github.io/bi-sdk-react-native/">SDK API Documentation</a> for more information.</p>
 
-<a href="#run-examples" id="run-examples" style="color: inherit; text-decoration: none;">
-  <h2>Run Examples</h2>
+<a href="#setup" id="setup" style="color: inherit; text-decoration: none;">
+  <h3>Setup</h3>
 </a>
-<p>To set up:</p>
-<pre><code class="language-sh"><span class="hl-0">yarn bootstrap</span>
+<p>First, before calling the Embedded functions, make sure to initialize the SDK. This can be done where you register your root component.</p>
+<pre><code class="language-javascript"><span class="hl-4">import</span><span class="hl-1"> { </span><span class="hl-0">Embedded</span><span class="hl-1"> } </span><span class="hl-4">from</span><span class="hl-1"> </span><span class="hl-2">&#39;@beyondidentity/bi-sdk-react-native&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">Embedded</span><span class="hl-1">.</span><span class="hl-5">initialize</span><span class="hl-1">(</span><br/><span class="hl-1">  </span><span class="hl-0">biometricAskPrompt</span><span class="hl-1">: </span><span class="hl-0">string</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-0">allowedDomains</span><span class="hl-1">?: </span><span class="hl-0">string</span><span class="hl-1">[]</span><br/><span class="hl-1">): </span><span class="hl-6">Promise</span><span class="hl-1">&lt;</span><span class="hl-0">Success</span><span class="hl-1">&gt;;</span>
+</code></pre>
+<p>You may also add a listener to log native events with <code>Embedded.logEventEmitter</code> after initializing.</p>
+
+<a href="#example-app" id="example-app" style="color: inherit; text-decoration: none;">
+  <h2>Example App</h2>
+</a>
+<p>Clone the following repo and use the available comands to see the SDK in action!</p>
+<p>To set up (run this first):</p>
+<pre><code class="language-sh"><span class="hl-1">yarn </span><span class="hl-2">bootstrap</span>
 </code></pre>
 <p>To run the example app on Android:</p>
-<pre><code class="language-sh"><span class="hl-0">yarn example android</span>
+<pre><code class="language-sh"><span class="hl-1">yarn </span><span class="hl-2">example</span><span class="hl-1"> </span><span class="hl-2">android</span>
 </code></pre>
 <p>To run the example app on iOS:</p>
-<pre><code class="language-sh"><span class="hl-0">yarn example ios</span>
+<pre><code class="language-sh"><span class="hl-1">yarn </span><span class="hl-2">example</span><span class="hl-1"> </span><span class="hl-2">ios</span>
 </code></pre>
 <p>To start the packager:</p>
-<pre><code class="language-sh"><span class="hl-0">yarn example start</span>
+<pre><code class="language-sh"><span class="hl-1">yarn </span><span class="hl-2">example</span><span class="hl-1"> </span><span class="hl-2">start</span>
 </code></pre>
 </div></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">

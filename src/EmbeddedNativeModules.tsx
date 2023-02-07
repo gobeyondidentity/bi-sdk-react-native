@@ -1,6 +1,6 @@
 import { NativeEventEmitter, NativeModules, Platform } from 'react-native';
 
-import type { Credential, Success } from './EmbeddedTypes';
+import type { Passkey, Success } from './EmbeddedTypes';
 
 class BILoggerEmitter extends NativeEventEmitter {
   addListener(
@@ -21,7 +21,7 @@ const LINKING_ERROR =
   `The package 'bi-sdk-react-native' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
   '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo managed workflow\n';
+  '- You are not using Expo Go managed workflow\n';
 
 const EmbeddedNativeModules: EmbeddedNativeModules =
   NativeModules.BiSdkReactNative
@@ -38,29 +38,29 @@ const EmbeddedNativeModules: EmbeddedNativeModules =
 /// Types below represent models passed from Native layer to React.
 /// These modesl do no contain optional values, as empty strings would be passed instead.
 interface NativeAuthenticateResponse {
-  redirectURL: string;
+  redirectUrl: string;
   message: string;
 }
 
-interface NativeBindCredentialResponse {
-  credential: Credential;
-  postBindingRedirectURI: string;
+interface NativeBindPasskeyResponse {
+  passkey: Passkey;
+  postBindingRedirectUri: string;
 }
 
 interface EmbeddedNativeModules {
   authenticate(
     url: string,
-    credentialID: string
+    passkeyId: string
   ): Promise<NativeAuthenticateResponse>;
-  bindCredential(url: string): Promise<NativeBindCredentialResponse>;
-  deleteCredential(id: string): Promise<string>;
-  getCredentials(): Promise<Credential[]>;
+  bindPasskey(url: string): Promise<NativeBindPasskeyResponse>;
+  deletePasskey(id: string): Promise<string>;
+  getPasskeys(): Promise<Passkey[]>;
   initialize(
     allowedDomains: string[],
     biometricAskPrompt: string
   ): Promise<Success>;
   isAuthenticateUrl(url: string): Promise<boolean>;
-  isBindCredentialUrl(url: string): Promise<boolean>;
+  isBindPasskeyUrl(url: string): Promise<boolean>;
 }
 
 export { EmbeddedNativeModules, LoggerEventEmitter, BILoggerEmitter };

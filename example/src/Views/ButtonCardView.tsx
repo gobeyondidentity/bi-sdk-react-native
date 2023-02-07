@@ -20,6 +20,7 @@ export default function ButtonCardView({
   onPress,
 }: ButtonCardViewProps) {
   const [result, setResult] = useState('');
+  const [loading, setLoading] = useState(false);
 
   return (
     <View>
@@ -29,12 +30,16 @@ export default function ButtonCardView({
       <NewlineText text={detail} />
       <Button
         onPress={async () => {
-          onPress(setResult);
+          setLoading(true);
+          onPress((result) => {
+            setLoading(false);
+            setResult(result);
+          });
         }}
         title={buttonTitle}
         color={Color.primary}
       />
-      {!hideLabel && <ResponseLabelView text={result} />}
+      {!hideLabel && <ResponseLabelView text={result} isLoading={loading} />}
     </View>
   );
 }

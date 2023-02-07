@@ -56,6 +56,8 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(XCCONFIG_APP_BUILD_NUMBER)</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

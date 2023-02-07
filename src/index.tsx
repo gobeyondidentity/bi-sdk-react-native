@@ -6,41 +6,37 @@ import {
 
 import type {
   AuthenticateResponse,
-  BindCredentialResponse,
-  Credential,
-  CredentialState,
+  BindPasskeyResponse,
+  Passkey,
+  PasskeyState,
   Success,
 } from './EmbeddedTypes';
 
 interface Embedded {
   /**
    * Authenticate a user and receive an `AuthenticateResponse`.
-   * @param url the url used to authenticate.
-   * @param credentialID the `id` of the Credential with which to authenticate.
+   * @param url the URL used to authenticate.
+   * @param passkeyId the ID of the passkey with which to authenticate.
    */
-  authenticate(
-    url: string,
-    credentialID: string
-  ): Promise<AuthenticateResponse>;
+  authenticate(url: string, passkeyId: string): Promise<AuthenticateResponse>;
 
   /**
-   * Bind a credential to a device.
-   * @param url the url used to bind a credential to a device.
+   * Bind a passkey to a device.
+   * @param url the URL used to bind a passkey to a device.
    */
-  bindCredential(url: string): Promise<BindCredentialResponse>;
+  bindPasskey(url: string): Promise<BindPasskeyResponse>;
 
   /**
-   * Delete a Credential by ID.
-   * @warning deleting a Credential is destructive and will remove everything from the device. If no other device contains the credential then the user will need to complete a recovery in order to log in again on this device.
-   * @param id the unique identifier of the Credential.
+   * Delete a passkey by ID.
+   * @warning deleting a passkey is destructive and will remove everything from the device. If no other device contains the passkey then the user will need to complete a recovery in order to log in again on this device.
+   * @param id the the passkey id, uniquely identifying a `Passkey`.
    */
-  deleteCredential(id: string): Promise<string>;
+  deletePasskey(id: string): Promise<string>;
 
   /**
-   * Get all current credentials.
-   * Only one credential per device is currently supported.
+   * Get all current passkeys for this device.
    */
-  getCredentials(): Promise<Credential[]>;
+  getPasskeys(): Promise<Passkey[]>;
 
   /**
    * Initialize the SDK. This must be called before any other functions are called.
@@ -54,16 +50,16 @@ interface Embedded {
   ): Promise<Success>;
 
   /**
-   * Determines if a URL is a valid Authenticate URL.
+   * Returns whether a URL is a valid Authenticate URL or not.
    * @param url The URL in question.
    */
   isAuthenticateUrl(url: string): Promise<boolean>;
 
   /**
-   * Determines if a URL is a valid Bind Credentail URL.
+   * Returns whether a URL is a valid Bind Passkey URL or not.
    * @param url The URL in question.
    */
-  isBindCredentialUrl(url: string): Promise<boolean>;
+  isBindPasskeyUrl(url: string): Promise<boolean>;
 
   /**
    * A NativeEventEmitter to listen for `Logger` events after calling `Embedded.initialize`
@@ -72,39 +68,36 @@ interface Embedded {
 }
 
 const Embedded: Embedded = {
-  authenticate(
-    url: string,
-    credentialID: string
-  ): Promise<AuthenticateResponse> {
+  authenticate(url: string, passkeyId: string): Promise<AuthenticateResponse> {
     return new Promise(function (resolve, reject) {
-      EmbeddedNativeModules.authenticate(url, credentialID)
+      EmbeddedNativeModules.authenticate(url, passkeyId)
         .then((response) =>
           resolve({
-            redirectURL: response.redirectURL,
+            redirectUrl: response.redirectUrl,
             message: response.message || undefined, // checking for empty string from native bridge
           })
         )
         .catch(reject);
     });
   },
-  bindCredential: function (url: string): Promise<BindCredentialResponse> {
+  bindPasskey: function (url: string): Promise<BindPasskeyResponse> {
     return new Promise(function (resolve, reject) {
-      EmbeddedNativeModules.bindCredential(url)
+      EmbeddedNativeModules.bindPasskey(url)
         .then((response) =>
           resolve({
-            credential: response.credential,
-            postBindingRedirectURI:
-              response.postBindingRedirectURI || undefined, // checking for empty string from native bridge
+            passkey: response.passkey,
+            postBindingRedirectUri:
+              response.postBindingRedirectUri || undefined, // checking for empty string from native bridge
           })
         )
         .catch(reject);
     });
   },
-  deleteCredential: function (id: string): Promise<string> {
-    return EmbeddedNativeModules.deleteCredential(id);
+  deletePasskey: function (id: string): Promise<string> {
+    return EmbeddedNativeModules.deletePasskey(id);
   },
-  getCredentials: function (): Promise<Credential[]> {
-    return EmbeddedNativeModules.getCredentials();
+  getPasskeys: function (): Promise<Passkey[]> {
+    return EmbeddedNativeModules.getPasskeys();
   },
   initialize: function (
     biometricAskPrompt: string,
@@ -115,10 +108,10 @@ const Embedded: Embedded = {
   isAuthenticateUrl(url: string): Promise<boolean> {
     return EmbeddedNativeModules.isAuthenticateUrl(url);
   },
-  isBindCredentialUrl(url: string): Promise<boolean> {
-    return EmbeddedNativeModules.isBindCredentialUrl(url);
+  isBindPasskeyUrl(url: string): Promise<boolean> {
+    return EmbeddedNativeModules.isBindPasskeyUrl(url);
   },
   logEventEmitter: LoggerEventEmitter,
 };
 
-export { AuthenticateResponse, Credential, CredentialState, Embedded, Success };
+export { AuthenticateResponse, Passkey, PasskeyState, Embedded, Success };

@@ -1,28 +1,27 @@
 import { BILoggerEmitter } from './EmbeddedNativeModules';
-import type { AuthenticateResponse, BindCredentialResponse, Credential, CredentialState, Success } from './EmbeddedTypes';
+import type { AuthenticateResponse, BindPasskeyResponse, Passkey, PasskeyState, Success } from './EmbeddedTypes';
 interface Embedded {
     /**
      * Authenticate a user and receive an `AuthenticateResponse`.
-     * @param url the url used to authenticate.
-     * @param credentialID the `id` of the Credential with which to authenticate.
+     * @param url the URL used to authenticate.
+     * @param passkeyId the ID of the passkey with which to authenticate.
      */
-    authenticate(url: string, credentialID: string): Promise<AuthenticateResponse>;
+    authenticate(url: string, passkeyId: string): Promise<AuthenticateResponse>;
     /**
-     * Bind a credential to a device.
-     * @param url the url used to bind a credential to a device.
+     * Bind a passkey to a device.
+     * @param url the URL used to bind a passkey to a device.
      */
-    bindCredential(url: string): Promise<BindCredentialResponse>;
+    bindPasskey(url: string): Promise<BindPasskeyResponse>;
     /**
-     * Delete a Credential by ID.
-     * @warning deleting a Credential is destructive and will remove everything from the device. If no other device contains the credential then the user will need to complete a recovery in order to log in again on this device.
-     * @param id the unique identifier of the Credential.
+     * Delete a passkey by ID.
+     * @warning deleting a passkey is destructive and will remove everything from the device. If no other device contains the passkey then the user will need to complete a recovery in order to log in again on this device.
+     * @param id the the passkey id, uniquely identifying a `Passkey`.
      */
-    deleteCredential(id: string): Promise<string>;
+    deletePasskey(id: string): Promise<string>;
     /**
-     * Get all current credentials.
-     * Only one credential per device is currently supported.
+     * Get all current passkeys for this device.
      */
-    getCredentials(): Promise<Credential[]>;
+    getPasskeys(): Promise<Passkey[]>;
     /**
      * Initialize the SDK. This must be called before any other functions are called.
      * Note: Hot reloading will not call this function again. If changes have been made to calling this function, fully reload the app to see those changes.
@@ -31,19 +30,19 @@ interface Embedded {
      */
     initialize(biometricAskPrompt: string, allowedDomains?: string[]): Promise<Success>;
     /**
-     * Determines if a URL is a valid Authenticate URL.
+     * Returns whether a URL is a valid Authenticate URL or not.
      * @param url The URL in question.
      */
     isAuthenticateUrl(url: string): Promise<boolean>;
     /**
-     * Determines if a URL is a valid Bind Credentail URL.
+     * Returns whether a URL is a valid Bind Passkey URL or not.
      * @param url The URL in question.
      */
-    isBindCredentialUrl(url: string): Promise<boolean>;
+    isBindPasskeyUrl(url: string): Promise<boolean>;
     /**
      * A NativeEventEmitter to listen for `Logger` events after calling `Embedded.initialize`
      */
     logEventEmitter: BILoggerEmitter;
 }
 declare const Embedded: Embedded;
-export { AuthenticateResponse, Credential, CredentialState, Embedded, Success };
+export { AuthenticateResponse, Passkey, PasskeyState, Embedded, Success };

@@ -3,7 +3,7 @@ import { Embedded } from '@beyondidentity/bi-sdk-react-native';
 import InputCardView from './InputCardView';
 import s from './styles';
 
-export default function CredentialManagementView() {
+export default function PasskeyManagementView() {
   return (
     <ScrollView>
       <View style={s.container}>
@@ -32,20 +32,20 @@ export default function CredentialManagementView() {
         />
 
         <InputCardView
-          title="Bind Credential URL"
-          detail="Paste a URL here to validate if it's a bind credential URL."
+          title="Bind Passkey URL"
+          detail="Paste a URL here to validate if it's a bind passkey URL."
           buttonTitle="Validate URL"
-          placeholder="Bind Credential URL"
+          placeholder="Bind Passkey URL"
           autoCompleteType="off"
           keyboardType="default"
           textContentType="none"
           onPress={async (url, setResult) => {
             try {
-              const result = await Embedded.isBindCredentialUrl(url);
+              const result = await Embedded.isBindPasskeyUrl(url);
               setResult(
                 `${result}: ${url} ${isOrIsNot(
                   result
-                )} a valid bind credential URL`
+                )} a valid bind passkey URL`
               );
             } catch (e) {
               if (e instanceof Error) {

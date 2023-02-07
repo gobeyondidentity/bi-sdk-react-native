@@ -3,19 +3,19 @@
 @interface RCT_EXTERN_MODULE(BiSdkReactNative, NSObject)
 
 RCT_EXTERN_METHOD(authenticate: (NSString)url
-                  credentialID: (NSString)credentialID
+                  passkeyId: (NSString)passkeyId
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(bindCredential: (NSString)url
+RCT_EXTERN_METHOD(bindPasskey: (NSString)url
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(deleteCredential: (NSString)id
+RCT_EXTERN_METHOD(deletePasskey: (NSString)id
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(getCredentials: (RCTPromiseResolveBlock)resolve
+RCT_EXTERN_METHOD(getPasskeys: (RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 
 RCT_EXTERN_METHOD(initialize: (NSArray)allowedDomains
@@ -27,7 +27,7 @@ RCT_EXTERN_METHOD(isAuthenticateUrl: (NSString)url
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(isBindCredentialUrl: (NSString)url
+RCT_EXTERN_METHOD(isBindPasskeyUrl: (NSString)url
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 @end

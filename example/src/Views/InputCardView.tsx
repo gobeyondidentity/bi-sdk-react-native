@@ -37,6 +37,7 @@ export default function InputCardView({
 }: InputCardViewProps) {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
+  const [loading, setLoading] = useState(false);
 
   return (
     <View>
@@ -54,12 +55,16 @@ export default function InputCardView({
       />
       <Button
         onPress={async () => {
-          onPress(input, setResult);
+          setLoading(true);
+          onPress(input, (result) => {
+            setLoading(false);
+            setResult(result);
+          });
         }}
         title={buttonTitle}
         color={Color.primary}
       />
-      <ResponseLabelView text={result} />
+      <ResponseLabelView text={result} isLoading={loading} />
     </View>
   );
 }

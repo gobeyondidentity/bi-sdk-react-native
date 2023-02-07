@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AuthenticateView from './Views/AuthenticateView';
-import CredentialManagementView from './Views/CredentialManagementView';
+import PasskeyManagementView from './Views/PasskeyManagementView';
 import Demo from './Views/Demo';
 import Home from './Views/Home';
 import URLValidationView from './Views/URLValidationView';
@@ -35,9 +35,9 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} options={{ title: '' }} />
         <Stack.Screen name="Demo" component={Demo} options={{ title: '' }} />
         <Stack.Screen
-          name="CredentialManagement"
-          component={CredentialManagementView}
-          options={{ title: 'Manage Credentials' }}
+          name="PasskeyManagement"
+          component={PasskeyManagementView}
+          options={{ title: 'Manage Passkeys' }}
         />
         <Stack.Screen
           name="Authenticate"
@@ -45,9 +45,9 @@ export default function App() {
           options={{ title: 'Authenticate' }}
         />
         <Stack.Screen
-          name="URLValidatation"
+          name="URLValidation"
           component={URLValidationView}
-          options={{ title: 'URL Validatation' }}
+          options={{ title: 'URL Validation' }}
         />
         <Stack.Screen
           name="DevDocs"

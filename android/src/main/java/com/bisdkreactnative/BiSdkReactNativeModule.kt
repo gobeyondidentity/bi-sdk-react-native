@@ -9,13 +9,12 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import com.beyondidentity.embedded.sdk.EmbeddedSdk
-import com.beyondidentity.embedded.sdk.models.Credential
-import com.beyondidentity.embedded.sdk.models.CredentialState
-import com.beyondidentity.embedded.sdk.models.CredentialState.ACTIVE
-import com.beyondidentity.embedded.sdk.models.CredentialState.REVOKED
+import com.beyondidentity.embedded.sdk.models.Passkey
+import com.beyondidentity.embedded.sdk.models.State
+import com.beyondidentity.embedded.sdk.models.State.ACTIVE
+import com.beyondidentity.embedded.sdk.models.State.REVOKED
 import com.facebook.react.bridge.*
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
-
 
 private const val EMBEDDED_KEYGUARD_REQUEST = 2314
 private const val INITIALIZE_ERROR = "Please call Embedded.initializeBiSdk first"
@@ -70,7 +69,7 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
   @ReactMethod
   fun authenticate(
     url: String,
-    credentialID: String,
+    passkeyId: String,
     promise: Promise
   ) {
     if (!isEmbeddedSdkInitialized) {
@@ -78,10 +77,10 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
       return
     }
 
-    EmbeddedSdk.authenticate(url, credentialID) { authResult ->
+    EmbeddedSdk.authenticate(url, passkeyId) { authResult ->
       authResult.onSuccess { authResponse ->
         val n = WritableNativeMap()
-        n.putString("redirectURL", authResponse.redirectUrl ?: "")
+        n.putString("redirectUrl", authResponse.redirectUrl ?: "")
         n.putString("message", authResponse.message ?: "")
         promise.resolve(n)
       }
@@ -90,16 +89,16 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun bindCredential(url: String, promise: Promise) {
+  fun bindPasskey(url: String, promise: Promise) {
     if (!isEmbeddedSdkInitialized) {
       promise.reject(Throwable(INITIALIZE_ERROR))
       return
     }
 
-    EmbeddedSdk.bindCredential(url) { bindResult ->
+    EmbeddedSdk.bindPasskey(url) { bindResult ->
       bindResult.onSuccess { bindResponse ->
         val n = WritableNativeMap()
-        n.putMap("credential", makeCredentialMap(bindResponse.credential))
+        n.putMap("passkey", makePasskeyMap(bindResponse.passkey))
         n.putString("postBindingRedirectUri", bindResponse.postBindingRedirectUri ?: "")
         promise.resolve(n)
       }
@@ -108,33 +107,33 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun deleteCredential(id: String, promise: Promise) {
+  fun deletePasskey(id: String, promise: Promise) {
     if (!isEmbeddedSdkInitialized) {
       promise.reject(Throwable(INITIALIZE_ERROR))
       return
     }
 
-    EmbeddedSdk.deleteCredential(id) { deleteCredResult ->
-      deleteCredResult.onSuccess {
+    EmbeddedSdk.deletePasskey(id) { deleteResult ->
+      deleteResult.onSuccess {
         promise.resolve(id)
       }
-      deleteCredResult.onFailure { t -> promise.reject(t) }
+      deleteResult.onFailure { t -> promise.reject(t) }
     }
   }
 
   @ReactMethod
-  fun getCredentials(promise: Promise) {
+  fun getPasskeys(promise: Promise) {
     if (!isEmbeddedSdkInitialized) {
       promise.reject(Throwable(INITIALIZE_ERROR))
       return
     }
-    EmbeddedSdk.getCredentials { credResult ->
-      credResult.onSuccess { credentials ->
-        val credentialsArray = WritableNativeArray()
-        credentials.map { makeCredentialMap(it) }.forEach { credentialsArray.pushMap(it) }
-        promise.resolve(credentialsArray)
+    EmbeddedSdk.getPasskeys { getResult ->
+      getResult.onSuccess { passkeys ->
+        val passkeysArray = WritableNativeArray()
+        passkeys.map { makePasskeyMap(it) }.forEach { passkeysArray.pushMap(it) }
+        promise.resolve(passkeysArray)
       }
-      credResult.onFailure { t ->
+      getResult.onFailure { t ->
         promise.reject(t)
       }
     }
@@ -175,7 +174,7 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun isBindCredentialUrl(
+  fun isBindPasskeyUrl(
     url: String,
     promise: Promise
   ) {
@@ -183,7 +182,7 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
       promise.reject(Throwable(INITIALIZE_ERROR))
       return
     }
-    promise.resolve(EmbeddedSdk.isBindCredentialUrl(url))
+    promise.resolve(EmbeddedSdk.isBindPasskeyUrl(url))
   }
 
   @ReactMethod
@@ -222,44 +221,44 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
     }
   }
 
-  private fun makeCredentialMap(credential: Credential): WritableNativeMap {
+  private fun makePasskeyMap(passkey: Passkey): WritableNativeMap {
     val map = WritableNativeMap()
-    map.putString("id", credential.id)
-    map.putString("localCreated", credential.localCreated.toString())
-    map.putString("localUpdated", credential.localUpdated.toString())
-    map.putString("apiBaseUrl", credential.apiBaseURL.toString())
-    map.putString("tenantId", credential.tenantId)
-    map.putString("realmId", credential.realmId)
-    map.putString("identityId", credential.identityId)
-    map.putString("keyHandle", credential.keyHandle)
-    map.putString("state", credentialStateToPascalCase(credential.state))
-    map.putString("created", credential.created.toString())
-    map.putString("updated", credential.updated.toString())
+    map.putString("id", passkey.id)
+    map.putString("localCreated", passkey.localCreated.toString())
+    map.putString("localUpdated", passkey.localUpdated.toString())
+    map.putString("apiBaseUrl", passkey.apiBaseUrl.toString())
+    map.putString("keyHandle", passkey.keyHandle)
+    map.putString("state", passkeyStateToPascalCase(passkey.state))
+    map.putString("created", passkey.created.toString())
+    map.putString("updated", passkey.updated.toString())
 
     val realmMap = WritableNativeMap()
-    realmMap.putString("displayName", credential.realm.displayName)
+    realmMap.putString("id", passkey.realm.id)
+    realmMap.putString("displayName", passkey.realm.displayName)
     map.putMap("realm", realmMap)
 
     val identityMap = WritableNativeMap()
-    identityMap.putString("displayName", credential.identity.displayName)
-    identityMap.putString("username", credential.identity.username)
-    identityMap.putString("primaryEmailAddress", credential.identity.primaryEmailAddress)
+    identityMap.putString("id", passkey.identity.id)
+    identityMap.putString("displayName", passkey.identity.displayName)
+    identityMap.putString("username", passkey.identity.username)
+    identityMap.putString("primaryEmailAddress", passkey.identity.primaryEmailAddress)
     map.putMap("identity", identityMap)
 
     val tenantMap = WritableNativeMap()
-    tenantMap.putString("displayName", credential.tenant.displayName)
+    tenantMap.putString("id", passkey.tenant.id)
+    tenantMap.putString("displayName", passkey.tenant.displayName)
     map.putMap("tenant", tenantMap)
 
     val themeMap = WritableNativeMap()
-    themeMap.putString("logoLightUrl", credential.theme.logoUrlLight.toString())
-    themeMap.putString("logoDarkUrl", credential.theme.logoUrlDark.toString())
-    themeMap.putString("supportUrl", credential.theme.supportUrl.toString())
+    themeMap.putString("logoLightUrl", passkey.theme.logoLightUrl.toString())
+    themeMap.putString("logoDarkUrl", passkey.theme.logoDarkUrl.toString())
+    themeMap.putString("supportUrl", passkey.theme.supportUrl.toString())
     map.putMap("theme", themeMap)
 
     return map
   }
 
-  private fun credentialStateToPascalCase(state: CredentialState) =
+  private fun passkeyStateToPascalCase(state: State) =
     when (state) {
       ACTIVE -> "Active"
       REVOKED -> "Revoked"

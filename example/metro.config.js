@@ -5,16 +5,16 @@
  * @format
  */
 
- const path = require('path');
- const blacklist = require('metro-config/src/defaults/blacklist');
- const escape = require('escape-string-regexp');
- const pak = require('../package.json');
- 
- const root = path.resolve(__dirname, '..');
- 
- const modules = Object.keys({
-   ...pak.peerDependencies,
- });
+const path = require('path');
+const blacklist = require('metro-config/src/defaults/exclusionList');
+const escape = require('escape-string-regexp');
+const pak = require('../package.json');
+
+const root = path.resolve(__dirname, '..');
+
+const modules = Object.keys({
+  ...pak.peerDependencies,
+});
 
 module.exports = {
   projectRoot: __dirname,

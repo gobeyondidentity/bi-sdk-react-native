@@ -6,7 +6,7 @@ interface AuthenticateResponse {
    * The redirect URL that originates from the /authorize call's `redirect_uri` parameter.
    * The OAuth2 authorization `code` and the `state` parameter of the /authorize call are attached with the "code" and "state" parameters to this URL.
    */
-  redirectURL: string;
+  redirectUrl: string;
   /**
    * An optional displayable message defined by policy returned by the cloud on success.
    */
@@ -14,91 +14,88 @@ interface AuthenticateResponse {
 }
 
 /**
- * A response returned after successfully binding a credential to a device.
+ * A response returned after successfully binding a passkey to a device.
  */
-interface BindCredentialResponse {
+interface BindPasskeyResponse {
   /**
-   * The credential bound to the device.
+   * The passkey bound to the device.
    */
-  credential: Credential;
+  passkey: Passkey;
   /**
-   * A Uri that can be redirected to once a credential is bound. This could be a uri that automatically logs the user in with the newly bound credential, or a success page indicating that a credential has been bound.
+   * A URI that can be redirected to once a passkey is bound. This could be a URI that automatically logs the user in with the newly bound passkey, or a success page indicating that a passkey has been bound.
    */
-  postBindingRedirectURI?: string;
+  postBindingRedirectUri?: string;
 }
 
 /**
- * A user credential. Think of this as a wrapper around an X.509 Certificate.
+ * A Universal Passkey is a public and private key pair. The private key is generated, stored, and never leaves the user’s devices’ hardware root of trust (i.e. Secure Enclave).
+ * The public key is sent to the Beyond Identity cloud. The private key cannot be tampered with, viewed, or removed from the device in which it is created unless the user explicitly indicates that the trusted device be removed.
+ * Passkeys are cryptographically linked to devices and an Identity. A single device can store multiple passkeys for different users and a single Identity can have multiple passkeys.
  */
-interface Credential {
+interface Passkey {
   /**
-   * The globally unique identifier of the credential.
+   * The globally unique identifier of the passkey.
    */
   id: string;
   /**
-   * The time this credential was created.
+   * The time this passkey was created.
    */
   created: string;
   /**
-   * The last time this credential was updated.
+   * The last time this passkey was updated.
    */
   updated: string;
   /**
-   * The time when this credential was created locally.
-   * This could be different from "created" which is the time when this credential was created on the server.
+   * The time when this passkey was created locally.
+   * This could be different from "created" which is the time when this passkey was created on the server.
    */
   localCreated: string;
   /**
-   * The last time when this credential was updated locally.
-   * This could be different from "updated" which is the last time when this credential was updated on the server.
+   * The last time when this passkey was updated locally.
+   * This could be different from "updated" which is the last time when this passkey was updated on the server.
    */
   localUpdated: string;
   /**
-   * The base url for all binding & auth requests
+   * The base URL for all binding & auth requests
    */
   apiBaseUrl: string;
-  /**
-   * The Identity's Tenant.
-   */
-  tenantId: string;
-  /**
-   * The Identity's Realm.
-   */
-  realmId: string;
-  /**
-   * The Identity that owns this credential.
-   */
-  identityId: string;
   /**
    * Associated key handle.
    */
   keyHandle: string;
   /**
-   * Current state of the credential.
+   * Current state of the passkey.
    */
-  state: CredentialState;
+  state: PasskeyState;
   /**
-   * Realm information associated with this credential.
+   * Realm information associated with this passkey.
    */
-  realm: Realm;
+  realm: PasskeyRealm;
   /**
-   * Identity information associated with this credential.
+   * Identity information associated with this passkey.
    */
-  identity: Identity;
+  identity: PasskeyIdentity;
   /**
-   * Tenant information associated with this credential.
+   * Tenant information associated with this passkey.
    */
-  tenant: Tenant;
+  tenant: PasskeyTenant;
   /**
-   * Theme information associated with this credential.
+   * Theme information associated with this passkey.
    */
-  theme: Theme;
+  theme: PasskeyTheme;
 }
 
 /**
- * Realm information associated with a credential.
+ * Realm information associated with a `Passkey`.
+ * A Realm is a unique administrative domain within a `Tenant`. 
+ * Some Tenants will only need the use of a single Realm, in this case a Realm and a Tenant may seem synonymous. 
+ * Each Realm contains a unique set of Directory, Policy, Event, Application, and Branding objects.
  */
-interface Realm {
+interface PasskeyRealm {
+  /**
+   * The unique identifier of the realm.
+   */
+  id: string;
   /**
    * The display name of the realm.
    */
@@ -106,9 +103,16 @@ interface Realm {
 }
 
 /**
- * Identity information associated with a credential.
+ * Identity information associated with a `Passkey`.
+ * An Identity is a unique identifier that may be used by an end-user to gain access governed by Beyond Identity. 
+ * An Identity is created at the Realm level. 
+ * An end-user may have multiple identities. A Realm can have many Identities.
  */
-interface Identity {
+interface PasskeyIdentity {
+  /**
+   * The unique identifier of the identity..
+   */
+  id: string;
   /**
    * The display name of the identity.
    */
@@ -124,9 +128,14 @@ interface Identity {
 }
 
 /**
- * Tenant associated with a credential.
+ * Tenant information associated with a `Passkey`.
+ * A Tenant represents an organization in the Beyond Identity Cloud and serves as a root container for all other cloud components in your configuration.
  */
-interface Tenant {
+interface PasskeyTenant {
+  /**
+   * The unique identifier of the tenant.
+   */
+  id: string;
   /**
    * The display name of the tenant.
    */
@@ -134,9 +143,9 @@ interface Tenant {
 }
 
 /**
- * Theme associated with a credential.
+ * Theme associated with a `Passkey`.
  */
-interface Theme {
+interface PasskeyTheme {
   /**
    * URL resolving the logo in light mode.
    */
@@ -152,20 +161,20 @@ interface Theme {
 }
 
 /**
- * The state of the Credential: either active or revoked
+ * The state of a given `Passkey`: either active or revoked
  */
-type CredentialState = 'Active' | 'Revoked';
+type PasskeyState = 'Active' | 'Revoked';
 
 type Success = 'success';
 
 export {
   AuthenticateResponse,
-  BindCredentialResponse,
-  Credential,
-  CredentialState,
-  Realm,
-  Identity,
-  Tenant,
-  Theme,
+  BindPasskeyResponse,
+  Passkey,
+  PasskeyState,
+  PasskeyRealm,
+  PasskeyIdentity,
+  PasskeyTenant,
+  PasskeyTheme,
   Success,
 };

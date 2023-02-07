@@ -35,7 +35,7 @@ class BiSdkReactNative: RCTEventEmitter {
     
     @objc func authenticate(
         _ url: String,
-        credentialID: String,
+        passkeyId: String,
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ){
@@ -49,13 +49,13 @@ class BiSdkReactNative: RCTEventEmitter {
         
         Embedded.shared.authenticate(
             url: url,
-            credentialID: CredentialID(credentialID)
+            id: Passkey.Id(passkeyId)
         ){ result in
             switch result {
             case let .success(authResponse):
                 let response: [String: Any] = [
                     "message": authResponse.message ?? "",
-                    "redirectURL": authResponse.redirectURL.absoluteString
+                    "redirectUrl": authResponse.redirectUrl.absoluteString
                 ]
                 resolve(response)
             case let .failure(error):
@@ -64,7 +64,7 @@ class BiSdkReactNative: RCTEventEmitter {
         }
     }
     
-    @objc func bindCredential(
+    @objc func bindPasskey(
         _ url: String,
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
@@ -78,12 +78,12 @@ class BiSdkReactNative: RCTEventEmitter {
             return
         }
         
-        Embedded.shared.bindCredential(url: url) { result in
+        Embedded.shared.bindPasskey(url: url) { result in
             switch result {
-            case let .success(bindResonse):
+            case let .success(bindResponse):
                 let response: [String: Any] = [
-                    "credential": makeCredentialDictionary(bindResonse.credential),
-                    "postBindingRedirectUri": bindResonse.postBindingRedirectURI?.absoluteString ?? ""
+                    "passkey": makePasskeyDictionary(bindResponse.passkey),
+                    "postBindingRedirectUri": bindResponse.postBindingRedirectUri?.absoluteString ?? ""
                 ]
                 resolve(response)
             case let .failure(error):
@@ -92,7 +92,7 @@ class BiSdkReactNative: RCTEventEmitter {
         }
     }
     
-    @objc func deleteCredential(
+    @objc func deletePasskey(
         _ id: String,
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
@@ -101,7 +101,7 @@ class BiSdkReactNative: RCTEventEmitter {
             return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
         }
         
-        Embedded.shared.deleteCredential(for: CredentialID(id)) { result in
+        Embedded.shared.deletePasskey(for: Passkey.Id(id)) { result in
             switch result {
             case .success:
                 resolve(id)
@@ -111,7 +111,7 @@ class BiSdkReactNative: RCTEventEmitter {
         }
     }
     
-    @objc func getCredentials(
+    @objc func getPasskeys(
         _ resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ) {
@@ -119,11 +119,11 @@ class BiSdkReactNative: RCTEventEmitter {
             return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
         }
         
-        Embedded.shared.getCredentials() { result in
+        Embedded.shared.getPasskeys() { result in
             switch result {
-            case let .success(credentials):
-                let credentialDicts = credentials.map(makeCredentialDictionary)
-                resolve(credentialDicts)
+            case let .success(passkeys):
+                let passkeyDicts = passkeys.map(makePasskeyDictionary)
+                resolve(passkeyDicts)
             case let .failure(error):
                 reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
             }
@@ -174,7 +174,7 @@ class BiSdkReactNative: RCTEventEmitter {
         resolve(Embedded.shared.isAuthenticateUrl(url))
     }
     
-    @objc func isBindCredentialUrl(
+    @objc func isBindPasskeyUrl(
         _ url: String,
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
@@ -188,46 +188,46 @@ class BiSdkReactNative: RCTEventEmitter {
             return
         }
         
-        resolve(Embedded.shared.isBindCredentialUrl(url))
+        resolve(Embedded.shared.isBindPasskeyUrl(url))
     }
     
 }
 
 // MARK: HELPERS
 
-private func makeCredentialDictionary(_ credential: Credential) -> [String: Any] {
+private func makePasskeyDictionary(_ passkey: Passkey) -> [String: Any] {
     return [
-        "id" : credential.id.value,
-        "localCreated" : credential.localCreated.description,
-        "localUpdated" : credential.localUpdated.description,
-        "apiBaseUrl" : credential.apiBaseURL.absoluteString,
-        "tenantId" : credential.tenantID.value,
-        "realmId" : credential.realmID.value,
-        "identityId" : credential.identityID.value,
-        "keyHandle" : credential.keyHandle.value,
-        "state" : credential.state.toPascalCase(),
-        "created" : credential.created.description,
-        "updated" : credential.updated.description,
+        "id" : passkey.id.value,
+        "localCreated" : passkey.localCreated.description,
+        "localUpdated" : passkey.localUpdated.description,
+        "apiBaseUrl" : passkey.apiBaseUrl.absoluteString,
+        "keyHandle" : passkey.keyHandle.value,
+        "state" : passkey.state.toPascalCase(),
+        "created" : passkey.created.description,
+        "updated" : passkey.updated.description,
         "realm": [
-            "displayName": credential.realm.displayName
+            "id": passkey.realm.id.value,
+            "displayName": passkey.realm.displayName
         ],
         "identity": [
-            "displayName": credential.identity.displayName,
-            "username": credential.identity.username,
-            "primaryEmailAddress": credential.identity.primaryEmailAddress
+            "id": passkey.identity.id.value,
+            "displayName": passkey.identity.displayName,
+            "username": passkey.identity.username,
+            "primaryEmailAddress": passkey.identity.primaryEmailAddress ?? ""
         ],
         "tenant": [
-            "displayName": credential.tenant.displayName
+            "id": passkey.tenant.id.value,
+            "displayName": passkey.tenant.displayName
         ],
         "theme": [
-            "logoLightUrl": credential.theme.logoLightURL.absoluteString,
-            "logoDarkUrl": credential.theme.logoDarkURL.absoluteString,
-            "supportUrl": credential.theme.supportURL.absoluteString,
+            "logoLightUrl": passkey.theme.logoLightUrl.absoluteString,
+            "logoDarkUrl": passkey.theme.logoDarkUrl.absoluteString,
+            "supportUrl": passkey.theme.supportUrl.absoluteString,
         ]
     ]
 }
 
-extension CredentialState {
+extension Passkey.State {
     func toPascalCase() -> String {
         switch self {
         case .active:

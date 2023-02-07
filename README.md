@@ -10,27 +10,29 @@
 
 # Beyond Identity React Native SDK
 
-Goodbye, passwords! The Beyond Identity SDK for React Native is a wrapper around our Native Embedded SDKs ([iOS](https://github.com/gobeyondidentity/bi-sdk-swift) and [Android](https://github.com/gobeyondidentity/bi-sdk-android)), which allows you to embed the Passwordless experience into your product. This SDK supports OIDC and OAuth2.
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+### Embedded SDK
+
+Goodbye, passwords! The Beyond Identity SDK for React Native is a wrapper around our Native Embedded SDKs ([Android](https://github.com/gobeyondidentity/bi-sdk-android) and [iOS](https://github.com/gobeyondidentity/bi-sdk-swift)), which allows you to embed the Passwordless experience into your product. Users will not need to download the Beyond Identity Authenticator. This SDK supports OIDC and OAuth2.
 
 ## Installation
 
-### Install the library:
+### Using a [bare expo](https://docs.expo.dev/bare/hello-world/) or [react-native init](https://reactnative.dev/docs/environment-setup) app.
 
-```sh
+1. Install the SDK:
+```
 yarn add @beyondidentity/bi-sdk-react-native
 ```
-
 or
-
 ```
-npm i --save @beyondidentity/bi-sdk-react-native
+npm install @beyondidentity/bi-sdk-react-native
 ```
+2. Update Native Requirements in your ios/android folders:
 
-> Note that this library is not compatible with Expo projects. This is because Expo's “managed” workflow does not allow usage of React Native libraries that introduce their own native code beyond the React Native APIs and components that are available in the Expo client app. If you have an Expo app and wish to use this project, you must `eject`.
+Please make sure your iOS project supports "minimum deployment target" 13.0 or later.
 
-### Update Native:
-
-Make sure your `ios/Podfile` supports iOS 13 or later
+In your `ios/Podfile` set:
 
 ```sh
 platform :ios, '13.0'
@@ -64,17 +66,94 @@ allprojects {
 }
 ```
 
-## Usage
+### Using `expo`
+> :warning: This package cannot be used in "Expo Go" because [it requires custom native code](https://docs.expo.io/workflow/customizing/). However you can leverage this library with a [development build](https://docs.expo.dev/development/introduction/) or [prebuild](https://docs.expo.dev/workflow/prebuild/).  
 
-```js
-import { Embedded } from '@beyondidentity/bi-sdk-react-native';
+1. Install the SDK:
+```
+expo install @beyondidentity/bi-sdk-react-native
 ```
 
-A set of functions are provided to you in this SDK. Check out the [documentation](https://developer.beyondidentity.com) for more information.
+2. Add the SDK [config plugin](https://docs.expo.dev/guides/config-plugins/) to the [plugins array](https://docs.expo.dev/versions/latest/config/app/#plugins) of your app.{json,config.js,config.ts}:
+```
+{
+  "expo": {
+    "plugins": [
+      ["@beyondidentity/bi-sdk-react-native"],
+    ]
+  }
+}
+```
 
-## Run Examples
+3. Set native requirments either with [expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/) or modify project [static files](https://docs.expo.dev/guides/config-plugins/#static-modification)
 
-To set up:
+A. Modify the following static files
+
+android/gradle.properties
+```
+android.minSdkVersion=26
+```
+ios/Podfile.properties.json
+```
+"ios.deploymentTarget": "13.0"
+```
+
+*or* 
+
+B. Add [expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/) to your app.{json,config.js,config.ts}:
+
+
+```
+expo install expo-build-properties
+```
+
+```
+{
+  "expo": {
+    "plugins": [
+      ["@beyondidentity/bi-sdk-react-native"],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          },
+          "ios": {
+            "deploymentTarget": "13.0"
+          }
+        }
+      ]
+    ]
+  }
+}
+```
+
+4.  Next, rebuild your app as described in the ["Adding custom native code"](https://docs.expo.dev/workflow/customizing/) guide.
+
+## Usage
+
+Check out the [Developer Documentation](https://developer.beyondidentity.com) and the [SDK API Documentation](https://gobeyondidentity.github.io/bi-sdk-react-native/) for more information.
+
+### Setup
+
+First, before calling the Embedded functions, make sure to initialize the SDK. This can be done where you register your root component.
+
+```javascript
+import { Embedded } from '@beyondidentity/bi-sdk-react-native';
+
+Embedded.initialize(
+  biometricAskPrompt: string,
+  allowedDomains?: string[]
+): Promise<Success>;
+```
+
+You may also add a listener to log native events with `Embedded.logEventEmitter` after initializing.
+
+## Example App
+
+Clone the following repo and use the available comands to see the SDK in action!
+
+To set up (run this first):
 
 ```sh
 yarn bootstrap

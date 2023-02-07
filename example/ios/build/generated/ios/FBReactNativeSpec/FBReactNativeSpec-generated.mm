@@ -95,6 +95,10 @@ namespace facebook {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "getCurrentReduceMotionState", @selector(getCurrentReduceMotionState:onError:), args, count);
     }
 
+    static facebook::jsi::Value __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentPrefersCrossFadeTransitionsState(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "getCurrentPrefersCrossFadeTransitionsState", @selector(getCurrentPrefersCrossFadeTransitionsState:onError:), args, count);
+    }
+
     static facebook::jsi::Value __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentReduceTransparencyState(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "getCurrentReduceTransparencyState", @selector(getCurrentReduceTransparencyState:onError:), args, count);
     }
@@ -132,6 +136,9 @@ namespace facebook {
         
         
         methodMap_["getCurrentReduceMotionState"] = MethodMetadata {2, __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentReduceMotionState};
+        
+        
+        methodMap_["getCurrentPrefersCrossFadeTransitionsState"] = MethodMetadata {2, __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentPrefersCrossFadeTransitionsState};
         
         
         methodMap_["getCurrentReduceTransparencyState"] = MethodMetadata {2, __hostFunction_NativeAccessibilityManagerSpecJSI_getCurrentReduceTransparencyState};

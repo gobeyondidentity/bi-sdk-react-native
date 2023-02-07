@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
-  s.dependency "BeyondIdentityEmbedded", '1.0.4'
+  s.dependency "BeyondIdentityEmbedded", '2.0.0'
 
 end

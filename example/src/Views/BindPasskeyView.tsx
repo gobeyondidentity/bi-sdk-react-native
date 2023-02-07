@@ -1,7 +1,7 @@
 import { Embedded } from '@beyondidentity/bi-sdk-react-native';
 import InputCardView from './InputCardView';
 
-interface BindCredentialViewProps {
+interface BindPasskeyViewProps {
   title: string;
   detail: string;
   buttonTitle: string;
@@ -9,13 +9,13 @@ interface BindCredentialViewProps {
   placeholder: string;
 }
 
-export default function BindCredentialView({
+export default function BindPasskeyView({
   title,
   detail,
   buttonTitle,
   endpoint,
   placeholder,
-}: BindCredentialViewProps) {
+}: BindPasskeyViewProps) {
   return InputCardView({
     title: title,
     detail: detail,
@@ -75,7 +75,7 @@ async function makeBindRequest(
     }
 
     const bindUrl = json.credential_binding_link;
-    let bindResponse = await Embedded.bindCredential(bindUrl);
+    let bindResponse = await Embedded.bindPasskey(bindUrl);
 
     return setResult(JSON.stringify(bindResponse, null, 2));
   } catch (e) {

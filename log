@@ -1,1000 +1,1000 @@
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:855:10: [33mparameter 'eb' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param eb the event_base structure returned by event_init()[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:875:10: [33mparameter 'eb' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param eb the event_base structure returned by event_init()[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:888:10: [33mparameter 'eb' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param eb the event_base structure returned by event_init()[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:903:10: [33mparameter 'eb' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param eb the event_base structure returned by event_init()[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1008:11: [33mparameter 'fd' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param fd An fd or signal[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1009:11: [33mparameter 'events' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param events One or more EV_* flags[0m
-[12:56:35]: ▸ [35m[36m          ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1010:11: [33mparameter 'arg' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param arg A user-supplied argument.[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1078:10: [33mparameter 'base' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param base the event base to which the event should be attached.[0m
-[12:56:35]: ▸ [35m[36m          ^~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1079:10: [33mparameter 'fd' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param fd the file descriptor or signal to be monitored, or -1.[0m
-[12:56:35]: ▸ [35m[36m         ^~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1080:10: [33mparameter 'events' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param events desired events to monitor: bitfield of EV_READ, EV_WRITE,[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1082:10: [33mparameter 'callback' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param callback callback function to be invoked when the event occurs[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1083:10: [33mparameter 'callback_arg' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param callback_arg an argument to be passed to the callback function[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1119:10: [33mparameter 'ev' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param ev an event struct to be modified[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1120:10: [33mparameter 'base' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param base the event base to which ev should be attached.[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1121:10: [33mparameter 'fd' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param fd the file descriptor to be monitored[0m
-[12:56:35]: ▸ [35m[36m         ^~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1122:10: [33mparameter 'events' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param events desired events to monitor; can be EV_READ and/or EV_WRITE[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1123:10: [33mparameter 'callback' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param callback callback function to be invoked when the event occurs[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1124:10: [33mparameter 'callback_arg' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param callback_arg an argument to be passed to the callback function[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1197:10: [33mparameter 'base' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param base an event_base[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1198:10: [33mparameter 'fd' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param fd a file descriptor to monitor, or -1 for no fd.[0m
-[12:56:35]: ▸ [35m[36m         ^~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1199:10: [33mparameter 'events' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param events event(s) to monitor; can be any of EV_READ |[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1201:10: [33mparameter 'callback' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param callback callback function to be invoked when the event occurs[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1202:10: [33mparameter 'arg' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param arg an argument to be passed to the callback function[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1203:10: [33mparameter 'timeout' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param timeout the maximum amount of time to wait for the event. NULL[0m
-[12:56:35]: ▸ [35m[36m         ^~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1254:10: [33mparameter 'ev' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param ev an event struct to be removed from the working set[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1463:10: [33mparameter 'eb' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param eb the event_base structure returned by event_base_new()[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1464:10: [33mparameter 'npriorities' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param npriorities the maximum number of priorities[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1484:10: [33mparameter 'ev' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param ev an event struct[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1485:10: [33mparameter 'priority' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m  @param priority the new priority to be assigned[0m
-[12:56:35]: ▸ [35m[36m         ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1555:11: [33mparameter 'base' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param base An event_base on which to scan the events.[0m
-[12:56:35]: ▸ [35m[36m         ^~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1556:11: [33mparameter 'output' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param output A stdio file to write on.[0m
-[12:56:35]: ▸ [35m[36m          ^~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1582:11: [33mparameter 'fd' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param fd The signal to active events on.[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:210:11: [33mparameter 'buffer' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m * @param buffer the evbuffer that the callback is watching.[0m
-[12:56:35]: ▸ [35m[36m          ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:211:11: [33mparameter 'cb' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m * @param cb the callback whose status we want to change.[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:219:11: [33mparameter 'buffer' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m * @param buffer the evbuffer that the callback is watching.[0m
-[12:56:35]: ▸ [35m[36m          ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:220:11: [33mparameter 'cb' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m * @param cb the callback whose status we want to change.[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer_compat.h:42:5: [33mdeclaration is marked with '@deprecated' command but does not have a deprecation attribute [-Wdocumentation-deprecated-sync][0m
-[12:56:35]: ▸ [35m   @deprecated This function is deprecated because its behavior is not correct[0m
-[12:56:35]: ▸ [35m[36m          ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer_compat.h:82:4: [33mdeclaration is marked with '@deprecated' command but does not have a deprecation attribute [-Wdocumentation-deprecated-sync][0m
-[12:56:35]: ▸ [35m  @deprecated This function is deprecated because it clears all previous[0m
-[12:56:35]: ▸ [35m[36m^[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:205:11: [33mparameter 'bufev' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param bufev an existing bufferevent allocated with[0m
-[12:56:35]: ▸ [35m[36m^[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:207:11: [33mparameter 'addr' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param addr the address we should connect to[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:208:11: [33mparameter 'socklen' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param socklen The length of the address[0m
-[12:56:35]: ▸ [35m[36m          ^~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:219:11: [33mparameter 'bufev' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param bufev An existing bufferevent allocated with bufferevent_socket_new()[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:220:11: [33mparameter 'evdns_base' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param evdns_base Optionally, an evdns_base to use for resolving hostnames[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:222:11: [33mparameter 'family' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param family A preferred address family to resolve addresses to, or[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:225:11: [33mparameter 'hostname' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param hostname The hostname to resolve; see below for notes on recognized[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:227:11: [33mparameter 'port' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param port The port to connect to on the resolved address.[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:646:17: [33mempty paragraph passed to '@param' command [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param options[0m
-[12:56:35]: ▸ [35m[36m          ^~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:659:17: [33mempty paragraph passed to '@param' command [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param options[0m
-[12:56:35]: ▸ [35m[36m   ~~~~~~~~~~~~~^[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:689:12: [33mparameter 'limit' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m    @param limit A suggested upper bound of bytes to write to dst.[0m
-[12:56:35]: ▸ [35m[36m   ~~~~~~~~~~~~~^[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent_compat.h:59:4: [33mdeclaration is marked with '@deprecated' command but does not have a deprecation attribute [-Wdocumentation-deprecated-sync][0m
-[12:56:35]: ▸ [35m  @deprecated This function is deprecated because it uses the current[0m
-[12:56:35]: ▸ [35m[36m           ^~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/thread.h:187:11: [33mparameter 'base' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param base the event base for which to set the id function[0m
-[12:56:35]: ▸ [35m[36m^[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:44:11: [33mparameter 'deferred' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param deferred The struct event_callback structure to initialize.[0m
-[12:56:35]: ▸ [35m[36m          ^~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:45:11: [33mparameter 'priority' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param priority The priority that the callback should run at.[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:46:11: [33mparameter 'cb' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param cb The function to run when the struct event_callback executes.[0m
-[12:56:35]: ▸ [35m[36m          ^~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:47:11: [33mparameter 'arg' not found in the function declaration [-Wdocumentation][0m
-[12:56:35]: ▸ [35m   @param arg The function's second argument.[0m
-[12:56:35]: ▸ [35m[36m          ^~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/buffer.c:2347:7: [33mimplicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32][0m
-[12:56:35]: ▸ [35m                n = readv(fd, vecs, nvecs);[0m
-[12:56:35]: ▸ [35m[36m          ^~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/buffer.c:2460:6: [33mimplicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32][0m
-[12:56:35]: ▸ [35m        n = writev(fd, iov, i);[0m
-[12:56:35]: ▸ [35m[36m                  ~ ^~~~~~~~~~~~~~~~~~~~~~[0m
-[12:56:35]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/buffer.c:2491:10: [33mimplicit conversion loses integer precision: 'int64_t' (aka 'long long') to 'int' [-Wshorten-64-to-32][0m
-[12:56:35]: ▸ [35m        return (len);[0m
-[12:56:35]: ▸ [35m[36m          ~ ^~~~~~~~~~~~~~~~~~[0m
-[12:56:36]: [35m[33m▸[0m [39;1mBuilding library[0m liblibevent.a[0m
-[12:56:36]: [35m[33m▸[0m [39;1mCompiling[0m json_pointer.cpp[0m
-[12:56:37]: [35m[33m▸[0m [39;1mCompiling[0m json.cpp[0m
-[12:56:41]: [35m[33m▸[0m [39;1mCompiling[0m dynamic.cpp[0m
-[12:56:41]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/dynamic.cpp:475:3: [33mcode will never be executed [-Wunreachable-code][0m
-[12:56:41]: ▸ [35m  assume_unreachable();[0m
-[12:56:41]: ▸ [35m[36m        ~~~~~~  ^~~[0m
-[12:56:41]: [35m[33m▸[0m [39;1mCompiling[0m WaitOptions.cpp[0m
-[12:56:41]: [35m[33m▸[0m [39;1mCompiling[0m VirtualEventBase.cpp[0m
-[12:56:41]: [35m[33m▸[0m [39;1mCompiling[0m UniqueInstance.cpp[0m
-[12:56:41]: [35m[33m▸[0m [39;1mCompiling[0m Unicode.cpp[0m
-[12:56:41]: [35m[33m▸[0m [39;1mCompiling[0m Try.cpp[0m
-[12:56:41]: [35m[33m▸[0m [39;1mCompiling[0m ToAscii.cpp[0m
-[12:56:41]: [35m[33m▸[0m [39;1mCompiling[0m TimeoutManager.cpp[0m
-[12:56:42]: [35m[33m▸[0m [39;1mCompiling[0m TimekeeperScheduledExecutor.cpp[0m
-[12:56:43]: [35m[33m▸[0m [39;1mCompiling[0m TimedDrivableExecutor.cpp[0m
-[12:56:44]: [35m[33m▸[0m [39;1mCompiling[0m ThreadedExecutor.cpp[0m
-[12:56:45]: [35m[33m▸[0m [39;1mCompiling[0m ThreadWheelTimekeeper.cpp[0m
-[12:56:47]: [35m[33m▸[0m [39;1mCompiling[0m ThreadPoolExecutor.cpp[0m
-[12:56:47]: [35m[33m▸[0m [39;1mCompiling[0m ThreadName.cpp[0m
-[12:56:47]: [35m[33m▸[0m [39;1mCompiling[0m ThreadLocalDetail.cpp[0m
-[12:56:47]: [35m[33m▸[0m [39;1mCompiling[0m ThreadId.cpp[0m
-[12:56:47]: [35m[33m▸[0m [39;1mCompiling[0m SysUio.cpp[0m
-[12:56:47]: [35m[33m▸[0m [39;1mCompiling[0m SysMembarrier.cpp[0m
-[12:56:48]: [35m[33m▸[0m [39;1mCompiling[0m String.cpp[0m
-[12:56:49]: [35m[33m▸[0m [39;1mCompiling[0m StrandExecutor.cpp[0m
-[12:56:50]: [35m[33m▸[0m [39;1mCompiling[0m StaticSingletonManager.cpp[0m
-[12:56:50]: [35m[33m▸[0m [39;1mCompiling[0m SpookyHashV2.cpp[0m
-[12:56:50]: [35m[33m▸[0m [39;1mCompiling[0m Sleeper.cpp[0m
-[12:56:50]: [35m[33m▸[0m [39;1mCompiling[0m SingletonStackTrace.cpp[0m
-[12:56:51]: [35m[33m▸[0m [39;1mCompiling[0m Singleton.cpp[0m
-[12:56:51]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:104:3: [33mcode will never be executed [-Wunreachable-code][0m
-[12:56:51]: ▸ [35m  folly::assume_unreachable();[0m
-[12:56:51]: ▸ [35m[36m  ^~~~~~~~~~~~~~~~~~[0m
-[12:56:51]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:111:3: [33mcode will never be executed [-Wunreachable-code][0m
-[12:56:51]: ▸ [35m  folly::assume_unreachable();[0m
-[12:56:51]: ▸ [35m[36m  ^~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[12:56:51]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:130:3: [33mcode will never be executed [-Wunreachable-code][0m
-[12:56:51]: ▸ [35m  folly::assume_unreachable();[0m
-[12:56:51]: ▸ [35m[36m  ^~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[12:56:51]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:139:3: [33mcode will never be executed [-Wunreachable-code][0m
-[12:56:51]: ▸ [35m  folly::assume_unreachable();[0m
-[12:56:51]: ▸ [35m[36m  ^~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[12:56:51]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:151:3: [33mcode will never be executed [-Wunreachable-code][0m
-[12:56:51]: ▸ [35m  folly::assume_unreachable();[0m
-[12:56:51]: ▸ [35m[36m  ^~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[12:56:56]: [35m[33m▸[0m [39;1mCompiling[0m SimpleLoopController.cpp[0m
-[12:56:56]: [35m[33m▸[0m [39;1mCompiling[0m SharedPromise.cpp[0m
-[12:56:56]: [35m[33m▸[0m [39;1mCompiling[0m SharedMutex.cpp[0m
-[12:56:56]: [35m[33m▸[0m [39;1mCompiling[0m SerialExecutor.cpp[0m
-[12:56:56]: [35m[33m▸[0m [39;1mCompiling[0m SemaphoreBase.cpp[0m
-[12:56:56]: [35m[33m▸[0m [39;1mCompiling[0m Semaphore.cpp[0m
-[12:56:58]: [35m[33m▸[0m [39;1mCompiling[0m ScopeGuard.cpp[0m
-[12:56:58]: [35m[33m▸[0m [39;1mCompiling[0m SanitizeThread.cpp[0m
-[12:56:58]: [35m[33m▸[0m [39;1mCompiling[0m SafeAssert.cpp[0m
-[12:56:58]: [35m[33m▸[0m [39;1mCompiling[0m Request.cpp[0m
-[12:57:01]: [35m[33m▸[0m [39;1mCompiling[0m Rcu.cpp[0m
-[12:57:01]: [35m[33m▸[0m [39;1mCompiling[0m RCT-Folly-dummy.m[0m
-[12:57:01]: [35m[33m▸[0m [39;1mCompiling[0m QueuedImmediateExecutor.cpp[0m
-[12:57:01]: [35m[33m▸[0m [39;1mCompiling[0m QueueObserver.cpp[0m
-[12:57:01]: [35m[33m▸[0m [39;1mCompiling[0m Promise.cpp[0m
-[12:57:01]: [35m[33m▸[0m [39;1mCompiling[0m Pid.cpp[0m
-[12:57:01]: [35m[33m▸[0m [39;1mCompiling[0m ParkingLot.cpp[0m
-[12:57:01]: [35m[33m▸[0m [39;1mCompiling[0m NetOps.cpp[0m
-[12:57:01]: [35m[33m▸[0m [39;1mCompiling[0m MeteredExecutor.cpp[0m
-[12:57:02]: [35m[33m▸[0m [39;1mCompiling[0m MemoryIdler.cpp[0m
-[12:57:02]: [35m[33m▸[0m [39;1mCompiling[0m ManualTimekeeper.cpp[0m
-[12:57:03]: [35m[33m▸[0m [39;1mCompiling[0m ManualExecutor.cpp[0m
-[12:57:03]: [35m[33m▸[0m [39;1mCompiling[0m MallocImpl.cpp[0m
-[12:57:03]: [35m[33m▸[0m [39;1mCompiling[0m MallctlHelper.cpp[0m
-[12:57:04]: [35m[33m▸[0m [39;1mCompiling[0m InlineExecutor.cpp[0m
-[12:57:04]: [35m[33m▸[0m [39;1mCompiling[0m IOThreadPoolExecutor.cpp[0m
-[12:57:06]: [35m[33m▸[0m [39;1mCompiling[0m IOThreadPoolDeadlockDetectorObserver.cpp[0m
-[12:57:06]: [35m[33m▸[0m [39;1mCompiling[0m IOBufQueue.cpp[0m
-[12:57:06]: [35m[33m▸[0m [39;1mCompiling[0m IOBuf.cpp[0m
-[12:57:07]: [35m[33m▸[0m [39;1mCompiling[0m HazptrThreadPoolExecutor.cpp[0m
-[12:57:07]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Private/RCT-Folly/folly/executors/CPUThreadPoolExecutor.h:177:25: [33mpointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness][0m
-[12:57:07]: ▸ [35m  BlockingQueue<CPUTask>* getTaskQueue();[0m
-[12:57:07]: ▸ [35m[36m  ^~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[12:57:10]: [35m[33m▸[0m [39;1mCompiling[0m Hazptr.cpp[0m
-[12:57:10]: [35m[33m▸[0m [39;1mCompiling[0m HardwareConcurrency.cpp[0m
-[12:57:10]: [35m[33m▸[0m [39;1mCompiling[0m Hardware.cpp[0m
-[12:57:10]: [35m[33m▸[0m [39;1mCompiling[0m HHWheelTimer.cpp[0m
-[12:57:10]: [35m[33m▸[0m [39;1mCompiling[0m GuardPageAllocator.cpp[0m
-[12:57:10]: [35m[33m▸[0m [39;1mCompiling[0m GlobalThreadPoolList.cpp[0m
-[12:57:11]: [35m[33m▸[0m [39;1mCompiling[0m GlobalExecutor.cpp[0m
-[12:57:11]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Private/RCT-Folly/folly/executors/CPUThreadPoolExecutor.h:177:25: [33mpointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness][0m
-[12:57:11]: ▸ [35m  BlockingQueue<CPUTask>* getTaskQueue();[0m
-[12:57:11]: ▸ [35m[36m                        ^[0m
-[12:57:16]: [35m[33m▸[0m [39;1mCompiling[0m Future.cpp[0m
-[12:57:16]: [35m[33m▸[0m [39;1mCompiling[0m Futex.cpp[0m
-[12:57:16]: [35m[33m▸[0m [39;1mCompiling[0m Format.cpp[0m
-[12:57:16]: [35m[33m▸[0m [39;1mCompiling[0m FileUtil.cpp[0m
-[12:57:16]: [35m[33m▸[0m [39;1mCompiling[0m FiberManager.cpp[0m
-[12:57:17]: [35m[33m▸[0m [39;1mCompiling[0m Fiber.cpp[0m
-[12:57:17]: [35m[33m▸[0m [39;1mCompiling[0m F14Table.cpp[0m
-[12:57:17]: [35m[33m▸[0m [39;1mCompiling[0m ExecutorWithPriority.cpp[0m
-[12:57:17]: [35m[33m▸[0m [39;1mCompiling[0m Executor.cpp[0m
-[12:57:17]: [35m[33m▸[0m [39;1mCompiling[0m ExceptionWrapper.cpp[0m
-[12:57:18]: [35m[33m▸[0m [39;1mCompiling[0m ExceptionString.cpp[0m
-[12:57:18]: [35m[33m▸[0m [39;1mCompiling[0m Exception.cpp[0m
-[12:57:18]: [35m[33m▸[0m [39;1mCompiling[0m EventHandler.cpp[0m
-[12:57:19]: [35m[33m▸[0m [39;1mCompiling[0m EventBaseManager.cpp[0m
-[12:57:19]: [35m[33m▸[0m [39;1mCompiling[0m EventBaseLocal.cpp[0m
-[12:57:20]: [35m[33m▸[0m [39;1mCompiling[0m EventBaseBackendBase.cpp[0m
-[12:57:22]: [35m[33m▸[0m [39;1mCompiling[0m EventBase.cpp[0m
-[12:57:25]: [35m[33m▸[0m [39;1mCompiling[0m EDFThreadPoolExecutor.cpp[0m
-[12:57:25]: [35m[33m▸[0m [39;1mCompiling[0m DistributedMutex.cpp[0m
-[12:57:25]: [35m[33m▸[0m [39;1mCompiling[0m Demangle.cpp[0m
-[12:57:25]: [35m[33m▸[0m [39;1mCompiling[0m DeadlockDetector.cpp[0m
-[12:57:25]: [35m[33m▸[0m [39;1mCompiling[0m Cursor.cpp[0m
-[12:57:25]: [35m[33m▸[0m [39;1mCompiling[0m Core.cpp[0m
-[12:57:26]: [35m[33m▸[0m [39;1mCompiling[0m Conv.cpp[0m
-[12:57:27]: [35m[33m▸[0m [39;1mCompiling[0m Codel.cpp[0m
-[12:57:27]: [35m[33m▸[0m [39;1mCompiling[0m CacheLocality.cpp[0m
-[12:57:31]: [35m[33m▸[0m [39;1mCompiling[0m CString.cpp[0m
-[12:57:31]: [35m[33m▸[0m [39;1mCompiling[0m CPUThreadPoolExecutor.cpp[0m
-[12:57:31]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Private/RCT-Folly/folly/executors/CPUThreadPoolExecutor.h:177:25: [33mpointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness][0m
-[12:57:31]: ▸ [35m  BlockingQueue<CPUTask>* getTaskQueue();[0m
-[12:57:31]: ▸ [35m[36m                        ^[0m
-[12:57:32]: [35m[33m▸[0m [39;1mCompiling[0m Baton.cpp[0m
-[12:57:32]: [35m[33m▸[0m [39;1mCompiling[0m BatchSemaphore.cpp[0m
-[12:57:32]: [35m[33m▸[0m [39;1mCompiling[0m Barrier.cpp[0m
-[12:57:33]: [35m[33m▸[0m [39;1mCompiling[0m AtomicNotification.cpp[0m
-[12:57:33]: [35m[33m▸[0m [39;1mCompiling[0m AtFork.cpp[0m
-[12:57:33]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/detail/AtFork.cpp:127:2: [33mpthread_atfork unavailable [-W#warnings][0m
-[12:57:33]: ▸ [35m#warning pthread_atfork unavailable[0m
-[12:57:33]: ▸ [35m[36m                        ^[0m
-[12:57:33]: [35m[33m▸[0m [39;1mCompiling[0m AsyncTrace.cpp[0m
-[12:57:33]: [35m[33m▸[0m [39;1mCompiling[0m AsyncTimeout.cpp[0m
-[12:57:34]: [35m[33m▸[0m [39;1mCompiling[0m AsyncStack.cpp[0m
-[12:57:34]: [35m[33m▸[0m [39;1mCompiling[0m AsymmetricMemoryBarrier.cpp[0m
-[12:57:34]: [35m[33m▸[0m [39;1mCompiling[0m Assume.cpp[0m
-[12:57:34]: [35m[33m▸[0m [39;1mBuilding library[0m libRCT-Folly.a[0m
-[12:57:34]: [35m[33m▸[0m [39;1mProcessing[0m ResourceBundle-AccessibilityResources-React-Core-Info.plist[0m
-[12:57:34]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/AccessibilityResources/en.lproj[0m
-[12:57:34]: [35m[33m▸[0m [39;1mTouching[0m AccessibilityResources.bundle (in target 'React-Core-AccessibilityResources' from project 'Pods')[0m
-[12:57:34]: [35m[33m▸[0m [39;1mCompiling[0m jsilib-windows.cpp[0m
-[12:57:34]: [35m[33m▸[0m [39;1mCompiling[0m jsilib-posix.cpp[0m
-[12:57:35]: [35m[33m▸[0m [39;1mCompiling[0m jsi.cpp[0m
-[12:57:35]: [35m[33m▸[0m [39;1mCompiling[0m React-jsi-dummy.m[0m
-[12:57:35]: [35m[33m▸[0m [39;1mCompiling[0m JSIDynamic.cpp[0m
-[12:57:37]: [35m[33m▸[0m [39;1mCompiling[0m JSCRuntime.cpp[0m
-[12:57:37]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-jsi.a[0m
-[12:57:37]: [35m[33m▸[0m [39;1mCompiling[0m React-jsinspector-dummy.m[0m
-[12:57:37]: [35m[33m▸[0m [39;1mCompiling[0m InspectorInterfaces.cpp[0m
-[12:57:38]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-jsinspector.a[0m
-[12:57:38]: [35m[33m▸[0m [39;1mCompiling[0m react_native_log.cpp[0m
-[12:57:38]: [35m[33m▸[0m [39;1mCompiling[0m React-logger-dummy.m[0m
-[12:57:38]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-logger.a[0m
-[12:57:38]: [35m[33m▸[0m [39;1mCompiling[0m React-perflogger-dummy.m[0m
-[12:57:39]: [35m[33m▸[0m [39;1mCompiling[0m BridgeNativeModulePerfLogger.cpp[0m
-[12:57:39]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-perflogger.a[0m
-[12:57:39]: [35m[33m▸[0m [39;1mCompiling[0m ReactMarker.cpp[0m
-[12:57:39]: [35m[33m▸[0m [39;1mCompiling[0m React-cxxreact-dummy.m[0m
-[12:57:39]: [35m[33m▸[0m [39;1mCompiling[0m RAMBundleRegistry.cpp[0m
-[12:57:40]: [35m[33m▸[0m [39;1mCompiling[0m NativeToJsBridge.cpp[0m
-[12:57:43]: [35m[33m▸[0m [39;1mCompiling[0m ModuleRegistry.cpp[0m
-[12:57:43]: [35m[33m▸[0m [39;1mCompiling[0m MethodCall.cpp[0m
-[12:57:43]: [35m[33m▸[0m [39;1mCompiling[0m JSIndexedRAMBundle.cpp[0m
-[12:57:44]: [35m[33m▸[0m [39;1mCompiling[0m JSExecutor.cpp[0m
-[12:57:44]: [35m[33m▸[0m [39;1mCompiling[0m JSBundleType.cpp[0m
-[12:57:44]: [35m[33m▸[0m [39;1mCompiling[0m JSBigString.cpp[0m
-[12:57:44]: [35m[33m▸[0m [39;1mCompiling[0m Instance.cpp[0m
-[12:57:47]: [35m[33m▸[0m [39;1mCompiling[0m CxxNativeModule.cpp[0m
-[12:57:48]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-cxxreact.a[0m
-[12:57:48]: [35m[33m▸[0m [39;1mCompiling[0m JSINativeModules.cpp[0m
-[12:57:50]: [35m[33m▸[0m [39;1mCompiling[0m React-jsiexecutor-dummy.m[0m
-[12:57:50]: [35m[33m▸[0m [39;1mCompiling[0m JSIExecutor.cpp[0m
-[12:57:52]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-jsiexecutor.a[0m
-[12:57:52]: [35m[33m▸[0m [39;1mCompiling[0m log.cpp[0m
-[12:57:52]: [35m[33m▸[0m [39;1mCompiling[0m experiments.cpp[0m
-[12:57:52]: [35m[33m▸[0m [39;1mCompiling[0m event.cpp[0m
-[12:57:52]: [35m[33m▸[0m [39;1mCompiling[0m Yoga.cpp[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m Yoga-dummy.m[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m YGValue.cpp[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m YGStyle.cpp[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m YGNodePrint.cpp[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m YGNode.cpp[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m YGLayout.cpp[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m YGEnums.cpp[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m YGConfig.cpp[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m Utils.cpp[0m
-[12:57:54]: [35m[33m▸[0m [39;1mBuilding library[0m libYoga.a[0m
-[12:57:54]: [35m[33m▸[0m [39;1mCompiling[0m UIView+React.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m React-Core-dummy.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTWrapperViewController.m[0m
-[12:57:57]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Views/RCTWrapperViewController.m:32:10: [33m'automaticallyAdjustsScrollViewInsets' is deprecated: first deprecated in iOS 11.0 - Use UIScrollView's contentInsetAdjustmentBehavior instead [-Wdeprecated-declarations][0m
-[12:57:57]: ▸ [35m    self.automaticallyAdjustsScrollViewInsets = NO;[0m
-[12:57:57]: ▸ [35m[36m ^[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTWeakProxy.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTViewUtils.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTViewRegistry.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTViewManager.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTView.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTVersion.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTUtilsUIOverride.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTUtils.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTUIUtils.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTUIManagerUtils.m[0m
-[12:57:57]: [35m[33m▸[0m [39;1mCompiling[0m RCTUIManagerObserverCoordinator.mm[0m
-[12:57:59]: [35m[33m▸[0m [39;1mCompiling[0m RCTUIManager.m[0m
-[12:57:59]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Modules/RCTUIManager.m:309:11: [33munused variable 'existingView' [-Wunused-variable][0m
-[12:57:59]: ▸ [35m  UIView *existingView = _viewRegistry[reactTag];[0m
-[12:57:59]: ▸ [35m[36m                                 ^[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTTouchHandler.m[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTTouchEvent.m[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSwitchManager.m[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSwitch.m[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSurfaceView.mm[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSurfaceStage.m[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSurfaceSizeMeasureMode.mm[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSurfaceRootView.mm[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSurfaceRootShadowView.m[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSurfacePresenterStub.m[0m
-[12:58:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSurfaceHostingView.mm[0m
-[12:58:01]: [35m[33m▸[0m [39;1mCompiling[0m RCTSurfaceHostingProxyRootView.mm[0m
-[12:58:01]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:76:17: [33mdesignated initializer invoked a non-designated initializer [-Wobjc-designated-initializers][0m
-[12:58:01]: ▸ [35m  self = [super initWithBridge:bridge[0m
-[12:58:01]: ▸ [35m[36m          ^[0m
-[12:58:01]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:56:1: [33mdesignated initializer missing a 'super' call to a designated initializer of the super class [-Wobjc-designated-initializers][0m
-[12:58:01]: ▸ [35m- (instancetype)initWithBridge:(RCTBridge *)bridge[0m
-[12:58:01]: ▸ [35m[36m^[0m
-[12:58:01]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:100:21: [33mconvenience initializer should not invoke an initializer on 'super' [-Wobjc-designated-initializers][0m
-[12:58:01]: ▸ [35m  if (self = [super initWithSurface:surface sizeMeasureMode:sizeMeasureMode]) {[0m
-[12:58:01]: ▸ [35m[36m^[0m
-[12:58:01]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:96:1: [33mconvenience initializer missing a 'self' call to another initializer [-Wobjc-designated-initializers][0m
-[12:58:01]: ▸ [35m- (instancetype)initWithSurface:(id<RCTSurfaceProtocol>)surface[0m
-[12:58:01]: ▸ [35m[36m                    ^[0m
-[12:58:01]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:52:17: [33mmethod override for the designated initializer of the superclass '-initWithSurface:sizeMeasureMode:' not found [-Wobjc-designated-initializers][0m
-[12:58:01]: ▸ [35m@implementation RCTSurfaceHostingProxyRootView {[0m
-[12:58:01]: ▸ [35m[36m^[0m
-[12:58:01]: [35m[33m▸[0m [39;1mCompiling[0m RCTSurface.mm[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTSliderManager.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTSlider.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTShadowView.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTShadowView+Layout.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTShadowView+Internal.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTSegmentedControlManager.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTSegmentedControl.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTScrollViewManager.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTScrollView.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTScrollEvent.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTScrollContentViewManager.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTScrollContentView.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTScrollContentShadowView.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTSafeAreaViewManager.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTSafeAreaViewLocalData.m[0m
-[12:58:02]: [35m[33m▸[0m [39;1mCompiling[0m RCTSafeAreaView.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTSafeAreaShadowView.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTSRWebSocket.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTRootView.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTRootShadowView.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTRootContentView.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTReloadCommand.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTRefreshControlManager.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTRefreshControl.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTRedBoxSetEnabled.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTRedBoxExtraDataViewController.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTReconnectingWebSocket.m[0m
-[12:58:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTProgressViewManager.m[0m
-[12:58:04]: [35m[33m▸[0m [39;1mCompiling[0m RCTProfile.m[0m
-[12:58:04]: [35m[33m▸[0m [39;1mCompiling[0m RCTPerformanceLoggerLabels.m[0m
-[12:58:04]: [35m[33m▸[0m [39;1mCompiling[0m RCTPerformanceLogger.m[0m
-[12:58:04]: [35m[33m▸[0m [39;1mCompiling[0m RCTParserUtils.m[0m
-[12:58:04]: [35m[33m▸[0m [39;1mCompiling[0m RCTPackagerConnection.mm[0m
-[12:58:05]: [35m[33m▸[0m [39;1mCompiling[0m RCTPackagerClient.m[0m
-[12:58:05]: [35m[33m▸[0m [39;1mCompiling[0m RCTObjcExecutor.mm[0m
-[12:58:07]: [35m[33m▸[0m [39;1mCompiling[0m RCTNativeModule.mm[0m
-[12:58:07]: [35m[33m▸[0m [39;1mCompiling[0m RCTMultipartStreamReader.m[0m
-[12:58:07]: [35m[33m▸[0m [39;1mCompiling[0m RCTMultipartDataTask.m[0m
-[12:58:07]: [35m[33m▸[0m [39;1mCompiling[0m RCTModuleRegistry.m[0m
-[12:58:07]: [35m[33m▸[0m [39;1mCompiling[0m RCTModuleMethod.mm[0m
-[12:58:07]: [35m[33m▸[0m [39;1mCompiling[0m RCTModuleData.mm[0m
-[12:58:07]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/RCTModuleData.mm:496:8: [33munused variable 'instance' [-Wunused-variable][0m
-[12:58:07]: ▸ [35m    id instance = self.instance;[0m
-[12:58:07]: ▸ [35m[36m^[0m
-[12:58:08]: [35m[33m▸[0m [39;1mCompiling[0m RCTModalManager.m[0m
-[12:58:08]: [35m[33m▸[0m [39;1mCompiling[0m RCTModalHostViewManager.m[0m
-[12:58:08]: [35m[33m▸[0m [39;1mCompiling[0m RCTModalHostViewController.m[0m
-[12:58:08]: [35m[33m▸[0m [39;1mCompiling[0m RCTModalHostView.m[0m
-[12:58:08]: [35m[33m▸[0m [39;1mCompiling[0m RCTMessageThread.mm[0m
-[12:58:09]: [35m[33m▸[0m [39;1mCompiling[0m RCTMaskedViewManager.m[0m
-[12:58:09]: [35m[33m▸[0m [39;1mCompiling[0m RCTMaskedView.m[0m
-[12:58:09]: [35m[33m▸[0m [39;1mCompiling[0m RCTManagedPointer.mm[0m
-[12:58:09]: [35m[33m▸[0m [39;1mCompiling[0m RCTLog.mm[0m
-[12:58:09]: [35m[33m▸[0m [39;1mCompiling[0m RCTLayoutAnimationGroup.m[0m
-[12:58:09]: [35m[33m▸[0m [39;1mCompiling[0m RCTLayoutAnimation.m[0m
-[12:58:09]: [35m[33m▸[0m [39;1mCompiling[0m RCTLayout.m[0m
-[12:58:09]: [35m[33m▸[0m [39;1mCompiling[0m RCTKeyCommands.m[0m
-[12:58:09]: [35m[33m▸[0m [39;1mCompiling[0m RCTJavaScriptLoader.mm[0m
-[12:58:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTJSThread.m[0m
-[12:58:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTJSStackFrame.m[0m
-[12:58:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTJSIExecutorRuntimeInstaller.mm[0m
-[12:58:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTInspectorPackagerConnection.m[0m
-[12:58:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTInspectorDevServerHelper.mm[0m
-[12:58:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTInspector.mm[0m
-[12:58:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageSource.m[0m
-[12:58:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTI18nUtil.m[0m
-[12:58:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTFrameUpdate.m[0m
-[12:58:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTFont.mm[0m
-[12:58:13]: [35m[33m▸[0m [39;1mCompiling[0m RCTFollyConvert.mm[0m
-[12:58:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTEventEmitter.m[0m
-[12:58:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTEventDispatcher.m[0m
-[12:58:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTErrorInfo.m[0m
-[12:58:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTDisplayLink.m[0m
-[12:58:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTDevLoadingViewSetEnabled.m[0m
-[12:58:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTDefaultCxxLogFunction.mm[0m
-[12:58:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTDatePickerManager.m[0m
-[12:58:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTDatePicker.m[0m
-[12:58:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTCxxUtils.mm[0m
-[12:58:16]: [35m[33m▸[0m [39;1mCompiling[0m RCTCxxModule.mm[0m
-[12:58:16]: [35m[33m▸[0m [39;1mCompiling[0m RCTCxxMethod.mm[0m
-[12:58:17]: [35m[33m▸[0m [39;1mCompiling[0m RCTCxxConvert.m[0m
-[12:58:17]: [35m[33m▸[0m [39;1mCompiling[0m RCTCxxBridge.mm[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTConvert.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTConvert+Transform.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTConvert+CoreLocation.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTConstants.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTComponentEvent.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTComponentData.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTCallableJSModules.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTBundleURLProvider.mm[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTBundleManager.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTBridgeModuleDecorator.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTBridge.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTBorderDrawing.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTAssert.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTAppSetupUtils.mm[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTActivityIndicatorViewManager.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m RCTActivityIndicatorView.m[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m NSDataBigString.mm[0m
-[12:58:22]: [35m[33m▸[0m [39;1mCompiling[0m JSCExecutorFactory.mm[0m
-[12:58:22]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-Core.a[0m
-[12:58:23]: [35m[33m▸[0m [39;1mCompiling[0m BiSdkReactNative.swift[0m
-[12:58:25]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Public/React-Core/React/RCTJSScriptLoaderModule.h:16:67: [33mpointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified)[0m
-[12:58:25]: ▸ [35m@property (nonatomic, copy, nonnull) void (^loadScript)(RCTSource *source);[0m
-[12:58:25]: ▸ [35m[36m        ^[0m
-[12:58:25]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Public/React-Core/React/RCTTiming.h:17:41: [33mpointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified)[0m
-[12:58:25]: ▸ [35m- (void)callTimers:(NSArray<NSNumber *> *)timers;[0m
-[12:58:25]: ▸ [35m[36m        ^[0m
-[12:58:25]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Public/React-Core/React/RCTTiming.h:25:4: [33mpointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified)[0m
-[12:58:25]: ▸ [35m- (instancetype)initWithDelegate:(id<RCTTimingDelegate>)delegate;[0m
-[12:58:25]: ▸ [35m[36m        ^[0m
-[12:58:25]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Public/React-Core/React/RCTTiming.h:25:35: [33mpointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified)[0m
-[12:58:25]: ▸ [35m- (instancetype)initWithDelegate:(id<RCTTimingDelegate>)delegate;[0m
-[12:58:25]: ▸ [35m[36m        ^[0m
-[12:58:25]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Public/React-Core/React/RCTTiming.h:28:41: [33mpointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified)[0m
-[12:58:25]: ▸ [35m               jsSchedulingTime:(NSDate *)jsSchedulingTime[0m
-[12:58:25]: ▸ [35m[36m        ^[0m
-[12:58:25]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/BeyondIdentityEmbeddedReactNative.build/Objects-normal/arm64/BeyondIdentityEmbeddedReactNative.swiftdoc[0m
-[12:58:25]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/BeyondIdentityEmbeddedReactNative.build/Objects-normal/arm64/BeyondIdentityEmbeddedReactNative.swiftmodule[0m
-[12:58:25]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/BeyondIdentityEmbeddedReactNative.build/Objects-normal/arm64/BeyondIdentityEmbeddedReactNative.swiftmodule[0m
-[12:58:25]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/BeyondIdentityEmbeddedReactNative.build/Objects-normal/arm64/BeyondIdentityEmbeddedReactNative.swiftdoc[0m
-[12:58:25]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/BeyondIdentityEmbeddedReactNative.build/Objects-normal/arm64/BeyondIdentityEmbeddedReactNative-Swift.h[0m
-[12:58:25]: [35m[33m▸[0m [39;1mCompiling[0m BiSdkReactNative.m[0m
-[12:58:25]: [35m[33m▸[0m [39;1mCompiling[0m BeyondIdentityEmbeddedReactNative-dummy.m[0m
-[12:58:25]: [35m[33m▸[0m [39;1mBuilding library[0m libBeyondIdentityEmbeddedReactNative.a[0m
-[12:58:25]: [35m[33m▸[0m [39;1mRunning script[0m 'Copy generated compatibility header'[0m
-[12:58:25]: [35m[33m▸[0m [39;1mCompiling[0m RCTTypedModuleConstants.mm[0m
-[12:58:26]: [35m[33m▸[0m [39;1mCompiling[0m RCTTypeSafety-dummy.m[0m
-[12:58:26]: [35m[33m▸[0m [39;1mCompiling[0m RCTConvertHelpers.mm[0m
-[12:58:27]: [35m[33m▸[0m [39;1mBuilding library[0m libRCTTypeSafety.a[0m
-[12:58:27]: [35m[33m▸[0m [39;1mCompiling[0m LongLivedObject.cpp[0m
-[12:58:27]: [35m[33m▸[0m [39;1mCompiling[0m React-bridging-dummy.m[0m
-[12:58:27]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-bridging.a[0m
-[12:58:27]: [35m[33m▸[0m [39;1mCompiling[0m TurboModuleUtils.cpp[0m
-[12:58:28]: [35m[33m▸[0m [39;1mCompiling[0m TurboModulePerfLogger.cpp[0m
-[12:58:28]: [35m[33m▸[0m [39;1mCompiling[0m TurboModuleBinding.cpp[0m
-[12:58:28]: [35m[33m▸[0m [39;1mCompiling[0m TurboModule.cpp[0m
-[12:58:29]: [35m[33m▸[0m [39;1mCompiling[0m TurboCxxModule.cpp[0m
-[12:58:34]: [35m[33m▸[0m [39;1mCompiling[0m ReactCommon-dummy.m[0m
-[12:58:34]: [35m[33m▸[0m [39;1mCompiling[0m RCTTurboModuleManager.mm[0m
-[12:58:35]: [35m[33m▸[0m [39;1mCompiling[0m RCTTurboModule.mm[0m
-[12:58:35]: [35m[33m▸[0m [39;1mCompiling[0m RCTBlockGuard.mm[0m
-[12:58:35]: [35m[33m▸[0m [39;1mBuilding library[0m libReactCommon.a[0m
-[12:58:35]: [35m[33m▸[0m [39;1mRunning script[0m '[CP-User] Generate Specs'[0m
-[12:58:36]: [35m[33m▸[0m [39;1mCompiling[0m RNInAppBrowser.m[0m
-[12:58:37]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-inappbrowser-reborn/ios/RNInAppBrowser.m:167:50: [33m'initWithURL:entersReaderIfAvailable:' is deprecated: first deprecated in iOS 11.0 [-Wdeprecated-declarations][0m
-[12:58:37]: ▸ [35m      safariVC = [[SFSafariViewController alloc] initWithURL:url entersReaderIfAvailable:readerMode];[0m
-[12:58:37]: ▸ [35m[36m                                        ^[0m
-[12:58:37]: [35m[33m▸[0m [39;1mCompiling[0m RNInAppBrowser-dummy.m[0m
-[12:58:37]: [35m[33m▸[0m [39;1mBuilding library[0m libRNInAppBrowser.a[0m
-[12:58:37]: [35m[33m▸[0m [39;1mCompiling[0m React-Codegen-dummy.m[0m
-[12:58:37]: [35m[33m▸[0m [39;1mCompiling[0m FBReactNativeSpec-generated.mm[0m
-[12:58:41]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-Codegen.a[0m
-[12:58:42]: [35m[33m▸[0m [39;1mCompiling[0m React-RCTNetwork-dummy.m[0m
-[12:58:42]: [35m[33m▸[0m [39;1mCompiling[0m RCTNetworking.mm[0m
-[12:58:44]: [35m[33m▸[0m [39;1mCompiling[0m RCTNetworkTask.mm[0m
-[12:58:44]: [35m[33m▸[0m [39;1mCompiling[0m RCTNetworkPlugins.mm[0m
-[12:58:44]: [35m[33m▸[0m [39;1mCompiling[0m RCTHTTPRequestHandler.mm[0m
-[12:58:44]: [35m[33m▸[0m [39;1mCompiling[0m RCTFileRequestHandler.mm[0m
-[12:58:45]: [35m[33m▸[0m [39;1mCompiling[0m RCTDataRequestHandler.mm[0m
-[12:58:45]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-RCTNetwork.a[0m
-[12:58:45]: [35m[33m▸[0m [39;1mCompiling[0m React-RCTImage-dummy.m[0m
-[12:58:45]: [35m[33m▸[0m [39;1mCompiling[0m RCTUIImageViewAnimated.m[0m
-[12:58:47]: [35m[33m▸[0m [39;1mCompiling[0m RCTResizeMode.m[0m
-[12:58:47]: [35m[33m▸[0m [39;1mCompiling[0m RCTLocalAssetImageLoader.mm[0m
-[12:58:47]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageViewManager.mm[0m
-[12:58:48]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageView.mm[0m
-[12:58:49]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageUtils.m[0m
-[12:58:49]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageURLLoaderWithAttribution.mm[0m
-[12:58:49]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageStoreManager.mm[0m
-[12:58:50]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageShadowView.m[0m
-[12:58:50]: [35m[33m▸[0m [39;1mCompiling[0m RCTImagePlugins.mm[0m
-[12:58:51]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageLoader.mm[0m
-[12:58:52]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageEditingManager.mm[0m
-[12:58:52]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageCache.m[0m
-[12:58:52]: [35m[33m▸[0m [39;1mCompiling[0m RCTImageBlurUtils.m[0m
-[12:58:52]: [35m[33m▸[0m [39;1mCompiling[0m RCTGIFImageDecoder.mm[0m
-[12:58:53]: [35m[33m▸[0m [39;1mCompiling[0m RCTDisplayWeakRefreshable.m[0m
-[12:58:53]: [35m[33m▸[0m [39;1mCompiling[0m RCTAnimatedImage.m[0m
-[12:58:53]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-RCTImage.a[0m
-[12:58:53]: [35m[33m▸[0m [39;1mCompiling[0m UIWindow+RNScreens.mm[0m
-[12:58:55]: [35m[33m▸[0m [39;1mCompiling[0m UIViewController+RNScreens.mm[0m
-[12:58:55]: [35m[33m▸[0m [39;1mCompiling[0m RNScreens-dummy.m[0m
-[12:58:55]: [35m[33m▸[0m [39;1mCompiling[0m RNSUIBarButtonItem.mm[0m
-[12:58:55]: [35m[33m▸[0m [39;1mCompiling[0m RNSSearchBar.mm[0m
-[12:58:56]: [35m[33m▸[0m [39;1mCompiling[0m RNSScreenWindowTraits.mm[0m
-[12:58:56]: [35m[33m▸[0m [39;1mCompiling[0m RNSScreenViewEvent.mm[0m
-[12:58:56]: [35m[33m▸[0m [39;1mCompiling[0m RNSScreenStackHeaderSubview.mm[0m
-[12:58:57]: [35m[33m▸[0m [39;1mCompiling[0m RNSScreenStackHeaderConfig.mm[0m
-[12:58:57]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenStackHeaderConfig.mm:73:1: [33mmethod possibly missing a [super reactSuperview] call [-Wobjc-missing-super-calls][0m
-[12:58:57]: ▸ [35m}[0m
-[12:58:57]: ▸ [35m[36m^[0m
-[12:58:57]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenStackHeaderConfig.mm:78:1: [33mmethod possibly missing a [super reactSubviews] call [-Wobjc-missing-super-calls][0m
-[12:58:57]: ▸ [35m}[0m
-[12:58:57]: ▸ [35m[36m^[0m
-[12:58:57]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenStackHeaderConfig.mm:625:1: [33mmethod possibly missing a [super insertReactSubview:atIndex:] call [-Wobjc-missing-super-calls][0m
-[12:58:57]: ▸ [35m}[0m
-[12:58:57]: ▸ [35m[36m^[0m
-[12:58:57]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenStackHeaderConfig.mm:630:1: [33mmethod possibly missing a [super removeReactSubview:] call [-Wobjc-missing-super-calls][0m
-[12:58:57]: ▸ [35m}[0m
-[12:58:57]: ▸ [35m[36m^[0m
-[12:58:57]: [35m[33m▸[0m [39;1mCompiling[0m RNSScreenStackAnimator.mm[0m
-[12:58:57]: [35m[33m▸[0m [39;1mCompiling[0m RNSScreenStack.mm[0m
-[12:58:58]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenStack.mm:213:1: [33mmethod possibly missing a [super reactSubviews] call [-Wobjc-missing-super-calls][0m
-[12:58:58]: ▸ [35m}[0m
-[12:58:58]: ▸ [35m[36m^[0m
-[12:58:58]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenStack.mm:885:1: [33mmethod possibly missing a [super insertReactSubview:atIndex:] call [-Wobjc-missing-super-calls][0m
-[12:58:58]: ▸ [35m}[0m
-[12:58:58]: ▸ [35m[36m^[0m
-[12:58:58]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenStack.mm:891:1: [33mmethod possibly missing a [super removeReactSubview:] call [-Wobjc-missing-super-calls][0m
-[12:58:58]: ▸ [35m}[0m
-[12:58:58]: ▸ [35m[36m^[0m
-[12:58:58]: [35m[33m▸[0m [39;1mCompiling[0m RNSScreenNavigationContainer.mm[0m
-[12:58:59]: [35m[33m▸[0m [39;1mCompiling[0m RNSScreenContainer.mm[0m
-[12:58:59]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenContainer.mm:94:1: [33mmethod possibly missing a [super insertReactSubview:atIndex:] call [-Wobjc-missing-super-calls][0m
-[12:58:59]: ▸ [35m}[0m
-[12:58:59]: ▸ [35m[36m^[0m
-[12:58:59]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenContainer.mm:100:1: [33mmethod possibly missing a [super removeReactSubview:] call [-Wobjc-missing-super-calls][0m
-[12:58:59]: ▸ [35m}[0m
-[12:58:59]: ▸ [35m[36m^[0m
-[12:58:59]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreenContainer.mm:105:1: [33mmethod possibly missing a [super reactSubviews] call [-Wobjc-missing-super-calls][0m
-[12:58:59]: ▸ [35m}[0m
-[12:58:59]: ▸ [35m[36m^[0m
-[12:58:59]: [35m[33m▸[0m [39;1mCompiling[0m RNSScreen.mm[0m
-[12:58:59]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/ios/RNSScreen.mm:266:1: [33mmethod possibly missing a [super reactSuperview] call [-Wobjc-missing-super-calls][0m
-[12:58:59]: ▸ [35m}[0m
-[12:58:59]: ▸ [35m[36m^[0m
-[12:59:00]: [35m[33m▸[0m [39;1mCompiling[0m RNSFullWindowOverlay.mm[0m
-[12:59:00]: [35m[33m▸[0m [39;1mCompiling[0m RNSConvert.mm[0m
-[12:59:00]: [35m[33m▸[0m [39;1mBuilding library[0m libRNScreens.a[0m
-[12:59:00]: [35m[33m▸[0m [39;1mCompiling[0m React-RCTAnimation-dummy.m[0m
-[12:59:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTValueAnimatedNode.m[0m
-[12:59:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTTransformAnimatedNode.m[0m
-[12:59:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTTrackingAnimatedNode.m[0m
-[12:59:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSubtractionAnimatedNode.m[0m
-[12:59:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTStyleAnimatedNode.m[0m
-[12:59:00]: [35m[33m▸[0m [39;1mCompiling[0m RCTSpringAnimation.m[0m
-[12:59:01]: [35m[33m▸[0m [39;1mCompiling[0m RCTPropsAnimatedNode.m[0m
-[12:59:01]: [35m[33m▸[0m [39;1mCompiling[0m RCTNativeAnimatedTurboModule.mm[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTNativeAnimatedNodesManager.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTNativeAnimatedModule.mm[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTMultiplicationAnimatedNode.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTModuloAnimatedNode.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTInterpolationAnimatedNode.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTFrameAnimation.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTEventAnimation.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTDivisionAnimatedNode.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTDiffClampAnimatedNode.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTDecayAnimation.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTColorAnimatedNode.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTAnimationUtils.m[0m
-[12:59:03]: [35m[33m▸[0m [39;1mCompiling[0m RCTAnimationPlugins.mm[0m
-[12:59:04]: [35m[33m▸[0m [39;1mCompiling[0m RCTAnimatedNode.m[0m
-[12:59:04]: [35m[33m▸[0m [39;1mCompiling[0m RCTAdditionAnimatedNode.m[0m
-[12:59:04]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-RCTAnimation.a[0m
-[12:59:04]: [35m[33m▸[0m [39;1mCompiling[0m RCTFileReaderModule.mm[0m
-[12:59:06]: [35m[33m▸[0m [39;1mCompiling[0m React-RCTBlob-dummy.m[0m
-[12:59:06]: [35m[33m▸[0m [39;1mCompiling[0m RCTBlobPlugins.mm[0m
-[12:59:06]: [35m[33m▸[0m [39;1mCompiling[0m RCTBlobManager.mm[0m
-[12:59:06]: [35m[33m▸[0m [39;1mCompiling[0m RCTBlobCollector.mm[0m
-[12:59:06]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-RCTBlob.a[0m
-[12:59:07]: [35m[33m▸[0m [39;1mCompiling[0m React-RCTLinking-dummy.m[0m
-[12:59:07]: [35m[33m▸[0m [39;1mCompiling[0m RCTLinkingPlugins.mm[0m
-[12:59:08]: [35m[33m▸[0m [39;1mCompiling[0m RCTLinkingManager.mm[0m
-[12:59:08]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-RCTLinking.a[0m
-[12:59:08]: [35m[33m▸[0m [39;1mCompiling[0m React-RCTSettings-dummy.m[0m
-[12:59:08]: [35m[33m▸[0m [39;1mCompiling[0m RCTSettingsPlugins.mm[0m
-[12:59:10]: [35m[33m▸[0m [39;1mCompiling[0m RCTSettingsManager.mm[0m
-[12:59:10]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-RCTSettings.a[0m
-[12:59:10]: [35m[33m▸[0m [39;1mCompiling[0m RCTVirtualTextViewManager.m[0m
-[12:59:10]: [35m[33m▸[0m [39;1mCompiling[0m React-RCTText-dummy.m[0m
-[12:59:10]: [35m[33m▸[0m [39;1mCompiling[0m RCTVirtualTextShadowView.m[0m
-[12:59:10]: [35m[33m▸[0m [39;1mCompiling[0m RCTUITextView.m[0m
-[12:59:10]: [35m[33m▸[0m [39;1mCompiling[0m RCTUITextField.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTTextViewManager.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTTextView.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTTextShadowView.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTTextSelection.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTTextAttributes.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTSinglelineTextInputViewManager.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTSinglelineTextInputView.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTRawTextViewManager.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTRawTextShadowView.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTMultilineTextInputViewManager.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTMultilineTextInputView.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTInputAccessoryViewManager.m[0m
-[12:59:11]: [35m[33m▸[0m [39;1mCompiling[0m RCTInputAccessoryViewContent.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTInputAccessoryView.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTInputAccessoryShadowView.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTConvert+Text.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTBaseTextViewManager.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTBaseTextShadowView.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTBaseTextInputViewManager.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTBaseTextInputView.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTBaseTextInputShadowView.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTBackedTextInputDelegateAdapter.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m NSTextStorage+FontScaling.m[0m
-[12:59:12]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-RCTText.a[0m
-[12:59:12]: [35m[33m▸[0m [39;1mCompiling[0m RCTVibrationPlugins.mm[0m
-[12:59:14]: [35m[33m▸[0m [39;1mCompiling[0m React-RCTVibration-dummy.m[0m
-[12:59:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTVibration.mm[0m
-[12:59:14]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-RCTVibration.a[0m
-[12:59:14]: [35m[33m▸[0m [39;1mCompiling[0m React-CoreModules-dummy.m[0m
-[12:59:14]: [35m[33m▸[0m [39;1mCompiling[0m RCTWebSocketModule.mm[0m
-[12:59:16]: [35m[33m▸[0m [39;1mCompiling[0m RCTWebSocketExecutor.mm[0m
-[12:59:16]: [35m[33m▸[0m [39;1mCompiling[0m RCTTiming.mm[0m
-[12:59:16]: [35m[33m▸[0m [39;1mCompiling[0m RCTStatusBarManager.mm[0m
-[12:59:17]: [35m[33m▸[0m [39;1mCompiling[0m RCTSourceCode.mm[0m
-[12:59:18]: [35m[33m▸[0m [39;1mCompiling[0m RCTRedBox.mm[0m
-[12:59:18]: [35m[33m▸[0m [39;1mCompiling[0m RCTPlatform.mm[0m
-[12:59:19]: [35m[33m▸[0m [39;1mCompiling[0m RCTPerfMonitor.mm[0m
-[12:59:19]: [35m[33m▸[0m [39;1mCompiling[0m RCTLogBoxView.mm[0m
-[12:59:19]: [35m[33m▸[0m [39;1mCompiling[0m RCTLogBox.mm[0m
-[12:59:20]: [35m[33m▸[0m [39;1mCompiling[0m RCTKeyboardObserver.mm[0m
-[12:59:21]: [35m[33m▸[0m [39;1mCompiling[0m RCTI18nManager.mm[0m
-[12:59:21]: [35m[33m▸[0m [39;1mCompiling[0m RCTFPSGraph.m[0m
-[12:59:21]: [35m[33m▸[0m [39;1mCompiling[0m RCTExceptionsManager.mm[0m
-[12:59:23]: [35m[33m▸[0m [39;1mCompiling[0m RCTEventDispatcher.mm[0m
-[12:59:23]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/CoreModules/RCTEventDispatcher.mm:64:1: [33mimplementing deprecated method [-Wdeprecated-implementations][0m
-[12:59:23]: ▸ [35m- (void)sendAppEventWithName:(NSString *)name body:(id)body[0m
-[12:59:23]: ▸ [35m[36m^[0m
-[12:59:23]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/CoreModules/RCTEventDispatcher.mm:71:1: [33mimplementing deprecated method [-Wdeprecated-implementations][0m
-[12:59:23]: ▸ [35m- (void)sendDeviceEventWithName:(NSString *)name body:(id)body[0m
-[12:59:23]: ▸ [35m[36m^[0m
-[12:59:23]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/CoreModules/RCTEventDispatcher.mm:140:18: [33munused variable 'previousEvent' [-Wunused-variable][0m
-[12:59:23]: ▸ [35m    id<RCTEvent> previousEvent = _events[eventID];[0m
-[12:59:23]: ▸ [35m[36m^[0m
-[12:59:23]: [35m[33m▸[0m [39;1mCompiling[0m RCTDeviceInfo.mm[0m
-[12:59:23]: [35m[33m▸[0m [39;1mCompiling[0m RCTDevSplitBundleLoader.mm[0m
-[12:59:24]: [35m[33m▸[0m [39;1mCompiling[0m RCTDevSettings.mm[0m
-[12:59:24]: [35m[33m▸[0m [39;1mCompiling[0m RCTDevMenu.mm[0m
-[12:59:25]: [35m[33m▸[0m [39;1mCompiling[0m RCTDevLoadingView.mm[0m
-[12:59:26]: [35m[33m▸[0m [39;1mCompiling[0m RCTClipboard.mm[0m
-[12:59:26]: [35m[33m▸[0m [39;1mCompiling[0m RCTAsyncLocalStorage.mm[0m
-[12:59:27]: [35m[33m▸[0m [39;1mCompiling[0m RCTAppearance.mm[0m
-[12:59:28]: [35m[33m▸[0m [39;1mCompiling[0m RCTAppState.mm[0m
-[12:59:28]: [35m[33m▸[0m [39;1mCompiling[0m RCTAlertManager.mm[0m
-[12:59:29]: [35m[33m▸[0m [39;1mCompiling[0m RCTAlertController.m[0m
-[12:59:29]: [35m[33m▸[0m [39;1mCompiling[0m RCTActionSheetManager.mm[0m
-[12:59:30]: [35m[33m▸[0m [39;1mCompiling[0m RCTAccessibilityManager.mm[0m
-[12:59:30]: [35m[33m▸[0m [39;1mCompiling[0m CoreModulesPlugins.mm[0m
-[12:59:30]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-CoreModules.a[0m
-[12:59:30]: [35m[33m▸[0m [39;1mRunning script[0m '[CP] Copy XCFrameworks'[0m
-[12:59:40]: [35m[33m▸[0m [39;1mCompiling[0m Thread.cpp[0m
-[12:59:40]: [35m[33m▸[0m [39;1mCompiling[0m SerialExecutor.cpp[0m
-[12:59:41]: [35m[33m▸[0m [39;1mCompiling[0m RuntimeAdapter.cpp[0m
-[12:59:41]: [35m[33m▸[0m [39;1mCompiling[0m RemoteObjectsTable.cpp[0m
-[12:59:42]: [35m[33m▸[0m [39;1mCompiling[0m Registration.cpp[0m
-[12:59:42]: [35m[33m▸[0m [39;1mCompiling[0m React-hermes-dummy.m[0m
-[12:59:44]: [35m[33m▸[0m [39;1mCompiling[0m MessageTypes.cpp[0m
-[12:59:52]: [35m[33m▸[0m [39;1mCompiling[0m MessageConverters.cpp[0m
-[12:59:52]: [35m[33m▸[0m [39;1mCompiling[0m JSITracing.cpp[0m
-[12:59:52]: [35m[33m▸[0m [39;1mCompiling[0m InspectorState.cpp[0m
-[12:59:52]: [35m[33m▸[0m [39;1mCompiling[0m Inspector.cpp[0m
-[12:59:53]: [35m[33m▸[0m [39;1mCompiling[0m HermesExecutorFactory.cpp[0m
-[12:59:53]: [35m[33m▸[0m [39;1mCompiling[0m ConnectionDemux.cpp[0m
-[12:59:53]: [35m[33m▸[0m [39;1mCompiling[0m Connection.cpp[0m
-[13:00:05]: [35m[33m▸[0m [39;1mCompiling[0m CallbackOStream.cpp[0m
-[13:00:05]: [35m[33m▸[0m [39;1mCompiling[0m AutoAttachUtils.cpp[0m
-[13:00:05]: [35m[33m▸[0m [39;1mBuilding library[0m libReact-hermes.a[0m
-[13:00:05]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaViewMode.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m react-native-safe-area-context-dummy.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaViewManager.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaViewLocalData.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaViewEdges.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaView.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaUtils.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaShadowView.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaProviderManager.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaProvider.m[0m
-[13:00:08]: [35m[33m▸[0m [39;1mCompiling[0m RNCSafeAreaContext.mm[0m
-[13:00:09]: [35m[33m▸[0m [39;1mBuilding library[0m libreact-native-safe-area-context.a[0m
-[13:00:09]: [35m[33m▸[0m [39;1mCompiling[0m RNCWebViewManager.m[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebViewManager.h:12:29: [33mblock pointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness][0m
-[13:00:09]: ▸ [35m@property (nonatomic, copy) RCTDirectEventBlock onCustomMenuSelection;[0m
-[13:00:09]: ▸ [35m[36m                 ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.h:83:29: [33mblock pointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness][0m
-[13:00:09]: ▸ [35m@property (nonatomic, copy) RCTDirectEventBlock onCustomMenuSelection;[0m
-[13:00:09]: ▸ [35m[36m                            ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.h:89:31: [33m'WKContentMode' is only available on iOS 13.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m@property (nonatomic, assign) WKContentMode contentMode;[0m
-[13:00:09]: ▸ [35m[36m                            ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebViewManager.m:19:20: [33m'WKContentMode' is only available on iOS 13.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35mRCT_ENUM_CONVERTER(WKContentMode, (@{[0m
-[13:00:09]: ▸ [35m[36m           ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebViewManager.m:20:21: [33m'WKContentModeRecommended' is only available on iOS 13.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m  @"recommended": @(WKContentModeRecommended),[0m
-[13:00:09]: ▸ [35m[36m  ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebViewManager.m:21:16: [33m'WKContentModeMobile' is only available on iOS 13.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m  @"mobile": @(WKContentModeMobile),[0m
-[13:00:09]: ▸ [35m[36m                ^~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebViewManager.m:22:17: [33m'WKContentModeDesktop' is only available on iOS 13.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m  @"desktop": @(WKContentModeDesktop),[0m
-[13:00:09]: ▸ [35m[36m                ^~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebViewManager.m:23:5: [33m'WKContentModeRecommended' is only available on iOS 13.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m}), WKContentModeRecommended, integerValue)[0m
-[13:00:09]: ▸ [35m[36m                ^~~~~~[0m
-[13:00:09]: [35m[33m▸[0m [39;1mCompiling[0m react-native-webview-dummy.m[0m
-[13:00:09]: [35m[33m▸[0m [39;1mCompiling[0m RNCWebView.m[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.h:83:29: [33mblock pointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness][0m
-[13:00:09]: ▸ [35m@property (nonatomic, copy) RCTDirectEventBlock onCustomMenuSelection;[0m
-[13:00:09]: ▸ [35m[36m                              ^~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.h:89:31: [33m'WKContentMode' is only available on iOS 13.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m@property (nonatomic, assign) WKContentMode contentMode;[0m
-[13:00:09]: ▸ [35m[36m                            ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1089:43: [33m'WKMediaCaptureType' is only available on iOS 15.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m                                    type:(WKMediaCaptureType)type[0m
-[13:00:09]: ▸ [35m[36m           ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1090:52: [33m'WKPermissionDecision' is only available on iOS 15.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m                         decisionHandler:(void (^)(WKPermissionDecision decision))decisionHandler {[0m
-[13:00:09]: ▸ [35m[36m^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:394:19: [33m'mediaPlaybackRequiresUserAction' is deprecated: first deprecated in iOS 9.0 [-Wdeprecated-declarations][0m
-[13:00:09]: ▸ [35m  wkWebViewConfig.mediaPlaybackRequiresUserAction = _mediaPlaybackRequiresUserAction;[0m
-[13:00:09]: ▸ [35m[36m^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:458:24: [33massigning to 'id<UIGestureRecognizerDelegate> _Nullable' from incompatible type 'RNCWebView *const __strong'[0m
-[13:00:09]: ▸ [35m    longPress.delegate = self;[0m
-[13:00:09]: ▸ [35m[36m                           ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:614:25: [33m'setAutomaticallyAdjustsScrollIndicatorInsets:' is only available on iOS 13.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m    _webView.scrollView.automaticallyAdjustsScrollIndicatorInsets = automaticallyAdjustsScrollIndicatorInsets;[0m
-[13:00:09]: ▸ [35m[36m                       ^ ~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:707:30: [33mblock implicitly retains 'self'; explicitly mention 'self' to indicate this is intended behavior [-Wimplicit-retain-self][0m
-[13:00:09]: ▸ [35m    if ([request.URL isEqual:_webView.URL]) {[0m
-[13:00:09]: ▸ [35m[36m                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:712:8: [33mblock implicitly retains 'self'; explicitly mention 'self' to indicate this is intended behavior [-Wimplicit-retain-self][0m
-[13:00:09]: ▸ [35m      [_webView loadHTMLString:@"" baseURL:nil];[0m
-[13:00:09]: ▸ [35m[36m                             ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:716:8: [33mblock implicitly retains 'self'; explicitly mention 'self' to indicate this is intended behavior [-Wimplicit-retain-self][0m
-[13:00:09]: ▸ [35m      [_webView loadRequest:request];[0m
-[13:00:09]: ▸ [35m[36m       ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:719:30: [33mblock implicitly retains 'self'; explicitly mention 'self' to indicate this is intended behavior [-Wimplicit-retain-self][0m
-[13:00:09]: ▸ [35m      NSURL* readAccessUrl = _allowingReadAccessToURL ? [RCTConvert NSURL:_allowingReadAccessToURL] : request.URL;[0m
-[13:00:09]: ▸ [35m[36m       ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:719:75: [33mblock implicitly retains 'self'; explicitly mention 'self' to indicate this is intended behavior [-Wimplicit-retain-self][0m
-[13:00:09]: ▸ [35m      NSURL* readAccessUrl = _allowingReadAccessToURL ? [RCTConvert NSURL:_allowingReadAccessToURL] : request.URL;[0m
-[13:00:09]: ▸ [35m[36m                             ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:720:8: [33mblock implicitly retains 'self'; explicitly mention 'self' to indicate this is intended behavior [-Wimplicit-retain-self][0m
-[13:00:09]: ▸ [35m      [_webView loadFileURL:request.URL allowingReadAccessToURL:readAccessUrl];[0m
-[13:00:09]: ▸ [35m[36m                                                                          ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1093:23: [33m'WKPermissionDecisionGrant' is only available on iOS 15.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m      decisionHandler(WKPermissionDecisionGrant);[0m
-[13:00:09]: ▸ [35m[36m       ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1095:7: [33m'WKPermissionDecision' is only available on iOS 15.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m      WKPermissionDecision decision = _mediaCapturePermissionGrantType == RNCWebViewPermissionGrantType_GrantIfSameHost_ElsePrompt ? WKPermissionDecisionPrompt : WKPermissionDecisionDeny;[0m
-[13:00:09]: ▸ [35m[36m                      ^~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1095:134: [33m'WKPermissionDecisionPrompt' is only available on iOS 15.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m      WKPermissionDecision decision = _mediaCapturePermissionGrantType == RNCWebViewPermissionGrantType_GrantIfSameHost_ElsePrompt ? WKPermissionDecisionPrompt : WKPermissionDecisionDeny;[0m
-[13:00:09]: ▸ [35m[36m      ^~~~~~~~~~~~~~~~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1095:163: [33m'WKPermissionDecisionDeny' is only available on iOS 15.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m      WKPermissionDecision decision = _mediaCapturePermissionGrantType == RNCWebViewPermissionGrantType_GrantIfSameHost_ElsePrompt ? WKPermissionDecisionPrompt : WKPermissionDecisionDeny;[0m
-[13:00:09]: ▸ [35m[36m                                                                                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1099:21: [33m'WKPermissionDecisionDeny' is only available on iOS 15.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m    decisionHandler(WKPermissionDecisionDeny);[0m
-[13:00:09]: ▸ [35m[36m                                                                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1101:21: [33m'WKPermissionDecisionGrant' is only available on iOS 15.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m    decisionHandler(WKPermissionDecisionGrant);[0m
-[13:00:09]: ▸ [35m[36m                    ^~~~~~~~~~~~~~~~~~~~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1103:21: [33m'WKPermissionDecisionPrompt' is only available on iOS 15.0 or newer [-Wunguarded-availability-new][0m
-[13:00:09]: ▸ [35m    decisionHandler(WKPermissionDecisionPrompt);[0m
-[13:00:09]: ▸ [35m[36m                    ^~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1330:31: [33m@available does not guard availability here; use if (@available) instead [-Wunsupported-availability-guard][0m
-[13:00:09]: ▸ [35m  if(_sharedCookiesEnabled && @available(iOS 11.0, *)) {[0m
-[13:00:09]: ▸ [35m[36m                    ^~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1498:10: [33mblock implicitly retains 'self'; explicitly mention 'self' to indicate this is intended behavior [-Wimplicit-retain-self][0m
-[13:00:09]: ▸ [35m        [_webView.configuration.websiteDataStore.httpCookieStore setCookie:cookie completionHandler:^{[0m
-[13:00:09]: ▸ [35m[36m                              ^[0m
-[13:00:09]: ▸ [35m[33m⚠️  [0m/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/apple/RNCWebView.m:1493:31: [33m@available does not guard availability here; use if (@available) instead [-Wunsupported-availability-guard][0m
-[13:00:09]: ▸ [35m  if(_sharedCookiesEnabled && @available(iOS 11.0, *)) {[0m
-[13:00:09]: ▸ [35m[36m         ^[0m
-[13:00:10]: [35m[33m▸[0m [39;1mCompiling[0m RNCWKProcessPoolManager.m[0m
-[13:00:10]: [35m[33m▸[0m [39;1mBuilding library[0m libreact-native-webview.a[0m
-[13:00:10]: [35m[33m▸[0m [39;1mCompiling[0m Pods-BiSdkReactNativeExample-dummy.m[0m
-[13:00:11]: [35m[33m▸[0m [39;1mBuilding library[0m libPods-BiSdkReactNativeExample.a[0m
-[13:00:11]: [35m[33m▸[0m [39;1mRunning script[0m '[CP] Check Pods Manifest.lock'[0m
-[13:00:11]: [35m[33m▸[0m [39;1mRunning script[0m 'Start Packager'[0m
-[13:00:11]: [35m[33m▸[0m [39;1mCompiling[0m empty.swift[0m
-[13:00:13]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/BiSdkReactNativeExample.build/Release-iphoneos/BiSdkReactNativeExample.build/Objects-normal/arm64/BiSdkReactNativeExample.swiftmodule[0m
-[13:00:13]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/BiSdkReactNativeExample.build/Release-iphoneos/BiSdkReactNativeExample.build/Objects-normal/arm64/BiSdkReactNativeExample.swiftmodule[0m
-[13:00:13]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/BiSdkReactNativeExample.build/Release-iphoneos/BiSdkReactNativeExample.build/Objects-normal/arm64/BiSdkReactNativeExample.swiftdoc[0m
-[13:00:13]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/BiSdkReactNativeExample.build/Release-iphoneos/BiSdkReactNativeExample.build/Objects-normal/arm64/BiSdkReactNativeExample.swiftdoc[0m
-[13:00:13]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/BiSdkReactNativeExample.build/Release-iphoneos/BiSdkReactNativeExample.build/Objects-normal/arm64/BiSdkReactNativeExample-Swift.h[0m
-[13:00:13]: [35m[33m▸[0m [39;1mCompiling[0m BiSdkReactNativeExample_vers.c[0m
-[13:00:13]: [35m[33m▸[0m [39;1mCompiling[0m main.m[0m
-[13:00:16]: [35m[33m▸[0m [39;1mCompiling[0m AppDelegate.mm[0m
-[13:00:16]: [35m[33m▸[0m [39;1mLinking[0m BiSdkReactNativeExample[0m
-[13:00:16]: ▸ [35m[33m⚠️  ld: directory not found for option '-L "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/BeyondIdentityEmbedded" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/BeyondIdentityEmbeddedReactNative" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/DoubleConversion" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/RCT-Folly" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/RCTTypeSafety" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/RNInAppBrowser" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/RNScreens" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-Codegen" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-Core" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-CoreModules" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-RCTAnimation" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-RCTBlob" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-RCTImage" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-RCTLinking" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-RCTNetwork" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-RCTSettings" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-RCTText" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-RCTVibration" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-bridging" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-cxxreact" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-hermes" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-jsi" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-jsiexecutor" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-jsinspector" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-logger" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-perflogger" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/ReactCommon" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/Yoga" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/fmt" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/glog" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/libevent" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/react-native-safe-area-context" "/Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/react-native-webview" /usr/lib/swift'[0m
-[13:00:17]: ▸ [35m[33m⚠️  ld: method '+UIStatusBarAnimation:' in category from /Users/anka/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-cpcnqzmmhodqisehrqlfglxbzods/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/BuildProductsPath/Release-iphoneos/React-CoreModules/libReact-CoreModules.a(RCTStatusBarManager.o) conflicts with same method from another category[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/Zocial.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/Octicons.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/Ionicons.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/Foundation.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/Fontisto.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/Feather.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/Entypo.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/Fonts/AntDesign.ttf[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCopying[0m /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/BiSdkReactNativeExample/main.jsbundle[0m
-[13:00:17]: [35m[33m▸[0m [39;1mCompiling[0m LaunchScreen.storyboard[0m
-[13:00:23]: [35m[33m▸[0m [39;1mProcessing[0m Info.plist[0m
-[13:00:23]: [35m[33m▸[0m [39;1mRunning script[0m 'Bundle React Native code and images'[0m
-[13:00:25]: ▸ [35m    [33mthe transform cache was reset.[0m
-[13:00:26]: [35m[33m▸[0m [39;1mGenerating 'BiSdkReactNativeExample.app.dSYM'[0m
-[13:00:29]: [35m[33m▸[0m [39;1mRunning script[0m '[CP] Copy Pods Resources'[0m
-[13:00:29]: [35m[33m▸[0m [39;1mRunning script[0m '[CP] Embed Pods Frameworks'[0m
-[13:00:48]: [35m[33m▸[0m [39;1mTouching[0m BiSdkReactNativeExample.app (in target 'BiSdkReactNativeExample' from project 'BiSdkReactNativeExample')[0m
-[13:00:48]: [35m[33m▸[0m [39;1mArchive[0m Succeeded[0m
-[13:00:49]: [33mGenerated plist file with the following values:[0m
-[13:00:49]: ▸ [35m-----------------------------------------[0m
-[13:00:49]: ▸ [35m{[0m
-[13:00:49]: ▸ [35m  "method": "app-store"[0m
-[13:00:49]: ▸ [35m}[0m
-[13:00:49]: ▸ [35m-----------------------------------------[0m
-[13:00:49]: [36m$ /usr/bin/xcrun /Users/anka/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/fastlane-2.205.1/gym/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/q3/p5w35djs1sv9nwg1yh633l540000gn/T/gym_config20221018-91524-1op4z8.plist' -archivePath /Users/anka/Library/Developer/Xcode/Archives/2022-10-18/BiSdkReactNativeExample\ 2022-10-18\ 12.56.00.xcarchive -exportPath '/var/folders/q3/p5w35djs1sv9nwg1yh633l540000gn/T/gym_output20221018-91524-1jlek42' -allowProvisioningUpdates [0m
-[13:01:32]: Compressing 1 dSYM(s)
-[13:01:32]: [36m$ cd '/Users/anka/Library/Developer/Xcode/Archives/2022-10-18/BiSdkReactNativeExample 2022-10-18 12.56.00.xcarchive/dSYMs' && zip -r '/Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/ci/build/BiSdkReactNativeExample.app.dSYM.zip' *.dSYM[0m
-[13:01:33]: ▸ [35m  adding: BiSdkReactNativeExample.app.dSYM/ (stored 0%)[0m
-[13:01:33]: ▸ [35m  adding: BiSdkReactNativeExample.app.dSYM/Contents/ (stored 0%)[0m
-[13:01:33]: ▸ [35m  adding: BiSdkReactNativeExample.app.dSYM/Contents/Resources/ (stored 0%)[0m
-[13:01:33]: ▸ [35m  adding: BiSdkReactNativeExample.app.dSYM/Contents/Resources/DWARF/ (stored 0%)[0m
-[13:01:33]: ▸ [35m  adding: BiSdkReactNativeExample.app.dSYM/Contents/Resources/DWARF/BiSdkReactNativeExample (deflated 76%)[0m
-[13:01:33]: ▸ [35m  adding: BiSdkReactNativeExample.app.dSYM/Contents/Resources/Swift/ (stored 0%)[0m
-[13:01:33]: ▸ [35m  adding: BiSdkReactNativeExample.app.dSYM/Contents/Resources/Swift/aarch64/ (stored 0%)[0m
-[13:01:33]: ▸ [35m  adding: BiSdkReactNativeExample.app.dSYM/Contents/Resources/Swift/aarch64/CoreSDK.swiftinterface (deflated 86%)[0m
-[13:01:33]: ▸ [35m  adding: BiSdkReactNativeExample.app.dSYM/Contents/Info.plist (deflated 52%)[0m
 
-[13:01:33]: [32mSuccessfully exported and compressed dSYM file[0m
-[13:01:33]: [32mSuccessfully exported and signed the ipa file:[0m
-[13:01:33]: /Users/anka/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/ci/build/BiSdkReactNativeExample.ipa
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1197:10: parameter 'base' not found in the function declaration [-Wdocumentation]
 
-+------+--------------------+-------------+
-|            [32mfastlane summary[0m             |
-+------+--------------------+-------------+
-| Step | Action             | Time (in s) |
-+------+--------------------+-------------+
-| 1    | default_platform   | 0           |
-| 2    | unlock_keychain    | 0           |
-| 3    | clear_derived_data | 9           |
-| 4    | gym                | 341         |
-+------+--------------------+-------------+
+  @param base an event_base
+         ^~~~~~~~~~~~
 
-[13:01:33]: [32mfastlane.tools just saved you 6 minutes! 🎉[0m
 
-#######################################################################
-# fastlane 2.210.1 is available. You are on 2.205.1.
-# You should use the latest version.
-# Please update using `gem install fastlane`.
-#######################################################################
 
-[32m2.210.1 Hotfix for deliver and pilot[0m
-* [pilot][deliver] Fix how to encode base64 p8 key on deliver and pilot (#20669) via freddi(Yuki Aki) (@freddi-kit)
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1198:10: parameter 'fd' not found in the function declaration [-Wdocumentation]
 
-[32m2.210.0 Improvements[0m
-* [deliver][pilot] use altool instead of using iTMSTransporter for Xcode 14 (#20631) via freddi(Yuki Aki) (@freddi-kit)
-* [docs][run_tests] fix typo and improve phrasing of documentation (#20585) via Roger Oba (@rogerluan)
+  @param fd a file descriptor to monitor, or -1 for no fd.
+         ^~~~
 
-[32m2.209.1 Improvements[0m
-* [fastlane_core] install all Apple WWDR Intermediate Certificates (#20537) via Tony Li (@crazytonyli)
-* [Fastlane.swift] the word phrasing used has been standardized. (#20543) via Yusuke Arakawa (@nekolaboratory)
-* [spaceship] ignoring case sensitive when requesting SMS (#20436) via harrimaatta (@harrimaatta)
 
-[32mTo see all new releases, open https://github.com/fastlane/fastlane/releases[0m
 
-[32mPlease update using `gem install fastlane`[0m
-Test React Native
-yarn run v1.22.18
-$ jest
-Done in 3.51s.
-Generate copybara
-Generated copy.bara.sky: ## THIS FILE IS GENERATED. DO NOT EDIT.
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1199:10: parameter 'events' not found in the function declaration [-Wdocumentation]
 
-core.workflow(
-    name = "default",
-    origin = folder.origin(),
-    
-    destination = git.destination(
-        url = 'git@github.com:gobeyondidentity/bi-sdk-react-native.git',
-        push = 'main', 
-        tag_name = '1.0.0', 
-        tag_msg = 'copybara version:1.0.0',
-    ),
+  @param events event(s) to monitor; can be any of EV_READ |
+         ^~
 
-    origin_files = glob(["**"], exclude = ["README_DEV.md","build/**",".packages","ci/**","node_modules/**","android/build/**","example/android/.gradle/**", "example/node_modules/**","example/android/app/build/**","example/android/build/**","example/android/app/src/main/assets/**", "local.properties","android.iml","example/ios/Pods/**","Pods/**",".git-credentials",".gitattributes","example/.git-credentials"]),
 
-    # Default to this user, but try to pass thru original commit author
-    authoring = authoring.pass_thru("Anna Garcia <anna.garcia@beyondidentity.com>"),
-)
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1201:10: parameter 'callback' not found in the function declaration [-Wdocumentation]
+
+  @param callback callback function to be invoked when the event occurs
+         ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1202:10: parameter 'arg' not found in the function declaration [-Wdocumentation]
+
+  @param arg an argument to be passed to the callback function
+         ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1203:10: parameter 'timeout' not found in the function declaration [-Wdocumentation]
+
+  @param timeout the maximum amount of time to wait for the event. NULL
+         ^~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1254:10: parameter 'ev' not found in the function declaration [-Wdocumentation]
+
+  @param ev an event struct to be removed from the working set
+         ^~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1463:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_base_new()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1464:10: parameter 'npriorities' not found in the function declaration [-Wdocumentation]
+
+  @param npriorities the maximum number of priorities
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1484:10: parameter 'ev' not found in the function declaration [-Wdocumentation]
+
+  @param ev an event struct
+         ^~~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1485:10: parameter 'priority' not found in the function declaration [-Wdocumentation]
+
+  @param priority the new priority to be assigned
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1555:11: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+   @param base An event_base on which to scan the events.
+         ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1556:11: parameter 'output' not found in the function declaration [-Wdocumentation]
+
+   @param output A stdio file to write on.
+          ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1582:11: parameter 'fd' not found in the function declaration [-Wdocumentation]
+
+   @param fd The signal to active events on.
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:44:11: parameter 'deferred' not found in the function declaration [-Wdocumentation]
+
+   @param deferred The struct event_callback structure to initialize.
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:45:11: parameter 'priority' not found in the function declaration [-Wdocumentation]
+
+   @param priority The priority that the callback should run at.
+          ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:46:11: parameter 'cb' not found in the function declaration [-Wdocumentation]
+
+   @param cb The function to run when the struct event_callback executes.
+          ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:47:11: parameter 'arg' not found in the function declaration [-Wdocumentation]
+
+   @param arg The function's second argument.
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/thread.h:187:11: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+   @param base the event base for which to set the id function
+          ^~~
+
+
+▸ Compiling buffer.c
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:366:10: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+  @param base the event_base structure returned by event_base_new() or
+          ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:378:9: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+ @param eb the event_base structure returned by event_base_new()
+         ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:435:11: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+   @param eb the event_base structure returned by event_base_new()
+        ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:436:11: parameter 'flags' not found in the function declaration [-Wdocumentation]
+
+   @param flags a bitwise combination of the kinds of events to aggregate
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:447:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_base_new()
+          ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:448:10: parameter 'flags' not found in the function declaration [-Wdocumentation]
+
+  @param flags a bitwise combination of the kinds of events to aggregate
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:450:10: parameter 'clear' not found in the function declaration [-Wdocumentation]
+
+  @param clear option used to reset the maximum count.
+         ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:672:10: parameter 'cfg' not found in the function declaration [-Wdocumentation]
+
+  @param cfg the event configuration object
+         ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:689:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb an event_base to be freed
+         ^~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:782:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event base
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:783:10: parameter 'ev' not found in the function declaration [-Wdocumentation]
+
+  @param ev the event
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:817:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_base_new() or
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:819:10: parameter 'flags' not found in the function declaration [-Wdocumentation]
+
+  @param flags any combination of EVLOOP_ONCE | EVLOOP_NONBLOCK
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:837:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:838:10: parameter 'tv' not found in the function declaration [-Wdocumentation]
+
+  @param tv the amount of time after which the loop should terminate,
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:855:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:875:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:888:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:903:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1008:11: parameter 'fd' not found in the function declaration [-Wdocumentation]
+
+   @param fd An fd or signal
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1009:11: parameter 'events' not found in the function declaration [-Wdocumentation]
+
+   @param events One or more EV_* flags
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1010:11: parameter 'arg' not found in the function declaration [-Wdocumentation]
+
+   @param arg A user-supplied argument.
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1078:10: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+  @param base the event base to which the event should be attached.
+          ^~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1079:10: parameter 'fd' not found in the function declaration [-Wdocumentation]
+
+  @param fd the file descriptor or signal to be monitored, or -1.
+         ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1080:10: parameter 'events' not found in the function declaration [-Wdocumentation]
+
+  @param events desired events to monitor: bitfield of EV_READ, EV_WRITE,
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1082:10: parameter 'callback' not found in the function declaration [-Wdocumentation]
+
+  @param callback callback function to be invoked when the event occurs
+         ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1083:10: parameter 'callback_arg' not found in the function declaration [-Wdocumentation]
+
+  @param callback_arg an argument to be passed to the callback function
+         ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1119:10: parameter 'ev' not found in the function declaration [-Wdocumentation]
+
+  @param ev an event struct to be modified
+         ^~~~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1120:10: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+  @param base the event base to which ev should be attached.
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1121:10: parameter 'fd' not found in the function declaration [-Wdocumentation]
+
+  @param fd the file descriptor to be monitored
+         ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1122:10: parameter 'events' not found in the function declaration [-Wdocumentation]
+
+  @param events desired events to monitor; can be EV_READ and/or EV_WRITE
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1123:10: parameter 'callback' not found in the function declaration [-Wdocumentation]
+
+  @param callback callback function to be invoked when the event occurs
+         ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1124:10: parameter 'callback_arg' not found in the function declaration [-Wdocumentation]
+
+  @param callback_arg an argument to be passed to the callback function
+         ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1197:10: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+  @param base an event_base
+         ^~~~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1198:10: parameter 'fd' not found in the function declaration [-Wdocumentation]
+
+  @param fd a file descriptor to monitor, or -1 for no fd.
+         ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1199:10: parameter 'events' not found in the function declaration [-Wdocumentation]
+
+  @param events event(s) to monitor; can be any of EV_READ |
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1201:10: parameter 'callback' not found in the function declaration [-Wdocumentation]
+
+  @param callback callback function to be invoked when the event occurs
+         ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1202:10: parameter 'arg' not found in the function declaration [-Wdocumentation]
+
+  @param arg an argument to be passed to the callback function
+         ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1203:10: parameter 'timeout' not found in the function declaration [-Wdocumentation]
+
+  @param timeout the maximum amount of time to wait for the event. NULL
+         ^~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1254:10: parameter 'ev' not found in the function declaration [-Wdocumentation]
+
+  @param ev an event struct to be removed from the working set
+         ^~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1463:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_base_new()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1464:10: parameter 'npriorities' not found in the function declaration [-Wdocumentation]
+
+  @param npriorities the maximum number of priorities
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1484:10: parameter 'ev' not found in the function declaration [-Wdocumentation]
+
+  @param ev an event struct
+         ^~~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1485:10: parameter 'priority' not found in the function declaration [-Wdocumentation]
+
+  @param priority the new priority to be assigned
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1555:11: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+   @param base An event_base on which to scan the events.
+         ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1556:11: parameter 'output' not found in the function declaration [-Wdocumentation]
+
+   @param output A stdio file to write on.
+          ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1582:11: parameter 'fd' not found in the function declaration [-Wdocumentation]
+
+   @param fd The signal to active events on.
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:210:11: parameter 'buffer' not found in the function declaration [-Wdocumentation]
+
+ * @param buffer the evbuffer that the callback is watching.
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:211:11: parameter 'cb' not found in the function declaration [-Wdocumentation]
+
+ * @param cb the callback whose status we want to change.
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:219:11: parameter 'buffer' not found in the function declaration [-Wdocumentation]
+
+ * @param buffer the evbuffer that the callback is watching.
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:220:11: parameter 'cb' not found in the function declaration [-Wdocumentation]
+
+ * @param cb the callback whose status we want to change.
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer_compat.h:42:5: declaration is marked with '@deprecated' command but does not have a deprecation attribute [-Wdocumentation-deprecated-sync]
+
+   @deprecated This function is deprecated because its behavior is not correct
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer_compat.h:82:4: declaration is marked with '@deprecated' command but does not have a deprecation attribute [-Wdocumentation-deprecated-sync]
+
+  @deprecated This function is deprecated because it clears all previous
+^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:205:11: parameter 'bufev' not found in the function declaration [-Wdocumentation]
+
+   @param bufev an existing bufferevent allocated with
+^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:207:11: parameter 'addr' not found in the function declaration [-Wdocumentation]
+
+   @param addr the address we should connect to
+          ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:208:11: parameter 'socklen' not found in the function declaration [-Wdocumentation]
+
+   @param socklen The length of the address
+          ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:219:11: parameter 'bufev' not found in the function declaration [-Wdocumentation]
+
+   @param bufev An existing bufferevent allocated with bufferevent_socket_new()
+          ^~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:220:11: parameter 'evdns_base' not found in the function declaration [-Wdocumentation]
+
+   @param evdns_base Optionally, an evdns_base to use for resolving hostnames
+          ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:222:11: parameter 'family' not found in the function declaration [-Wdocumentation]
+
+   @param family A preferred address family to resolve addresses to, or
+          ^~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:225:11: parameter 'hostname' not found in the function declaration [-Wdocumentation]
+
+   @param hostname The hostname to resolve; see below for notes on recognized
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:227:11: parameter 'port' not found in the function declaration [-Wdocumentation]
+
+   @param port The port to connect to on the resolved address.
+          ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:646:17: empty paragraph passed to '@param' command [-Wdocumentation]
+
+   @param options
+          ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:659:17: empty paragraph passed to '@param' command [-Wdocumentation]
+
+   @param options
+   ~~~~~~~~~~~~~^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:689:12: parameter 'limit' not found in the function declaration [-Wdocumentation]
+
+    @param limit A suggested upper bound of bytes to write to dst.
+   ~~~~~~~~~~~~~^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent_compat.h:59:4: declaration is marked with '@deprecated' command but does not have a deprecation attribute [-Wdocumentation-deprecated-sync]
+
+  @deprecated This function is deprecated because it uses the current
+           ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/thread.h:187:11: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+   @param base the event base for which to set the id function
+^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:44:11: parameter 'deferred' not found in the function declaration [-Wdocumentation]
+
+   @param deferred The struct event_callback structure to initialize.
+          ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:45:11: parameter 'priority' not found in the function declaration [-Wdocumentation]
+
+   @param priority The priority that the callback should run at.
+          ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:46:11: parameter 'cb' not found in the function declaration [-Wdocumentation]
+
+   @param cb The function to run when the struct event_callback executes.
+          ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:47:11: parameter 'arg' not found in the function declaration [-Wdocumentation]
+
+   @param arg The function's second argument.
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/buffer.c:2347:7: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+
+                n = readv(fd, vecs, nvecs);
+          ^~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/buffer.c:2460:6: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+
+        n = writev(fd, iov, i);
+                  ~ ^~~~~~~~~~~~~~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/buffer.c:2491:10: implicit conversion loses integer precision: 'int64_t' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+
+        return (len);
+          ~ ^~~~~~~~~~~~~~~~~~
+
+
+▸ Building library liblibevent.a
+▸ Compiling json_pointer.cpp
+▸ Compiling json.cpp
+▸ Compiling dynamic.cpp
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/dynamic.cpp:475:3: code will never be executed [-Wunreachable-code]
+
+  assume_unreachable();
+        ~~~~~~  ^~~
+
+
+▸ Compiling WaitOptions.cpp
+▸ Compiling VirtualEventBase.cpp
+▸ Compiling UniqueInstance.cpp
+▸ Compiling Unicode.cpp
+▸ Compiling Try.cpp
+▸ Compiling ToAscii.cpp
+▸ Compiling TimeoutManager.cpp
+▸ Compiling TimekeeperScheduledExecutor.cpp
+▸ Compiling TimedDrivableExecutor.cpp
+▸ Compiling ThreadedExecutor.cpp
+▸ Compiling ThreadWheelTimekeeper.cpp
+▸ Compiling ThreadPoolExecutor.cpp
+▸ Compiling ThreadName.cpp
+▸ Compiling ThreadLocalDetail.cpp
+▸ Compiling ThreadId.cpp
+▸ Compiling SysUio.cpp
+▸ Compiling SysMembarrier.cpp
+▸ Compiling String.cpp
+▸ Compiling StrandExecutor.cpp
+▸ Compiling StaticSingletonManager.cpp
+▸ Compiling SpookyHashV2.cpp
+▸ Compiling Sleeper.cpp
+▸ Compiling SingletonStackTrace.cpp
+▸ Compiling Singleton.cpp
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:104:3: code will never be executed [-Wunreachable-code]
+
+  folly::assume_unreachable();
+  ^~~~~~~~~~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:111:3: code will never be executed [-Wunreachable-code]
+
+  folly::assume_unreachable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:130:3: code will never be executed [-Wunreachable-code]
+
+  folly::assume_unreachable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:139:3: code will never be executed [-Wunreachable-code]
+
+  folly::assume_unreachable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:151:3: code will never be executed [-Wunreachable-code]
+
+  folly::assume_unreachable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▸ Compiling SimpleLoopController.cpp
+▸ Compiling SharedPromise.cpp
+▸ Compiling SharedMutex.cpp
+▸ Compiling SerialExecutor.cpp
+▸ Compiling SemaphoreBase.cpp
+▸ Compiling Semaphore.cpp
+▸ Compiling ScopeGuard.cpp
+▸ Compiling SanitizeThread.cpp
+▸ Compiling SafeAssert.cpp
+▸ Compiling Request.cpp
+▸ Compiling Rcu.cpp
+▸ Compiling RCT-Folly-dummy.m
+▸ Compiling QueuedImmediateExecutor.cpp
+▸ Compiling QueueObserver.cpp
+▸ Compiling Promise.cpp
+▸ Compiling Pid.cpp
+▸ Compiling ParkingLot.cpp
+▸ Compiling NetOps.cpp
+▸ Compiling MeteredExecutor.cpp
+▸ Compiling MemoryIdler.cpp
+▸ Compiling ManualTimekeeper.cpp
+▸ Compiling ManualExecutor.cpp
+▸ Compiling MallocImpl.cpp
+▸ Compiling MallctlHelper.cpp
+▸ Compiling InlineExecutor.cpp
+▸ Compiling IOThreadPoolExecutor.cpp
+▸ Compiling IOThreadPoolDeadlockDetectorObserver.cpp
+▸ Compiling IOBufQueue.cpp
+▸ Compiling IOBuf.cpp
+▸ Compiling HazptrThreadPoolExecutor.cpp
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Private/RCT-Folly/folly/executors/CPUThreadPoolExecutor.h:177:25: pointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness]
+
+  BlockingQueue<CPUTask>* getTaskQueue();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▸ Compiling Future.cpp
+▸ Compiling Futex.cpp
+▸ Compiling Format.cpp
+▸ Compiling FileUtil.cpp
+▸ Compiling FiberManager.cpp
+▸ Compiling Fiber.cpp
+▸ Compiling F14Table.cpp
+▸ Compiling ExecutorWithPriority.cpp
+▸ Compiling Executor.cpp
+▸ Compiling ExceptionWrapper.cpp
+▸ Compiling ExceptionString.cpp
+▸ Compiling Exception.cpp
+▸ Compiling EventHandler.cpp
+▸ Compiling EventBaseManager.cpp
+▸ Compiling EventBaseLocal.cpp
+▸ Compiling EventBaseBackendBase.cpp
+▸ Compiling EventBase.cpp
+▸ Compiling EDFThreadPoolExecutor.cpp
+▸ Compiling DistributedMutex.cpp
+▸ Compiling Demangle.cpp
+▸ Compiling DeadlockDetector.cpp
+▸ Compiling Cursor.cpp
+▸ Compiling Core.cpp
+▸ Compiling Conv.cpp
+▸ Compiling Codel.cpp
+▸ Compiling CacheLocality.cpp
+▸ Compiling CString.cpp
+▸ Compiling CPUThreadPoolExecutor.cpp
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Private/RCT-Folly/folly/executors/CPUThreadPoolExecutor.h:177:25: pointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness]
+
+  BlockingQueue<CPUTask>* getTaskQueue();
+                        ^
+
+
+▸ Compiling Baton.cpp
+▸ Compiling BatchSemaphore.cpp
+▸ Compiling Barrier.cpp
+▸ Compiling AtomicNotification.cpp
+▸ Compiling AtFork.cpp
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/detail/AtFork.cpp:127:2: pthread_atfork unavailable [-W#warnings]
+
+#warning pthread_atfork unavailable
+                        ^
+
+
+▸ Compiling AsyncTrace.cpp
+▸ Compiling AsyncTimeout.cpp
+▸ Compiling AsyncStack.cpp
+▸ Compiling AsymmetricMemoryBarrier.cpp
+▸ Compiling Assume.cpp
+▸ Building library libRCT-Folly.a
+▸ Processing ResourceBundle-AccessibilityResources-React-Core-Info.plist
+▸ Copying /Users/[REDACTED]/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-etiinqknplvmadfagjkxbucgnqep/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/AccessibilityResources.bundle/en.lproj
+▸ Touching AccessibilityResources.bundle (in target 'React-Core-AccessibilityResources' from project 'Pods')
+▸ Compiling jsi.cpp
+▸ Compiling jsilib-posix.cpp
+▸ Compiling React-jsi-dummy.m
+▸ Compiling jsilib-windows.cpp
+▸ Compiling JSIDynamic.cpp
+▸ Compiling JSCRuntime.cpp
+▸ Building library libReact-jsi.a
+▸ Compiling React-jsinspector-dummy.m
+▸ Compiling InspectorInterfaces.cpp
+▸ Building library libReact-jsinspector.a
+▸ Compiling React-logger-dummy.m
+▸ Compiling react_native_log.cpp
+▸ Building library libReact-logger.a
+▸ Compiling BridgeNativeModulePerfLogger.cpp
+▸ Compiling React-perflogger-dummy.m
+▸ Building library libReact-perflogger.a
+▸ Compiling ReactMarker.cpp
+▸ Compiling NativeToJsBridge.cpp
+▸ Compiling RAMBundleRegistry.cpp
+▸ Compiling React-cxxreact-dummy.m
+▸ Compiling ModuleRegistry.cpp
+▸ Compiling MethodCall.cpp
+▸ Compiling JSIndexedRAMBundle.cpp
+▸ Compiling JSExecutor.cpp
+▸ Compiling JSBundleType.cpp
+▸ Compiling JSBigString.cpp
+▸ Compiling Instance.cpp
+▸ Compiling CxxNativeModule.cpp
+▸ Building library libReact-cxxreact.a
+▸ Compiling JSINativeModules.cpp
+▸ Compiling React-jsiexecutor-dummy.m
+▸ Compiling JSIExecutor.cpp
+▸ Building library libReact-jsiexecutor.a
+▸ Compiling Yoga-dummy.m
+▸ Compiling Yoga.cpp
+▸ Compiling experiments.cpp
+▸ Compiling YGValue.cpp
+▸ Compiling event.cpp
+▸ Compiling log.cpp
+▸ Compiling YGStyle.cpp
+▸ Compiling YGNodePrint.cpp
+▸ Compiling YGNode.cpp
+▸ Compiling YGLayout.cpp
+▸ Compiling YGEnums.cpp
+▸ Compiling YGConfig.cpp
+▸ Compiling Utils.cpp
+▸ Building library libYoga.a
+▸ Compiling RCTViewRegistry.m
+▸ Compiling RCTWrapperViewController.m
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Views/RCTWrapperViewController.m:32:10: 'automaticallyAdjustsScrollViewInsets' is deprecated: first deprecated in iOS 11.0 - Use UIScrollView's contentInsetAdjustmentBehavior instead [-Wdeprecated-declarations]
+
+    self.automaticallyAdjustsScrollViewInsets = NO;
+ ^
+
+
+▸ Compiling RCTViewUtils.m
+▸ Compiling React-Core-dummy.m
+▸ Compiling UIView+React.m
+▸ Compiling RCTWeakProxy.m
+▸ Compiling RCTViewManager.m
+▸ Compiling RCTView.m
+▸ Compiling RCTVersion.m
+▸ Compiling RCTUtilsUIOverride.m
+▸ Compiling RCTUtils.m
+▸ Compiling RCTUIUtils.m
+▸ Compiling RCTUIManagerUtils.m
+▸ Compiling RCTUIManagerObserverCoordinator.mm
+▸ Compiling RCTUIManager.m
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Modules/RCTUIManager.m:309:11: unused variable 'existingView' [-Wunused-variable]
+
+  UIView *existingView = _viewRegistry[reactTag];
+                                 ^
+
+
+▸ Compiling RCTTouchHandler.m
+▸ Compiling RCTTouchEvent.m
+▸ Compiling RCTSwitchManager.m
+▸ Compiling RCTSwitch.m
+▸ Compiling RCTSurfaceView.mm
+▸ Compiling RCTSurfaceStage.m
+▸ Compiling RCTSurfaceSizeMeasureMode.mm
+▸ Compiling RCTSurfaceRootView.mm
+▸ Compiling RCTSurfaceRootShadowView.m
+▸ Compiling RCTSurfacePresenterStub.m
+▸ Compiling RCTSurfaceHostingView.mm
+▸ Compiling RCTSurfaceHostingProxyRootView.mm
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:76:17: designated initializer invoked a non-designated initializer [-Wobjc-designated-initializers]
+
+  self = [super initWithBridge:bridge
+          ^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:56:1: designated initializer missing a 'super' call to a designated initializer of the super class [-Wobjc-designated-initializers]
+
+- (instancetype)initWithBridge:(RCTBridge *)bridge
+^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:100:21: convenience initializer should not invoke an initializer on 'super' [-Wobjc-designated-initializers]
+
+  if (self = [super initWithSurface:surface sizeMeasureMode:sizeMeasureMode]) {
+^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:96:1: convenience initializer missing a 'self' call to another initializer [-Wobjc-designated-initializers]
+
+- (instancetype)initWithSurface:(id<RCTSurfaceProtocol>)surface
+                    ^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:52:17: method override for the designated initializer of the superclass '-initWithSurface:sizeMeasureMode:' not found [-Wobjc-designated-initializers]
+
+@implementation RCTSurfaceHostingProxyRootView {
+^
+
+
+▸ Compiling RCTSurface.mm
+▸ Compiling RCTSliderManager.m
+▸ Compiling RCTSlider.m
+▸ Compiling RCTShadowView.m
+▸ Compiling RCTShadowView+Layout.m
+▸ Compiling RCTShadowView+Internal.m
+▸ Compiling RCTSegmentedControlManager.m
+▸ Compiling RCTSegmentedControl.m
+▸ Compiling RCTScrollViewManager.m
+▸ Compiling RCTScrollView.m
+▸ Compiling RCTScrollEvent.m
+▸ Compiling RCTScrollContentViewManager.m
+▸ Compiling RCTScrollContentView.m
+▸ Compiling RCTScrollContentShadowView.m
+▸ Compiling RCTSafeAreaViewManager.m
+▸ Compiling RCTSafeAreaViewLocalData.m
+▸ Compiling RCTSafeAreaView.m
+▸ Compiling RCTSafeAreaShadowView.m
+▸ Compiling RCTSRWebSocket.m
+▸ Compiling RCTRootView.m
+▸ Compiling RCTRootShadowView.m
+▸ Compiling RCTRootContentView.m
+▸ Compiling RCTReloadCommand.m
+▸ Compiling RCTRefreshControlManager.m
+▸ Compiling RCTRefreshControl.m
+▸ Compiling RCTRedBoxSetEnabled.m
+▸ Compiling RCTRedBoxExtraDataViewController.m
+▸ Compiling RCTReconnectingWebSocket.m
+▸ Compiling RCTProgressViewManager.m
+▸ Compiling RCTProfile.m
+Build success
+Build Successful 🎉
+downloading artifacts to ./btrstmp
+Download artifact meta data e77a0df07f5b5ba2
+Downloading BiSdkReactNativeExample.dSYM.zip from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/e77a0df07f5b5ba2/BiSdkReactNativeExample.dSYM.zip?Expires=1675808335&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=DRoQe2yW9VpvH7unbrjmadC93r%2BL%2Bv%2BntttCP6wA5%2Bbn6Mqr%2FoIyW%2BAsrXfU%2FIqifnsMDD1PNQj3%2BG0hrzengT72dT%2BYhF0I%2BvuAgp78gKbEsizqrfrfaD0qvBIZg5uWMdK%2BnHrFZ3YeIjpqRF2jBCKHIP6mUQLzI8AT064hDBJUmReOpvy5q%2FLCPnoD%2Flsp0eagx5E5VZVNghmaJOobm7QG6JUEuojWDFvAILP4p8S7rB%2FWNzgdZCMSzrZPCe7eUXL7lALlWkk4OBSbV%2FL22OTBRo6ujia2uZkUgn7FJC7dc%2F0ARF1mT6j2PcM%2BthbCt%2B32HBEyIamPgGWEcs4nsw%3D%3D
+Download artifact meta data 1903a65e1b26d9e0
+Downloading BiSdkReactNativeExample.ipa from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/1903a65e1b26d9e0/BiSdkReactNativeExample.ipa?Expires=1675808336&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=xSSYqcF%2F0jE60OkNRV1WivOwb9uhxsyDHg2InA2NEj5AjnNaWDzqB9V2H3d4oejPAvgx5SMb2q56b%2B4cHg%2BvbxwZqLLwMXj7VL7eLq0qY9qXyLcjywhlfu8bIkHQshR%2FLvdbzww3HWtfFlLsOChrOnwgx9pbCyKw4F1KUc0ffD5THgMq0w9gcWXZwUp1QaeSQI2kIrfDIC5WgLmXs7EeB%2Bgpdn66PvG4DcV1%2B3jn14f8flPIq7BeKEFHn2sztPv98iN0HVR5xdWmgCRYo2%2F%2Fy2aignARCySQU5zXeZIZGabS%2BUIacK8iSeq85CNDt34nxQPB14PUZCrmM%2FaJRA5%2Fjw%3D%3D
+Download artifact meta data b65e163f32a8fe1b
+Downloading BiSdkReactNativeExample.xcarchive.zip from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/b65e163f32a8fe1b/BiSdkReactNativeExample.xcarchive.zip?Expires=1675808337&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=xArIzkoapxJZdzlFvwki%2F9fyfA4OQeePfQZeCmpU85dQA3uri%2FvMa0WwR1nFAmf2sQI35wMzcIs4G0qfkuJSQ1ZyLSOc33Bp6kIHHFGmcR%2FPeGtGszjbVvPHa8jOjKgbEqlE2fhNk8a1t%2B7dymWOW0POHS2NF5EAdfl9c8aJlGKxzyaFBI%2B2HY4lD2Jl34QvRurfMwAKDRLFY4gV7QPFWPMxdn2KF1L7bT7UEs12rHBJXUq7H%2FOGhoF7Wdqwlv5nsOYcupHOH1%2FdTChdXc4DiOap%2ByLs7RF%2BenpPksJ3GD%2FLIV37%2FCakiCS3W8yNDgQnW7JSn7GlEAiFXMIT1FUyVg%3D%3D
+Download artifact meta data bc00bf330bd60d1a
+Downloading artifacts.zip from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/bc00bf330bd60d1a/artifacts.zip?Expires=1675808339&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=ts%2Fxs3QgsBnABvZnLFPv0FGvOAHJVU6iTEnuvo8RC72WeTlgkrWv0m0Bl3ZGD3w6DPPB2MIifpUAC4%2Br2XMY6gs5WouTQrOzxJyoyzOaEsijkMjaEYvldaaf3sZ%2BwnexKa5NHfikcdFY3%2Bx6vQOlO%2FP%2BgoLpOO9gwYkuWAy%2FXlbm0JU7MvsskWYtZxWHjCyFSx7SiMhtbPk5CaqLxIcaupb9ba5RTbxJEY8Jkwz6n0Vg4PjzyddXelG3sVjfmj%2FFBMtwAQTEpnOllagGfnMezd59Iz67zcWo%2FGcM0gY5XFPCAfEG8pXJplEICWKgFYwp8JjNLEYxHLmBDUgKKkzgQQ%3D%3D
+Download artifact meta data 34deaa3e986307cc
+Downloading export_options.plist from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/34deaa3e986307cc/export_options.plist?Expires=1675808358&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=TTn5KvzJf49vwC%2FAf5zKKpxb5eO9WSGLSVm1GtySDbBhxdMMx0njHeqH4dNbg0Ra22RUIXy4XupD6OFQyjLFQIzkChoxYDOcki1Yil%2B2i3dt%2By%2FdtM139ugWHImlRcHdc%2FWO7Lao%2B5w4AjJp%2FjOsPyfWQ6CkP7fjCcgFJrS6hsmzgYfl91XL1lf9ey%2BBaVHn6CMotqH7b9mdszEVaFpamdvoqw4PWIZYmEAVzomxdvdBcwIDwVZcUaNXXGH17M%2Bk7PqN7TVKAlpUjyPqQjXva1efaOUMxeN7kU%2B8Y%2Fr1SdLSIzZmnfnwKijxPjOYGkmmIBK1lV3ScS15I5W69QtTSA%3D%3D
+Download artifact meta data ad9da219ecf32325
+Downloading xcodebuild-archive.log from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/ad9da219ecf32325/xcodebuild-archive.log?Expires=1675808358&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=nhti1WnZi5KXRIzLcuxU6odNyz3iJmCSRTVF2KcM7eM%2Fm%2BKP2UXc0mg8%2F3ojOwovL0q2LNAPo0bKbm%2Fih8qOiR7B3xi%2FtUNF5UMxv3ORd6pWtRs7bDncUG8Y7eUadCziqP02PbGV5UnY3gJxJ8vDgb9vY3sdHgjrlUuC%2Ffs0xRYJbdzPQAZRxlOzyEAjoPIfLSQKmXJ9fujCSU1nOgHe6zuXt%2FYe0ajg6iYLwxWMyoN3Gi5A2jAaOWxQumUHUwuqc6E6uXHdT98KJNJXkmxSuU4eRDRPiJLaUE85tdJGIw8vsehBWAIpf%2FbKhEGbiPRWZcK62m8lGp1YpplpBTGBSQ%3D%3D
+Download artifact meta data 9a7228ec3b52a1ed
+Downloading xcodebuild-export-archive.log from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/9a7228ec3b52a1ed/xcodebuild-export-archive.log?Expires=1675808359&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=eaUr0tdP3Am2X4NvwsFGKCVDy4l6XLoxbB%2BZXTcGI3d8kN3ApTHji2%2FhPepHZCv3bLMNmSWrtRPLDb9UIvdXCG7PrEsvGr421dURGayZ4UjdIAFhL%2FxyVHies7mCcHVldMATvvTF5LcU8rAG1yhha7hXizx7LpH8qJPSXbH3lPibxFA%2F50O%2Fawv9in5ZrQ%2F0IeO3RMGb8p%2FmqXu0qjFkoZ46XeC%2FAE4ebMtmP4jmGCLOQSFBkvq43qRL1mS%2Fz3tV%2BjahA%2Fz8LxdBCrZ61ZZVMEPMCN2jhw5zdpxG7eazWdw8QeTV0wXBRofi8wNiREz1%2F3YfWI9fWB9NjCiuIlrGyQ%3D%3D
+BITRISE_LAST_BUILD_SLUG=9947bab1-92fb-47ff-ab5f-30b13ab9ba92 >> bitrise.env
+Unzipping artifacts
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 49 not upgraded.
+Need to get 404 kB of archives.
+After this operation, 1031 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bullseye/main amd64 unzip amd64 6.0-26+deb11u1 [172 kB]
+Get:2 http://deb.debian.org/debian bullseye/main amd64 zip amd64 3.0-12 [232 kB]
+Fetched 404 kB in 0s (1753 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15729 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26+deb11u1_amd64.deb ...
+Unpacking unzip (6.0-26+deb11u1) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../archives/zip_3.0-12_amd64.deb ...
+Unpacking zip (3.0-12) ...
+Setting up unzip (6.0-26+deb11u1) ...
+Setting up zip (3.0-12) ...

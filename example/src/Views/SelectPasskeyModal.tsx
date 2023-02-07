@@ -1,16 +1,14 @@
-import type { Credential } from '@beyondidentity/bi-sdk-react-native';
+import type { Passkey } from '@beyondidentity/bi-sdk-react-native';
 import { Text, View, Modal, StyleSheet, Pressable } from 'react-native';
 
-interface SelectCredentialModalProps {
+interface SelectPasskeyModalProps {
   modalVisible: boolean;
   setModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  credentials: Credential[];
+  passkeys: Passkey[];
   onSelect: (id: string) => void;
 }
 
-export default function SelectCredentialModal(
-  props: SelectCredentialModalProps
-) {
+export default function SelectPasskeyModal(props: SelectPasskeyModalProps) {
   return (
     <Modal
       animationType="slide"
@@ -29,8 +27,8 @@ export default function SelectCredentialModal(
           >
             <Text>Close</Text>
           </Pressable>
-          <Text style={styles.modalText}>Select A Credential</Text>
-          {props.credentials.map((cred: Credential) => {
+          <Text style={styles.modalText}>Select A Passkey</Text>
+          {props.passkeys.map((cred: Passkey) => {
             return (
               <Pressable
                 style={styles.button}

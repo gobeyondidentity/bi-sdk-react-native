@@ -67,11 +67,11 @@ allprojects {
 ```
 
 ### Using `expo`
-> :warning: This package cannot be used in "Expo Go" because [it requires custom native code](https://docs.expo.io/workflow/customizing/). However you can leverage this library with a [development build](https://docs.expo.dev/development/introduction/) or [prebuild](https://docs.expo.dev/workflow/prebuild/).  
+> :warning: This package [requires custom native code](https://docs.expo.io/workflow/customizing/) and can be used with [Development builds](https://docs.expo.dev/develop/development-builds/introduction/) or  [prebuild](https://docs.expo.dev/workflow/prebuild/) and cannot be used with Expo Go.
 
 1. Install the SDK:
 ```
-expo install @beyondidentity/bi-sdk-react-native
+npx expo install @beyondidentity/bi-sdk-react-native
 ```
 
 2. Add the SDK [config plugin](https://docs.expo.dev/guides/config-plugins/) to the [plugins array](https://docs.expo.dev/versions/latest/config/app/#plugins) of your app.{json,config.js,config.ts}:
@@ -87,20 +87,7 @@ expo install @beyondidentity/bi-sdk-react-native
 
 3. Set native requirments either with [expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/) or modify project [static files](https://docs.expo.dev/guides/config-plugins/#static-modification)
 
-A. Modify the following static files
-
-android/gradle.properties
-```
-android.minSdkVersion=26
-```
-ios/Podfile.properties.json
-```
-"ios.deploymentTarget": "13.0"
-```
-
-*or* 
-
-B. Add [expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/) to your app.{json,config.js,config.ts}:
+A. Add [expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/) to your app.{json,config.js,config.ts}:
 
 
 ```
@@ -128,7 +115,22 @@ expo install expo-build-properties
 }
 ```
 
-4.  Next, rebuild your app as described in the ["Adding custom native code"](https://docs.expo.dev/workflow/customizing/) guide.
+*or*
+
+B. Modify the following static files
+
+android/gradle.properties
+```
+android.minSdkVersion=26
+```
+ios/Podfile.properties.json
+```
+"ios.deploymentTarget": "13.0"
+```
+
+
+
+4.  Next, rebuild your app as described in the ["Adding custom native code"]([https://docs.expo.dev/workflow/customizing/](https://docs.expo.dev/workflow/customizing/#generate-native-projects-with-prebuild)) guide.
 
 ## Usage
 

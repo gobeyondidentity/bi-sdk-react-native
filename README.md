@@ -85,9 +85,7 @@ npx expo install @beyondidentity/bi-sdk-react-native
 }
 ```
 
-3. Set native requirments either with [expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/) or modify project [static files](https://docs.expo.dev/guides/config-plugins/#static-modification)
-
-A. Add [expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/) to your app.{json,config.js,config.ts}:
+3. Set native requirments either with [expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/). Add [expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/) to your app.{json,config.js,config.ts}:
 
 
 ```
@@ -113,19 +111,6 @@ expo install expo-build-properties
     ]
   }
 }
-```
-
-*or*
-
-B. Modify the following static files
-
-android/gradle.properties
-```
-android.minSdkVersion=26
-```
-ios/Podfile.properties.json
-```
-"ios.deploymentTarget": "13.0"
 ```
 
 

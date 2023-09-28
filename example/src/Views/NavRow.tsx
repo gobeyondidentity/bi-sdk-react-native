@@ -1,4 +1,3 @@
-import React from "react";
 import { ListItem } from "@rneui/themed";
 import { Color } from "./styles";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { ScrollView, View } from "react-native";
 import { Embedded } from "@beyondidentity/bi-sdk-react-native";
 import ButtonCardView from "./ButtonCardView";

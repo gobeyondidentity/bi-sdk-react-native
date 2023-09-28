@@ -1,4 +1,3 @@
-import React from "react";
 import { SafeAreaView, ScrollView, Text } from "react-native";
 import { Button } from "@rneui/themed";
 import Config from "../Config";

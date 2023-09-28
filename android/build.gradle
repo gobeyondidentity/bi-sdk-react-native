@@ -15,7 +15,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:7.1.1'
+    classpath 'com.android.tools.build:gradle:7.4.2'
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
@@ -141,7 +141,7 @@ dependencies {
 
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
-  implementation "com.beyondidentity.android.sdk:embedded:2.0.0"
+  implementation "com.beyondidentity.android.sdk:embedded:2.0.1"
 
   implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
 }

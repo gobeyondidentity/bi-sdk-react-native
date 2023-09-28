@@ -1,45 +1,4 @@
 
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1197:10: parameter 'base' not found in the function declaration [-Wdocumentation]
-
-  @param base an event_base
-         ^~~~~~~~~~~~
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1198:10: parameter 'fd' not found in the function declaration [-Wdocumentation]
-
-  @param fd a file descriptor to monitor, or -1 for no fd.
-         ^~~~
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1199:10: parameter 'events' not found in the function declaration [-Wdocumentation]
-
-  @param events event(s) to monitor; can be any of EV_READ |
-         ^~
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1201:10: parameter 'callback' not found in the function declaration [-Wdocumentation]
-
-  @param callback callback function to be invoked when the event occurs
-         ^~~~~~
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1202:10: parameter 'arg' not found in the function declaration [-Wdocumentation]
-
-  @param arg an argument to be passed to the callback function
-         ^~~~~~~~
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1203:10: parameter 'timeout' not found in the function declaration [-Wdocumentation]
-
-  @param timeout the maximum amount of time to wait for the event. NULL
-         ^~~
-
-
 
 ⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1254:10: parameter 'ev' not found in the function declaration [-Wdocumentation]
 
@@ -131,7 +90,7 @@
           ^~~
 
 
-▸ Compiling buffer.c
+▸ Compiling bufferevent_ratelim.c
 
 ⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:366:10: parameter 'base' not found in the function declaration [-Wdocumentation]
 
@@ -572,6 +531,323 @@
    @param options
    ~~~~~~~~~~~~~^
 
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:46:11: parameter 'cb' not found in the function declaration [-Wdocumentation]
+
+   @param cb The function to run when the struct event_callback executes.
+          ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/defer-internal.h:47:11: parameter 'arg' not found in the function declaration [-Wdocumentation]
+
+   @param arg The function's second argument.
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/thread.h:187:11: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+   @param base the event base for which to set the id function
+          ^~~
+
+
+▸ Compiling bufferevent.c
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:210:11: parameter 'buffer' not found in the function declaration [-Wdocumentation]
+
+ * @param buffer the evbuffer that the callback is watching.
+          ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:211:11: parameter 'cb' not found in the function declaration [-Wdocumentation]
+
+ * @param cb the callback whose status we want to change.
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:219:11: parameter 'buffer' not found in the function declaration [-Wdocumentation]
+
+ * @param buffer the evbuffer that the callback is watching.
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer.h:220:11: parameter 'cb' not found in the function declaration [-Wdocumentation]
+
+ * @param cb the callback whose status we want to change.
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer_compat.h:42:5: declaration is marked with '@deprecated' command but does not have a deprecation attribute [-Wdocumentation-deprecated-sync]
+
+   @deprecated This function is deprecated because its behavior is not correct
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/buffer_compat.h:82:4: declaration is marked with '@deprecated' command but does not have a deprecation attribute [-Wdocumentation-deprecated-sync]
+
+  @deprecated This function is deprecated because it clears all previous
+^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:205:11: parameter 'bufev' not found in the function declaration [-Wdocumentation]
+
+   @param bufev an existing bufferevent allocated with
+^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:207:11: parameter 'addr' not found in the function declaration [-Wdocumentation]
+
+   @param addr the address we should connect to
+          ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:208:11: parameter 'socklen' not found in the function declaration [-Wdocumentation]
+
+   @param socklen The length of the address
+          ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:219:11: parameter 'bufev' not found in the function declaration [-Wdocumentation]
+
+   @param bufev An existing bufferevent allocated with bufferevent_socket_new()
+          ^~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:220:11: parameter 'evdns_base' not found in the function declaration [-Wdocumentation]
+
+   @param evdns_base Optionally, an evdns_base to use for resolving hostnames
+          ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:222:11: parameter 'family' not found in the function declaration [-Wdocumentation]
+
+   @param family A preferred address family to resolve addresses to, or
+          ^~~~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:225:11: parameter 'hostname' not found in the function declaration [-Wdocumentation]
+
+   @param hostname The hostname to resolve; see below for notes on recognized
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:227:11: parameter 'port' not found in the function declaration [-Wdocumentation]
+
+   @param port The port to connect to on the resolved address.
+          ^~~~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:646:17: empty paragraph passed to '@param' command [-Wdocumentation]
+
+   @param options
+          ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:659:17: empty paragraph passed to '@param' command [-Wdocumentation]
+
+   @param options
+   ~~~~~~~~~~~~~^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:689:12: parameter 'limit' not found in the function declaration [-Wdocumentation]
+
+    @param limit A suggested upper bound of bytes to write to dst.
+   ~~~~~~~~~~~~~^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent_compat.h:59:4: declaration is marked with '@deprecated' command but does not have a deprecation attribute [-Wdocumentation-deprecated-sync]
+
+  @deprecated This function is deprecated because it uses the current
+           ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:366:10: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+  @param base the event_base structure returned by event_base_new() or
+^
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:378:9: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+ @param eb the event_base structure returned by event_base_new()
+         ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:435:11: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+   @param eb the event_base structure returned by event_base_new()
+        ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:436:11: parameter 'flags' not found in the function declaration [-Wdocumentation]
+
+   @param flags a bitwise combination of the kinds of events to aggregate
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:447:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_base_new()
+          ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:448:10: parameter 'flags' not found in the function declaration [-Wdocumentation]
+
+  @param flags a bitwise combination of the kinds of events to aggregate
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:450:10: parameter 'clear' not found in the function declaration [-Wdocumentation]
+
+  @param clear option used to reset the maximum count.
+         ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:672:10: parameter 'cfg' not found in the function declaration [-Wdocumentation]
+
+  @param cfg the event configuration object
+         ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:689:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb an event_base to be freed
+         ^~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:782:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event base
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:783:10: parameter 'ev' not found in the function declaration [-Wdocumentation]
+
+  @param ev the event
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:817:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_base_new() or
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:819:10: parameter 'flags' not found in the function declaration [-Wdocumentation]
+
+  @param flags any combination of EVLOOP_ONCE | EVLOOP_NONBLOCK
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:837:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:838:10: parameter 'tv' not found in the function declaration [-Wdocumentation]
+
+  @param tv the amount of time after which the loop should terminate,
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:855:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:875:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:888:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:903:10: parameter 'eb' not found in the function declaration [-Wdocumentation]
+
+  @param eb the event_base structure returned by event_init()
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1008:11: parameter 'fd' not found in the function declaration [-Wdocumentation]
+
+   @param fd An fd or signal
+         ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1009:11: parameter 'events' not found in the function declaration [-Wdocumentation]
+
+   @param events One or more EV_* flags
+          ^~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1010:11: parameter 'arg' not found in the function declaration [-Wdocumentation]
+
+   @param arg A user-supplied argument.
+          ^~~~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1078:10: parameter 'base' not found in the function declaration [-Wdocumentation]
+
+  @param base the event base to which the event should be attached.
+          ^~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1079:10: parameter 'fd' not found in the function declaration [-Wdocumentation]
+
+  @param fd the file descriptor or signal to be monitored, or -1.
+         ^~~~
+
+
+
+⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/event.h:1080:10: parameter 'events' not found in the function declaration [-Wdocumentation]
 
 
 ⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/libevent/include/event2/bufferevent.h:689:12: parameter 'limit' not found in the function declaration [-Wdocumentation]
@@ -643,208 +919,16 @@
           ~ ^~~~~~~~~~~~~~~~~~
 
 
-▸ Building library liblibevent.a
-▸ Compiling json_pointer.cpp
-▸ Compiling json.cpp
-▸ Compiling dynamic.cpp
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/dynamic.cpp:475:3: code will never be executed [-Wunreachable-code]
-
-  assume_unreachable();
-        ~~~~~~  ^~~
-
-
-▸ Compiling WaitOptions.cpp
-▸ Compiling VirtualEventBase.cpp
-▸ Compiling UniqueInstance.cpp
-▸ Compiling Unicode.cpp
-▸ Compiling Try.cpp
-▸ Compiling ToAscii.cpp
-▸ Compiling TimeoutManager.cpp
-▸ Compiling TimekeeperScheduledExecutor.cpp
-▸ Compiling TimedDrivableExecutor.cpp
-▸ Compiling ThreadedExecutor.cpp
-▸ Compiling ThreadWheelTimekeeper.cpp
-▸ Compiling ThreadPoolExecutor.cpp
-▸ Compiling ThreadName.cpp
-▸ Compiling ThreadLocalDetail.cpp
-▸ Compiling ThreadId.cpp
-▸ Compiling SysUio.cpp
-▸ Compiling SysMembarrier.cpp
-▸ Compiling String.cpp
-▸ Compiling StrandExecutor.cpp
-▸ Compiling StaticSingletonManager.cpp
-▸ Compiling SpookyHashV2.cpp
-▸ Compiling Sleeper.cpp
-▸ Compiling SingletonStackTrace.cpp
-▸ Compiling Singleton.cpp
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:104:3: code will never be executed [-Wunreachable-code]
-
-  folly::assume_unreachable();
-  ^~~~~~~~~~~~~~~~~~
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:111:3: code will never be executed [-Wunreachable-code]
-
-  folly::assume_unreachable();
-  ^~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:130:3: code will never be executed [-Wunreachable-code]
-
-  folly::assume_unreachable();
-  ^~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:139:3: code will never be executed [-Wunreachable-code]
-
-  folly::assume_unreachable();
-  ^~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/Singleton.cpp:151:3: code will never be executed [-Wunreachable-code]
-
-  folly::assume_unreachable();
-  ^~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-▸ Compiling SimpleLoopController.cpp
-▸ Compiling SharedPromise.cpp
-▸ Compiling SharedMutex.cpp
-▸ Compiling SerialExecutor.cpp
-▸ Compiling SemaphoreBase.cpp
-▸ Compiling Semaphore.cpp
-▸ Compiling ScopeGuard.cpp
-▸ Compiling SanitizeThread.cpp
-▸ Compiling SafeAssert.cpp
-▸ Compiling Request.cpp
-▸ Compiling Rcu.cpp
-▸ Compiling RCT-Folly-dummy.m
-▸ Compiling QueuedImmediateExecutor.cpp
-▸ Compiling QueueObserver.cpp
-▸ Compiling Promise.cpp
-▸ Compiling Pid.cpp
-▸ Compiling ParkingLot.cpp
-▸ Compiling NetOps.cpp
-▸ Compiling MeteredExecutor.cpp
-▸ Compiling MemoryIdler.cpp
-▸ Compiling ManualTimekeeper.cpp
-▸ Compiling ManualExecutor.cpp
-▸ Compiling MallocImpl.cpp
-▸ Compiling MallctlHelper.cpp
-▸ Compiling InlineExecutor.cpp
-▸ Compiling IOThreadPoolExecutor.cpp
-▸ Compiling IOThreadPoolDeadlockDetectorObserver.cpp
-▸ Compiling IOBufQueue.cpp
-▸ Compiling IOBuf.cpp
-▸ Compiling HazptrThreadPoolExecutor.cpp
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Private/RCT-Folly/folly/executors/CPUThreadPoolExecutor.h:177:25: pointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness]
-
-  BlockingQueue<CPUTask>* getTaskQueue();
-  ^~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-▸ Compiling Future.cpp
-▸ Compiling Futex.cpp
-▸ Compiling Format.cpp
-▸ Compiling FileUtil.cpp
-▸ Compiling FiberManager.cpp
-▸ Compiling Fiber.cpp
-▸ Compiling F14Table.cpp
-▸ Compiling ExecutorWithPriority.cpp
-▸ Compiling Executor.cpp
-▸ Compiling ExceptionWrapper.cpp
-▸ Compiling ExceptionString.cpp
-▸ Compiling Exception.cpp
-▸ Compiling EventHandler.cpp
-▸ Compiling EventBaseManager.cpp
-▸ Compiling EventBaseLocal.cpp
-▸ Compiling EventBaseBackendBase.cpp
-▸ Compiling EventBase.cpp
-▸ Compiling EDFThreadPoolExecutor.cpp
-▸ Compiling DistributedMutex.cpp
-▸ Compiling Demangle.cpp
-▸ Compiling DeadlockDetector.cpp
-▸ Compiling Cursor.cpp
-▸ Compiling Core.cpp
-▸ Compiling Conv.cpp
-▸ Compiling Codel.cpp
-▸ Compiling CacheLocality.cpp
-▸ Compiling CString.cpp
-▸ Compiling CPUThreadPoolExecutor.cpp
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/Headers/Private/RCT-Folly/folly/executors/CPUThreadPoolExecutor.h:177:25: pointer is missing a nullability type specifier (_Nonnull, _Nullable, or _Null_unspecified) [-Wnullability-completeness]
-
-  BlockingQueue<CPUTask>* getTaskQueue();
-                        ^
-
-
-▸ Compiling Baton.cpp
-▸ Compiling BatchSemaphore.cpp
-▸ Compiling Barrier.cpp
-▸ Compiling AtomicNotification.cpp
-▸ Compiling AtFork.cpp
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/ios/Pods/RCT-Folly/folly/detail/AtFork.cpp:127:2: pthread_atfork unavailable [-W#warnings]
-
-#warning pthread_atfork unavailable
-                        ^
-
-
-▸ Compiling AsyncTrace.cpp
-▸ Compiling AsyncTimeout.cpp
-▸ Compiling AsyncStack.cpp
-▸ Compiling AsymmetricMemoryBarrier.cpp
-▸ Compiling Assume.cpp
-▸ Building library libRCT-Folly.a
-▸ Processing ResourceBundle-AccessibilityResources-React-Core-Info.plist
-▸ Copying /Users/[REDACTED]/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-etiinqknplvmadfagjkxbucgnqep/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/AccessibilityResources.bundle/en.lproj
-▸ Touching AccessibilityResources.bundle (in target 'React-Core-AccessibilityResources' from project 'Pods')
-▸ Compiling jsi.cpp
-▸ Compiling jsilib-posix.cpp
-▸ Compiling React-jsi-dummy.m
-▸ Compiling jsilib-windows.cpp
-▸ Compiling JSIDynamic.cpp
-▸ Compiling JSCRuntime.cpp
-▸ Building library libReact-jsi.a
-▸ Compiling React-jsinspector-dummy.m
-▸ Compiling InspectorInterfaces.cpp
-▸ Building library libReact-jsinspector.a
-▸ Compiling React-logger-dummy.m
-▸ Compiling react_native_log.cpp
-▸ Building library libReact-logger.a
-▸ Compiling BridgeNativeModulePerfLogger.cpp
-▸ Compiling React-perflogger-dummy.m
-▸ Building library libReact-perflogger.a
-▸ Compiling ReactMarker.cpp
-▸ Compiling NativeToJsBridge.cpp
-▸ Compiling RAMBundleRegistry.cpp
-▸ Compiling React-cxxreact-dummy.m
-▸ Compiling ModuleRegistry.cpp
-▸ Compiling MethodCall.cpp
-▸ Compiling JSIndexedRAMBundle.cpp
-▸ Compiling JSExecutor.cpp
-▸ Compiling JSBundleType.cpp
-▸ Compiling JSBigString.cpp
-▸ Compiling Instance.cpp
-▸ Compiling CxxNativeModule.cpp
-▸ Building library libReact-cxxreact.a
-▸ Compiling JSINativeModules.cpp
-▸ Compiling React-jsiexecutor-dummy.m
-▸ Compiling JSIExecutor.cpp
-▸ Building library libReact-jsiexecutor.a
-▸ Compiling Yoga-dummy.m
-▸ Compiling Yoga.cpp
-▸ Compiling experiments.cpp
-▸ Compiling YGValue.cpp
-▸ Compiling event.cpp
+▸ Compiling glog-dummy.m
+▸ Compiling demangle.cc
+▸ Compiling format.cc
+▸ Compiling fmt-dummy.m
 ▸ Compiling log.cpp
+▸ Compiling experiments.cpp
+▸ Compiling event.cpp
+▸ Compiling Yoga.cpp
+▸ Compiling Yoga-dummy.m
+▸ Compiling YGValue.cpp
 ▸ Compiling YGStyle.cpp
 ▸ Compiling YGNodePrint.cpp
 ▸ Compiling YGNode.cpp
@@ -852,145 +936,61 @@
 ▸ Compiling YGEnums.cpp
 ▸ Compiling YGConfig.cpp
 ▸ Compiling Utils.cpp
+▸ Building library libglog.a
+▸ Compiling React-perflogger-dummy.m
+▸ Building library liblibevent.a
+▸ Compiling BridgeNativeModulePerfLogger.cpp
+▸ Compiling React-jsinspector-dummy.m
+▸ Compiling InspectorInterfaces.cpp
+▸ Processing ResourceBundle-AccessibilityResources-React-Core-Info.plist
+▸ Copying /Users/[REDACTED]/Library/Developer/Xcode/DerivedData/BiSdkReactNativeExample-etiinqknplvmadfagjkxbucgnqep/Build/Intermediates.noindex/ArchiveIntermediates/BiSdkReactNativeExample/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/AccessibilityResources.bundle/en.lproj
+▸ Compiling strtod.cc
+▸ Compiling fixed-dtoa.cc
+▸ Compiling fast-dtoa.cc
 ▸ Building library libYoga.a
-▸ Compiling RCTViewRegistry.m
-▸ Compiling RCTWrapperViewController.m
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Views/RCTWrapperViewController.m:32:10: 'automaticallyAdjustsScrollViewInsets' is deprecated: first deprecated in iOS 11.0 - Use UIScrollView's contentInsetAdjustmentBehavior instead [-Wdeprecated-declarations]
-
-    self.automaticallyAdjustsScrollViewInsets = NO;
- ^
-
-
-▸ Compiling RCTViewUtils.m
-▸ Compiling React-Core-dummy.m
-▸ Compiling UIView+React.m
-▸ Compiling RCTWeakProxy.m
-▸ Compiling RCTViewManager.m
-▸ Compiling RCTView.m
-▸ Compiling RCTVersion.m
-▸ Compiling RCTUtilsUIOverride.m
-▸ Compiling RCTUtils.m
-▸ Compiling RCTUIUtils.m
-▸ Compiling RCTUIManagerUtils.m
-▸ Compiling RCTUIManagerObserverCoordinator.mm
-▸ Compiling RCTUIManager.m
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Modules/RCTUIManager.m:309:11: unused variable 'existingView' [-Wunused-variable]
-
-  UIView *existingView = _viewRegistry[reactTag];
-                                 ^
-
-
-▸ Compiling RCTTouchHandler.m
-▸ Compiling RCTTouchEvent.m
-▸ Compiling RCTSwitchManager.m
-▸ Compiling RCTSwitch.m
-▸ Compiling RCTSurfaceView.mm
-▸ Compiling RCTSurfaceStage.m
-▸ Compiling RCTSurfaceSizeMeasureMode.mm
-▸ Compiling RCTSurfaceRootView.mm
-▸ Compiling RCTSurfaceRootShadowView.m
-▸ Compiling RCTSurfacePresenterStub.m
-▸ Compiling RCTSurfaceHostingView.mm
-▸ Compiling RCTSurfaceHostingProxyRootView.mm
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:76:17: designated initializer invoked a non-designated initializer [-Wobjc-designated-initializers]
-
-  self = [super initWithBridge:bridge
-          ^
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:56:1: designated initializer missing a 'super' call to a designated initializer of the super class [-Wobjc-designated-initializers]
-
-- (instancetype)initWithBridge:(RCTBridge *)bridge
-^
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:100:21: convenience initializer should not invoke an initializer on 'super' [-Wobjc-designated-initializers]
-
-  if (self = [super initWithSurface:surface sizeMeasureMode:sizeMeasureMode]) {
-^
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:96:1: convenience initializer missing a 'self' call to another initializer [-Wobjc-designated-initializers]
-
-- (instancetype)initWithSurface:(id<RCTSurfaceProtocol>)surface
-                    ^
-
-
-
-⚠️  /Users/[REDACTED]/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/React/Base/Surface/SurfaceHostingView/RCTSurfaceHostingProxyRootView.mm:52:17: method override for the designated initializer of the superclass '-initWithSurface:sizeMeasureMode:' not found [-Wobjc-designated-initializers]
-
-@implementation RCTSurfaceHostingProxyRootView {
-^
-
-
-▸ Compiling RCTSurface.mm
-▸ Compiling RCTSliderManager.m
-▸ Compiling RCTSlider.m
-▸ Compiling RCTShadowView.m
-▸ Compiling RCTShadowView+Layout.m
-▸ Compiling RCTShadowView+Internal.m
-▸ Compiling RCTSegmentedControlManager.m
-▸ Compiling RCTSegmentedControl.m
-▸ Compiling RCTScrollViewManager.m
-▸ Compiling RCTScrollView.m
-▸ Compiling RCTScrollEvent.m
-▸ Compiling RCTScrollContentViewManager.m
-▸ Compiling RCTScrollContentView.m
-▸ Compiling RCTScrollContentShadowView.m
-▸ Compiling RCTSafeAreaViewManager.m
-▸ Compiling RCTSafeAreaViewLocalData.m
-▸ Compiling RCTSafeAreaView.m
-▸ Compiling RCTSafeAreaShadowView.m
-▸ Compiling RCTSRWebSocket.m
-▸ Compiling RCTRootView.m
-▸ Compiling RCTRootShadowView.m
-▸ Compiling RCTRootContentView.m
-▸ Compiling RCTReloadCommand.m
-▸ Compiling RCTRefreshControlManager.m
-▸ Compiling RCTRefreshControl.m
-▸ Compiling RCTRedBoxSetEnabled.m
-▸ Compiling RCTRedBoxExtraDataViewController.m
-▸ Compiling RCTReconnectingWebSocket.m
-▸ Compiling RCTProgressViewManager.m
-▸ Compiling RCTProfile.m
+▸ Building library libReact-perflogger.a
+▸ Compiling react_native_log.cpp
+▸ Compiling React-logger-dummy.m
+▸ Compiling double-conversion.cc
+▸ Compiling diy-fp.cc
+▸ Compiling cached-powers.cc
+▸ Touching AccessibilityResources.bundle (in target 'React-Core-AccessibilityResources' from project 'Pods')
+▸ Compiling bignum.cc
+▸ Compiling bignum-dtoa.cc
+▸ Compiling DoubleConversion-dummy.m
+▸ Building library libDoubleConversion.a
 Build success
 Build Successful 🎉
 downloading artifacts to ./btrstmp
-Download artifact meta data e77a0df07f5b5ba2
-Downloading BiSdkReactNativeExample.dSYM.zip from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/e77a0df07f5b5ba2/BiSdkReactNativeExample.dSYM.zip?Expires=1675808335&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=DRoQe2yW9VpvH7unbrjmadC93r%2BL%2Bv%2BntttCP6wA5%2Bbn6Mqr%2FoIyW%2BAsrXfU%2FIqifnsMDD1PNQj3%2BG0hrzengT72dT%2BYhF0I%2BvuAgp78gKbEsizqrfrfaD0qvBIZg5uWMdK%2BnHrFZ3YeIjpqRF2jBCKHIP6mUQLzI8AT064hDBJUmReOpvy5q%2FLCPnoD%2Flsp0eagx5E5VZVNghmaJOobm7QG6JUEuojWDFvAILP4p8S7rB%2FWNzgdZCMSzrZPCe7eUXL7lALlWkk4OBSbV%2FL22OTBRo6ujia2uZkUgn7FJC7dc%2F0ARF1mT6j2PcM%2BthbCt%2B32HBEyIamPgGWEcs4nsw%3D%3D
-Download artifact meta data 1903a65e1b26d9e0
-Downloading BiSdkReactNativeExample.ipa from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/1903a65e1b26d9e0/BiSdkReactNativeExample.ipa?Expires=1675808336&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=xSSYqcF%2F0jE60OkNRV1WivOwb9uhxsyDHg2InA2NEj5AjnNaWDzqB9V2H3d4oejPAvgx5SMb2q56b%2B4cHg%2BvbxwZqLLwMXj7VL7eLq0qY9qXyLcjywhlfu8bIkHQshR%2FLvdbzww3HWtfFlLsOChrOnwgx9pbCyKw4F1KUc0ffD5THgMq0w9gcWXZwUp1QaeSQI2kIrfDIC5WgLmXs7EeB%2Bgpdn66PvG4DcV1%2B3jn14f8flPIq7BeKEFHn2sztPv98iN0HVR5xdWmgCRYo2%2F%2Fy2aignARCySQU5zXeZIZGabS%2BUIacK8iSeq85CNDt34nxQPB14PUZCrmM%2FaJRA5%2Fjw%3D%3D
-Download artifact meta data b65e163f32a8fe1b
-Downloading BiSdkReactNativeExample.xcarchive.zip from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/b65e163f32a8fe1b/BiSdkReactNativeExample.xcarchive.zip?Expires=1675808337&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=xArIzkoapxJZdzlFvwki%2F9fyfA4OQeePfQZeCmpU85dQA3uri%2FvMa0WwR1nFAmf2sQI35wMzcIs4G0qfkuJSQ1ZyLSOc33Bp6kIHHFGmcR%2FPeGtGszjbVvPHa8jOjKgbEqlE2fhNk8a1t%2B7dymWOW0POHS2NF5EAdfl9c8aJlGKxzyaFBI%2B2HY4lD2Jl34QvRurfMwAKDRLFY4gV7QPFWPMxdn2KF1L7bT7UEs12rHBJXUq7H%2FOGhoF7Wdqwlv5nsOYcupHOH1%2FdTChdXc4DiOap%2ByLs7RF%2BenpPksJ3GD%2FLIV37%2FCakiCS3W8yNDgQnW7JSn7GlEAiFXMIT1FUyVg%3D%3D
-Download artifact meta data bc00bf330bd60d1a
-Downloading artifacts.zip from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/bc00bf330bd60d1a/artifacts.zip?Expires=1675808339&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=ts%2Fxs3QgsBnABvZnLFPv0FGvOAHJVU6iTEnuvo8RC72WeTlgkrWv0m0Bl3ZGD3w6DPPB2MIifpUAC4%2Br2XMY6gs5WouTQrOzxJyoyzOaEsijkMjaEYvldaaf3sZ%2BwnexKa5NHfikcdFY3%2Bx6vQOlO%2FP%2BgoLpOO9gwYkuWAy%2FXlbm0JU7MvsskWYtZxWHjCyFSx7SiMhtbPk5CaqLxIcaupb9ba5RTbxJEY8Jkwz6n0Vg4PjzyddXelG3sVjfmj%2FFBMtwAQTEpnOllagGfnMezd59Iz67zcWo%2FGcM0gY5XFPCAfEG8pXJplEICWKgFYwp8JjNLEYxHLmBDUgKKkzgQQ%3D%3D
-Download artifact meta data 34deaa3e986307cc
-Downloading export_options.plist from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/34deaa3e986307cc/export_options.plist?Expires=1675808358&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=TTn5KvzJf49vwC%2FAf5zKKpxb5eO9WSGLSVm1GtySDbBhxdMMx0njHeqH4dNbg0Ra22RUIXy4XupD6OFQyjLFQIzkChoxYDOcki1Yil%2B2i3dt%2By%2FdtM139ugWHImlRcHdc%2FWO7Lao%2B5w4AjJp%2FjOsPyfWQ6CkP7fjCcgFJrS6hsmzgYfl91XL1lf9ey%2BBaVHn6CMotqH7b9mdszEVaFpamdvoqw4PWIZYmEAVzomxdvdBcwIDwVZcUaNXXGH17M%2Bk7PqN7TVKAlpUjyPqQjXva1efaOUMxeN7kU%2B8Y%2Fr1SdLSIzZmnfnwKijxPjOYGkmmIBK1lV3ScS15I5W69QtTSA%3D%3D
-Download artifact meta data ad9da219ecf32325
-Downloading xcodebuild-archive.log from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/ad9da219ecf32325/xcodebuild-archive.log?Expires=1675808358&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=nhti1WnZi5KXRIzLcuxU6odNyz3iJmCSRTVF2KcM7eM%2Fm%2BKP2UXc0mg8%2F3ojOwovL0q2LNAPo0bKbm%2Fih8qOiR7B3xi%2FtUNF5UMxv3ORd6pWtRs7bDncUG8Y7eUadCziqP02PbGV5UnY3gJxJ8vDgb9vY3sdHgjrlUuC%2Ffs0xRYJbdzPQAZRxlOzyEAjoPIfLSQKmXJ9fujCSU1nOgHe6zuXt%2FYe0ajg6iYLwxWMyoN3Gi5A2jAaOWxQumUHUwuqc6E6uXHdT98KJNJXkmxSuU4eRDRPiJLaUE85tdJGIw8vsehBWAIpf%2FbKhEGbiPRWZcK62m8lGp1YpplpBTGBSQ%3D%3D
-Download artifact meta data 9a7228ec3b52a1ed
-Downloading xcodebuild-export-archive.log from https://storage.googleapis.com/bitrise-build-storage-prod/apps/d62e3ecde833fbd1/builds/9947bab1-92fb-47ff-ab5f-30b13ab9ba92/artifacts/9a7228ec3b52a1ed/xcodebuild-export-archive.log?Expires=1675808359&GoogleAccessId=bitrise-api%40bitrise-website-prod.iam.gserviceaccount.com&Signature=eaUr0tdP3Am2X4NvwsFGKCVDy4l6XLoxbB%2BZXTcGI3d8kN3ApTHji2%2FhPepHZCv3bLMNmSWrtRPLDb9UIvdXCG7PrEsvGr421dURGayZ4UjdIAFhL%2FxyVHies7mCcHVldMATvvTF5LcU8rAG1yhha7hXizx7LpH8qJPSXbH3lPibxFA%2F50O%2Fawv9in5ZrQ%2F0IeO3RMGb8p%2FmqXu0qjFkoZ46XeC%2FAE4ebMtmP4jmGCLOQSFBkvq43qRL1mS%2Fz3tV%2BjahA%2Fz8LxdBCrZ61ZZVMEPMCN2jhw5zdpxG7eazWdw8QeTV0wXBRofi8wNiREz1%2F3YfWI9fWB9NjCiuIlrGyQ%3D%3D
-BITRISE_LAST_BUILD_SLUG=9947bab1-92fb-47ff-ab5f-30b13ab9ba92 >> bitrise.env
+Download artifact meta data ed4caa5fa8cb3ad7
+Downloading BiSdkReactNativeExample.dSYM.zip from https://storage.googleapis.com/bitrise-build-storage-prod-with-retention-policy/apps/d62e3ecde833fbd1/builds/f8f39914-e485-42a5-85c5-0c1bee7a3e2b/artifacts/ed4caa5fa8cb3ad7/BiSdkReactNativeExample.dSYM.zip?Expires=1695932408&GoogleAccessId=build-artifact-sa-prod%40ip-web-monolith-prod.iam.gserviceaccount.com&Signature=Kd33Ww4v1KdxDAlsuWMPcx7xtJkf1LhQvC79fVoR9w9rfT1lpOCkgBu%2FMPpC57Zpr8nmG3y7AiWf%2BU3OYU%2BLnXpxADz1At%2F7QHag8hH590LysfAQ%2BFiSVD44k9r%2BPqP97SJG1FeSI26tElcGNvNs1aV9wGM36gVdcdt%2FhJ0uFklUXAkaK0lK6Tr3ff0gvamON%2FwOI4AKG%2FkkiYGdF5NKvvPede675e%2Bl9VO9%2BM5%2FkwOqlnDI%2BnL21G4qwj1%2FNooGyurJlSwF%2Fk4FzLR6VotyQUZakHF5wtoGKGmLD2NQEziRJl%2FoZN20jifDWmIocEUn3zXKpDDEzazd8uEv0sk3KA%3D%3D
+Download artifact meta data c452eb20283aa912
+Downloading BiSdkReactNativeExample.ipa from https://storage.googleapis.com/bitrise-build-storage-prod-with-retention-policy/apps/d62e3ecde833fbd1/builds/f8f39914-e485-42a5-85c5-0c1bee7a3e2b/artifacts/c452eb20283aa912/BiSdkReactNativeExample.ipa?Expires=1695932409&GoogleAccessId=build-artifact-sa-prod%40ip-web-monolith-prod.iam.gserviceaccount.com&Signature=GCR4MZANOsEfO5xJFfQdd2oT7yqro120sncdVpJUgaam2mQedmptc6pUkeouDcH1NcI%2FVPrJVQYiBG%2Fi89X0vmMu1wdd6Bgg45ANxAquqH3VvePW5mG01Ia29HZPoKlWM5yAzMvy7c%2FGFpv0eB%2BIAdqfxpjf3Rg2XLOUXvt3Ljp15XitMzfkWJlevx3smGxDhE1evEwHbYyQtD0o5FJoJnwYX2TuH257CG2IxFVR94Umw3qQw7rZTPzRYc9maYPWz7%2BEDV9%2FL2eJWGC%2Bbu8%2Bo2n3f6r%2FEOGYe5Zj%2Fdbk22Ma0hKUE1BsqWV0%2BlkLOzOims8QBeLlCHnZNsa4iREJkg%3D%3D
+Download artifact meta data 99415d0eaed2f16f
+Downloading BiSdkReactNativeExample.xcarchive.zip from https://storage.googleapis.com/bitrise-build-storage-prod-with-retention-policy/apps/d62e3ecde833fbd1/builds/f8f39914-e485-42a5-85c5-0c1bee7a3e2b/artifacts/99415d0eaed2f16f/BiSdkReactNativeExample.xcarchive.zip?Expires=1695932410&GoogleAccessId=build-artifact-sa-prod%40ip-web-monolith-prod.iam.gserviceaccount.com&Signature=W38Wl6c3skQETIWDtnz5M4h8iXFcGw25sZt2eIlEt6T%2FRwKll4fanmYzpeZvwT2fCUAhWVSGigOCVjQF3bV0s8VwdB%2B09uvl%2FhRXtdMXmApK%2FHpnVdjOGzXytG5LL0%2BtIjehoTGE3BxXtL8UO5TJmTEW8MJ2XcrONW5cV%2Bv383S%2FmaqmXfnmr8NwXv4gveZCCHGqIWrOlqBxPvJJC%2BPRW%2F%2Br92si7Vn4NzVqNXaXujSa5KT8i2kOZ901oVkMDaMYDUJYwvRrY9d66a7UO4MO8%2BiIoEmNXQy5NVGJNYlXY6fo9CWaY3rQgMpl66DXlA1NleckPMSR1EAsFL7w45iqAQ%3D%3D
+Download artifact meta data 07209e00671b9258
+Downloading artifacts.zip from https://storage.googleapis.com/bitrise-build-storage-prod-with-retention-policy/apps/d62e3ecde833fbd1/builds/f8f39914-e485-42a5-85c5-0c1bee7a3e2b/artifacts/07209e00671b9258/artifacts.zip?Expires=1695932413&GoogleAccessId=build-artifact-sa-prod%40ip-web-monolith-prod.iam.gserviceaccount.com&Signature=aLtYeGbeay30wJO3LD4oQ9vxqiz9IHFMEb60KFJTggRa101nCM4xC%2FP%2B94xsUu5knI42jF66CYWuF%2FLbfqA9PMXgPv0M5mNFNkAM0tBe93LfqK%2BnD3KGPVZErkpsiiIpil%2B09%2BowscfGB3ciiFA0MOvOCj5bLyHoS5W%2FKq%2BTMSA9FqVmxcQRVmSXm98o3%2F1f8dAw39hsITIQkBVBS3%2B6u2888GeEH%2F5vJtxVS5xU2mPfIx0x8hZJUKC8tu2XRtFYYeVq3j7RGumarcs%2BpWLVR7zJvfsE9cpBGPvQACcy6e8nhL3xSEYezUGIpWvjrPDeY290Wxlg4xksAVArANLblQ%3D%3D
+Download artifact meta data dd0a47327d776d65
+Downloading export_options.plist from https://storage.googleapis.com/bitrise-build-storage-prod-with-retention-policy/apps/d62e3ecde833fbd1/builds/f8f39914-e485-42a5-85c5-0c1bee7a3e2b/artifacts/dd0a47327d776d65/export_options.plist?Expires=1695932431&GoogleAccessId=build-artifact-sa-prod%40ip-web-monolith-prod.iam.gserviceaccount.com&Signature=FeJtfnzBSS%2BluInTi309YWEy56McWFSPt0mb1qZJwx5uJOGfvfdmsDR%2B0QgdE1Bbd2B%2BK%2FyhjeOANEPYQoVtwgOmgM%2FFM9FhtnGVs5DjIbjz7ujRUcFBNa3lcnQCT2oUVbPLcJRssAFkn45SfqBzEGPOYo%2F3CCZa7QH%2FliHlNynYg1yelfrj6b6QE4iA18ZdmssmOum4Klc9q4EHfSgYI75ykU13j%2FyiDvWWlWS%2F7NbStPpjPtLU1n3W4LTcVNIYNQ1O3Rk%2Fs2x12slnqhNqyf13N%2BFHfMYLqnR6aJWMsUGnwkBArziZH8HU55xO0y48miyqJgoYnB29ye%2FUJUNB4g%3D%3D
+Download artifact meta data bc5b6c79a12e1c41
+Downloading xcodebuild-archive.log from https://storage.googleapis.com/bitrise-build-storage-prod-with-retention-policy/apps/d62e3ecde833fbd1/builds/f8f39914-e485-42a5-85c5-0c1bee7a3e2b/artifacts/bc5b6c79a12e1c41/xcodebuild-archive.log?Expires=1695932431&GoogleAccessId=build-artifact-sa-prod%40ip-web-monolith-prod.iam.gserviceaccount.com&Signature=FO6Pv6TZCTXztr%2BA%2BnRgFH7lip9PUT3zUV33HHQ8WNX9zcKoPfKCIb91Zm74YgPbDuGtp4NOY1LTdiuuufgTXSGOHXm2GXO3wySrNXnGYzdNPa7CM5sx1LYx%2BoK4rRRr4ZalSlXYuGMFl%2FNO3d1pTWC1oFyFqhRY2idYMdgW%2FvOwoZlHMMyTezVBBqLO1NlJqFjVAgmq84YNJKYcLPTW0%2F6WRBa03H5mSBO%2Bv0N9ruiSIEsTuF%2BtA5vdQADEn6R%2Fa%2F%2BvGwrNOLaIhtQczGnh4prlz2bk3vwKsYqb2Kic9MPwenHgS4nrpgHKb852WCt2SvOYCWZQeVrRlBRE%2FWv3ZQ%3D%3D
+Download artifact meta data ec364698f3e56d40
+Downloading xcodebuild-export-archive.log from https://storage.googleapis.com/bitrise-build-storage-prod-with-retention-policy/apps/d62e3ecde833fbd1/builds/f8f39914-e485-42a5-85c5-0c1bee7a3e2b/artifacts/ec364698f3e56d40/xcodebuild-export-archive.log?Expires=1695932432&GoogleAccessId=build-artifact-sa-prod%40ip-web-monolith-prod.iam.gserviceaccount.com&Signature=Cw4hYustUM0DVspAQ4gtGUO1%2F5m1CzAr%2BVHnsTy9b0DCQ0rGCOY5aoLYhzb6NAb6IEIUYwv%2FL3iQs33i%2Bp7XR0%2BlxuLiz5Ot7lxv9CSUXyThmK%2Fp4hJaloOhxnY6NfnWtA8IHTQ8grTNUITHxURZJtiaZeNj6CN1Kv19e4LTbGomXaSZJ%2Fhbv7Q2ZQMpLspOxAVb1jWboQWpWLMOrFPhgXFgkq08B3h7itXYnevmxLJeq7TUhxOx0i6t6yB%2BAsidk3823wUJseGXZ6afpuSB06eBr%2BLyBlaR03KWQxRocvsmXXzCWNNlVLjHkbB2cWwHnsnY1oUhGesd5frbkFFSkg%3D%3D
+BITRISE_LAST_BUILD_SLUG=f8f39914-e485-42a5-85c5-0c1bee7a3e2b >> bitrise.env
 Unzipping artifacts
 Reading package lists...
 Building dependency tree...
 Reading state information...
 The following NEW packages will be installed:
   unzip zip
-0 upgraded, 2 newly installed, 0 to remove and 49 not upgraded.
+0 upgraded, 2 newly installed, 0 to remove and 26 not upgraded.
 Need to get 404 kB of archives.
 After this operation, 1031 kB of additional disk space will be used.
 Get:1 http://deb.debian.org/debian bullseye/main amd64 unzip amd64 6.0-26+deb11u1 [172 kB]
 Get:2 http://deb.debian.org/debian bullseye/main amd64 zip amd64 3.0-12 [232 kB]
-Fetched 404 kB in 0s (1753 kB/s)
+Fetched 404 kB in 0s (1902 kB/s)
 Selecting previously unselected package unzip.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15729 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15738 files and directories currently installed.)
 Preparing to unpack .../unzip_6.0-26+deb11u1_amd64.deb ...
 Unpacking unzip (6.0-26+deb11u1) ...
 Selecting previously unselected package zip.

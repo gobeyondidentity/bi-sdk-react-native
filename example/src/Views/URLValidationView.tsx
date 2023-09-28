@@ -1,7 +1,8 @@
-import { ScrollView, View } from 'react-native';
-import { Embedded } from '@beyondidentity/bi-sdk-react-native';
-import InputCardView from './InputCardView';
-import s from './styles';
+import React from "react";
+import { ScrollView, View } from "react-native";
+import { Embedded } from "@beyondidentity/bi-sdk-react-native";
+import InputCardView from "./InputCardView";
+import s from "./styles";
 
 export default function PasskeyManagementView() {
   return (
@@ -12,7 +13,6 @@ export default function PasskeyManagementView() {
           detail="Paste a URL here to validate if it's an authenticate URL."
           buttonTitle="Validate URL"
           placeholder="Authenticate URL"
-          autoCompleteType="off"
           keyboardType="default"
           textContentType="none"
           onPress={async (url, setResult) => {
@@ -36,7 +36,6 @@ export default function PasskeyManagementView() {
           detail="Paste a URL here to validate if it's a bind passkey URL."
           buttonTitle="Validate URL"
           placeholder="Bind Passkey URL"
-          autoCompleteType="off"
           keyboardType="default"
           textContentType="none"
           onPress={async (url, setResult) => {
@@ -60,5 +59,5 @@ export default function PasskeyManagementView() {
 }
 
 function isOrIsNot(result: boolean) {
-  return result ? 'IS' : 'is NOT';
+  return result ? "IS" : "is NOT";
 }

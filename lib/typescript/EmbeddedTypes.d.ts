@@ -1,4 +1,34 @@
 /**
+ * Information associated with the current authentication request.
+ *
+ * Note that the `authUrl` field may differ from the URL passed into
+ * `getAuthenticationContext`. In this event, the new `authUrl` must be
+ * passed into `authenticate` or `authenticateOtp`, rather than the
+ * original URL.
+ */
+interface AuthenticationContext {
+    /**
+     * A URL containing the state of the current authentication transaction.
+     */
+    authUrl: string;
+    /**
+     * The authenticating application information
+     */
+    application: {
+        id: string;
+        displayName?: string;
+    };
+    /**
+     * The authenticating request origin information
+     */
+    origin: {
+        sourceIp?: string;
+        userAgent?: string;
+        geolocation?: string;
+        referer?: string;
+    };
+}
+/**
  * A response returned after successfully authenticating.
  */
 interface AuthenticateResponse {
@@ -11,6 +41,10 @@ interface AuthenticateResponse {
      * An optional displayable message defined by policy returned by the cloud on success.
      */
     message?: string;
+    /**
+     * An optional one-time-token returned from successful `redeemOtp` that may be redeemed for a credential_binding_link from the /credential-binding-jobs endpoint.
+     */
+    passkeyBindingToken?: string;
 }
 /**
  * A response returned after successfully binding a passkey to a device.
@@ -24,6 +58,16 @@ interface BindPasskeyResponse {
      * A URI that can be redirected to once a passkey is bound. This could be a URI that automatically logs the user in with the newly bound passkey, or a success page indicating that a passkey has been bound.
      */
     postBindingRedirectUri?: string;
+}
+/**
+ * A response returned if the SDK requires an OTP.
+ */
+interface OtpChallengeResponse {
+    /**
+     * A URL containing the state of the current authentication transaction.
+     * This should be used in the next `redeemOtp` or `authenticateOtp` function.
+     */
+    url: string;
 }
 /**
  * A Universal Passkey is a public and private key pair. The private key is generated, stored, and never leaves the user’s devices’ hardware root of trust (i.e. Secure Enclave).
@@ -64,7 +108,7 @@ interface Passkey {
     /**
      * Current state of the passkey.
      */
-    state: PasskeyState;
+    state: 'Active' | 'Revoked';
     /**
      * Realm information associated with this passkey.
      */
@@ -153,9 +197,5 @@ interface PasskeyTheme {
      */
     supportUrl: string;
 }
-/**
- * The state of a given `Passkey`: either active or revoked
- */
-type PasskeyState = 'Active' | 'Revoked';
 type Success = 'success';
-export { AuthenticateResponse, BindPasskeyResponse, Passkey, PasskeyState, PasskeyRealm, PasskeyIdentity, PasskeyTenant, PasskeyTheme, Success, };
+export { AuthenticationContext, AuthenticateResponse, BindPasskeyResponse, OtpChallengeResponse, Passkey, PasskeyRealm, PasskeyIdentity, PasskeyTenant, PasskeyTheme, Success, };

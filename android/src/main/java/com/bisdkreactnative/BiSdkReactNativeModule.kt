@@ -9,7 +9,11 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import com.beyondidentity.embedded.sdk.EmbeddedSdk
+import com.beyondidentity.embedded.sdk.models.AuthenticateResponse
+import com.beyondidentity.embedded.sdk.models.AuthenticationContext
 import com.beyondidentity.embedded.sdk.models.Passkey
+import com.beyondidentity.embedded.sdk.models.OtpChallengeResponse
+import com.beyondidentity.embedded.sdk.models.RedeemOtpResponse
 import com.beyondidentity.embedded.sdk.models.State
 import com.beyondidentity.embedded.sdk.models.State.ACTIVE
 import com.beyondidentity.embedded.sdk.models.State.REVOKED
@@ -79,10 +83,26 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
 
     EmbeddedSdk.authenticate(url, passkeyId) { authResult ->
       authResult.onSuccess { authResponse ->
-        val n = WritableNativeMap()
-        n.putString("redirectUrl", authResponse.redirectUrl ?: "")
-        n.putString("message", authResponse.message ?: "")
-        promise.resolve(n)
+        promise.resolve(makeAuthenticationResponseMap(authResponse))
+      }
+      authResult.onFailure { t -> promise.reject(t) }
+    }
+  }
+
+  @ReactMethod
+  fun authenticateOtp(
+    url: String,
+    email: String,
+    promise: Promise
+  ) {
+    if (!isEmbeddedSdkInitialized) {
+      promise.reject(Throwable(INITIALIZE_ERROR))
+      return
+    }
+
+    EmbeddedSdk.authenticateOtp(url, email) { authResult ->
+      authResult.onSuccess { otpChallengeResponse ->
+        promise.resolve(makeOtpChallengeResponseMap(otpChallengeResponse))
       }
       authResult.onFailure { t -> promise.reject(t) }
     }
@@ -118,6 +138,21 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
         promise.resolve(id)
       }
       deleteResult.onFailure { t -> promise.reject(t) }
+    }
+  }
+
+  @ReactMethod
+  fun getAuthenticationContext(url: String, promise: Promise) {
+    if (!isEmbeddedSdkInitialized) {
+      promise.reject(Throwable(INITIALIZE_ERROR))
+      return
+    }
+
+    EmbeddedSdk.getAuthenticationContext(url) { authContextResult ->
+      authContextResult.onSuccess { authContextResponse ->
+        promise.resolve(makeAuthenticationContextResponseMap(authContextResponse))
+      }
+      authContextResult.onFailure { t -> promise.reject(t) }
     }
   }
 
@@ -186,6 +221,30 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
+  fun redeemOtp(url: String, otp: String, promise: Promise) {
+    if (!isEmbeddedSdkInitialized) {
+      promise.reject(Throwable(INITIALIZE_ERROR))
+      return
+    }
+
+    EmbeddedSdk.redeemOtp(url, otp) { redeemResult ->
+      redeemResult.onSuccess { redeemOtpResponse ->
+        when (redeemOtpResponse) {
+          is RedeemOtpResponse.Success -> {
+            val authResponse = redeemOtpResponse.authenticateResponse
+            promise.resolve(makeAuthenticationResponseMap(authResponse))
+          }
+          is RedeemOtpResponse.FailedOtp -> {
+            val otpChallengeResponse = redeemOtpResponse.otpChallengeResponse
+            promise.resolve(makeOtpChallengeResponseMap(otpChallengeResponse))
+          }
+        }
+      }
+      redeemResult.onFailure { t -> promise.reject(t) }
+    }
+  }
+
+  @ReactMethod
   fun addListener(eventName: String?) {
     // Keep: Required for RN built in Event Emitter Calls.
   }
@@ -219,6 +278,40 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
     } catch (e: Exception) {
       Log.e("ReactNative", "Caught Exception: " + e.message)
     }
+  }
+
+  private fun makeAuthenticationContextResponseMap(authContextResponse: AuthenticationContext): WritableNativeMap {
+    val map = WritableNativeMap()
+    map.putString("authUrl", authContextResponse.authUrl)
+
+    val applicationMap = WritableNativeMap()
+    applicationMap.putString("id", authContextResponse.application.id)
+    applicationMap.putString("displayName", authContextResponse.application.displayName ?: "")
+    map.putMap("application", applicationMap)
+
+    val originMap = WritableNativeMap()
+    originMap.putString("sourceIp", authContextResponse.origin.sourceIp ?: "")
+    originMap.putString("userAgent", authContextResponse.origin.userAgent ?: "")
+    originMap.putString("geolocation", authContextResponse.origin.geolocation ?: "")
+    originMap.putString("referer", authContextResponse.origin.referer ?: "")
+    map.putMap("origin", originMap)
+
+    return map
+  }
+
+  private fun makeAuthenticationResponseMap(authResponse: AuthenticateResponse): WritableNativeMap {
+    val map = WritableNativeMap()
+    map.putString("redirectUrl", authResponse.redirectUrl ?: "")
+    map.putString("message", authResponse.message ?: "")
+    map.putString("passkeyBindingToken", authResponse.passkeyBindingToken ?: "")
+
+    return map
+  }
+
+  private fun makeOtpChallengeResponseMap(otpChallengeResponse: OtpChallengeResponse): WritableNativeMap {
+    val map = WritableNativeMap()
+    map.putString("url", otpChallengeResponse.url)
+    return map
   }
 
   private fun makePasskeyMap(passkey: Passkey): WritableNativeMap {

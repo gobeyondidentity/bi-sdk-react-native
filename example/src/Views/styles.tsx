@@ -1,9 +1,9 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const Color = {
-  primary: '#4673D3',
-  backgroundColor: '#f8f8f8',
-  responseBackground: '#E3E3E4'
+  primary: "#4673D3",
+  backgroundColor: "#f8f8f8",
+  responseBackground: "#E3E3E4",
 };
 
 export default StyleSheet.create({
@@ -21,7 +21,7 @@ export default StyleSheet.create({
   version: {
     fontSize: 16,
     marginBottom: 10,
-    color: 'gray',
+    color: "gray",
     backgroundColor: Color.backgroundColor,
   },
   input: {
@@ -29,7 +29,7 @@ export default StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     borderRadius: 5,
-    borderColor: '#595959',
+    borderColor: "#595959",
     borderWidth: 1,
     padding: 10,
     minWidth: 150,
@@ -37,7 +37,7 @@ export default StyleSheet.create({
   },
   header: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 10,
     marginBottom: 10,
     backgroundColor: Color.backgroundColor,
@@ -46,7 +46,7 @@ export default StyleSheet.create({
     fontSize: 22,
     marginTop: 10,
     marginBottom: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     backgroundColor: Color.backgroundColor,
   },
   detail: {

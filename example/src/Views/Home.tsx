@@ -1,7 +1,8 @@
-import { SafeAreaView, ScrollView, Text } from 'react-native';
-import { Button } from '@rneui/themed';
-import Config from '../Config';
-import styles, { Color } from './styles';
+import React from "react";
+import { SafeAreaView, ScrollView, Text } from "react-native";
+import { Button } from "@rneui/themed";
+import Config from "../Config";
+import styles, { Color } from "./styles";
 
 export default function Home({ navigation }: any) {
   return (
@@ -24,7 +25,7 @@ export default function Home({ navigation }: any) {
         <Button
           title="View Embedded SDK"
           color={Color.primary}
-          onPress={() => navigation.navigate('Demo')}
+          onPress={() => navigation.navigate("Demo")}
         />
       </ScrollView>
     </SafeAreaView>

@@ -1,14 +1,15 @@
-import { useEffect } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import AuthenticateView from './Views/AuthenticateView';
-import PasskeyManagementView from './Views/PasskeyManagementView';
-import Demo from './Views/Demo';
-import Home from './Views/Home';
-import URLValidationView from './Views/URLValidationView';
-import { Support, DevDocs } from './Views/Webviews';
-import useDeepLinkURL from './Linking';
-import { Color } from './Views/styles';
+import React from "react";
+import { useEffect } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import AuthenticateView from "./Views/AuthenticateView";
+import PasskeyManagementView from "./Views/PasskeyManagementView";
+import Demo from "./Views/Demo";
+import Home from "./Views/Home";
+import URLValidationView from "./Views/URLValidationView";
+import { Support, DevDocs } from "./Views/Webviews";
+import useDeepLinkURL from "./Linking";
+import { Color } from "./Views/styles";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,7 +19,7 @@ export default function App() {
   useEffect(() => {
     async function register() {
       if (linkedURL !== null) {
-        console.log('linkedURL', linkedURL);
+        console.log("linkedURL", linkedURL);
       }
     }
 
@@ -32,32 +33,32 @@ export default function App() {
           contentStyle: { backgroundColor: Color.backgroundColor },
         }}
       >
-        <Stack.Screen name="Home" component={Home} options={{ title: '' }} />
-        <Stack.Screen name="Demo" component={Demo} options={{ title: '' }} />
+        <Stack.Screen name="Home" component={Home} options={{ title: "" }} />
+        <Stack.Screen name="Demo" component={Demo} options={{ title: "" }} />
         <Stack.Screen
           name="PasskeyManagement"
           component={PasskeyManagementView}
-          options={{ title: 'Manage Passkeys' }}
+          options={{ title: "Manage Passkeys" }}
         />
         <Stack.Screen
           name="Authenticate"
           component={AuthenticateView}
-          options={{ title: 'Authenticate' }}
+          options={{ title: "Authenticate" }}
         />
         <Stack.Screen
           name="URLValidation"
           component={URLValidationView}
-          options={{ title: 'URL Validation' }}
+          options={{ title: "URL Validation" }}
         />
         <Stack.Screen
           name="DevDocs"
           component={DevDocs}
-          options={{ title: '' }}
+          options={{ title: "" }}
         />
         <Stack.Screen
           name="Support"
           component={Support}
-          options={{ title: '' }}
+          options={{ title: "" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

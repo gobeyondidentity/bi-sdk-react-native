@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Text,
   TextInput,
   View,
   KeyboardTypeOptions,
   TextInputIOSProps,
-  TextInputAndroidProps,
-} from 'react-native';
-import { Button } from '@rneui/themed';
-import s, { Color } from './styles';
-import ResponseLabelView from './ResponseLabelView';
+} from "react-native";
+import { Button } from "@rneui/themed";
+import s, { Color } from "./styles";
+import ResponseLabelView from "./ResponseLabelView";
 
 interface InputCardViewProps {
   title: string;
   detail: string;
   buttonTitle: string;
   placeholder: string;
-  autoCompleteType: TextInputAndroidProps['autoComplete'];
   keyboardType: KeyboardTypeOptions;
-  textContentType: TextInputIOSProps['textContentType'];
+  textContentType: TextInputIOSProps["textContentType"];
   onPress: (
     input: string,
     setResult: React.Dispatch<React.SetStateAction<string>>
@@ -30,13 +28,12 @@ export default function InputCardView({
   detail,
   buttonTitle,
   placeholder,
-  autoCompleteType,
   keyboardType,
   textContentType,
   onPress,
 }: InputCardViewProps) {
-  const [input, setInput] = useState('');
-  const [result, setResult] = useState('');
+  const [input, setInput] = useState("");
+  const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
 
   return (
@@ -49,16 +46,15 @@ export default function InputCardView({
         onChangeText={setInput}
         value={input}
         placeholder={placeholder}
-        autoComplete={autoCompleteType}
         keyboardType={keyboardType}
         textContentType={textContentType}
       />
       <Button
         onPress={async () => {
           setLoading(true);
-          onPress(input, (result) => {
+          onPress(input, (response) => {
             setLoading(false);
-            setResult(result);
+            setResult(response);
           });
         }}
         title={buttonTitle}

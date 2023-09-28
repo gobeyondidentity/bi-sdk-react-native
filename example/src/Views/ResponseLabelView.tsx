@@ -1,5 +1,6 @@
-import { ActivityIndicator, View, Text } from 'react-native';
-import { Color } from './styles';
+import React from "react";
+import { ActivityIndicator, View, Text } from "react-native";
+import { Color } from "./styles";
 
 export default ({
   text,
@@ -10,7 +11,7 @@ export default ({
 }) => {
   function getText(): string {
     if (isLoading || text.length === 0) {
-      return 'RESPONSE DATA';
+      return "RESPONSE DATA";
     }
     return text;
   }
@@ -24,7 +25,7 @@ export default ({
         marginTop: 10,
       }}
     >
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
         <Text selectable={true}>{getText()}</Text>
         {isLoading && <ActivityIndicator />}
       </View>

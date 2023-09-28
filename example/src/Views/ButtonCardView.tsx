@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Text, View } from 'react-native';
-import { Button } from '@rneui/themed';
-import s, { Color } from './styles';
-import ResponseLabelView from './ResponseLabelView';
+import React, { useState } from "react";
+import { Text, View } from "react-native";
+import { Button } from "@rneui/themed";
+import s, { Color } from "./styles";
+import ResponseLabelView from "./ResponseLabelView";
 
 interface ButtonCardViewProps {
   title: string;
@@ -19,7 +19,7 @@ export default function ButtonCardView({
   hideLabel = false,
   onPress,
 }: ButtonCardViewProps) {
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
 
   return (
@@ -31,9 +31,9 @@ export default function ButtonCardView({
       <Button
         onPress={async () => {
           setLoading(true);
-          onPress((result) => {
+          onPress((response) => {
             setLoading(false);
-            setResult(result);
+            setResult(response);
           });
         }}
         title={buttonTitle}
@@ -45,7 +45,7 @@ export default function ButtonCardView({
 }
 
 export function NewlineText(props: { text: string }) {
-  const newText = props.text.split('\\n').map((str) => {
+  const newText = props.text.split("\\n").map((str) => {
     return (
       <Text style={{ paddingBottom: 10 }} key={str} selectable={true}>
         {str}

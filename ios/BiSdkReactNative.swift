@@ -3,7 +3,7 @@ import Foundation
 import React
 
 private let EMBEDDED_REJECT_ERROR = "Embedded Failure: "
-private let INITALIZATION_ERROR = "Please call Embedded.initialize first"
+private let INITIALIZATION_ERROR = "Please call Embedded.initialize first"
 private let SUCCESS = "success"
 private let INVALID_URL = "doesn’t represent a valid URL."
 
@@ -39,13 +39,9 @@ class BiSdkReactNative: RCTEventEmitter {
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ){
-        guard isEmbeddedSdkInitialized else {
-            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
-        }
+        guard checkInitialization(reject) else { return }
         
-        guard let url = URL(string: url) else {
-            return reject(EMBEDDED_REJECT_ERROR, "\(url) doesn’t represent a valid URL.", nil)
-        }
+        guard let url = parseURL(url, reject) else { return }
         
         Embedded.shared.authenticate(
             url: url,
@@ -53,11 +49,30 @@ class BiSdkReactNative: RCTEventEmitter {
         ){ result in
             switch result {
             case let .success(authResponse):
-                let response: [String: Any] = [
-                    "message": authResponse.message ?? "",
-                    "redirectUrl": authResponse.redirectUrl.absoluteString
-                ]
-                resolve(response)
+                resolve(makeAuthenticateResponseDictionary(authResponse))
+            case let .failure(error):
+                reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
+            }
+        }
+    }
+    
+    @objc func authenticateOtp(
+        _ url: String,
+        email: String,
+        resolver resolve: @escaping RCTPromiseResolveBlock,
+        rejecter reject: @escaping RCTPromiseRejectBlock
+    ){
+        guard checkInitialization(reject) else { return }
+        
+        guard let url = parseURL(url, reject) else { return }
+        
+        Embedded.shared.authenticateOtp(
+            url: url,
+            email: email
+        ){ result in
+            switch result {
+            case let .success(otpChallengeResponse):
+                resolve(makeOtpChallengeResponseDictionary(otpChallengeResponse))
             case let .failure(error):
                 reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
             }
@@ -69,14 +84,9 @@ class BiSdkReactNative: RCTEventEmitter {
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ){
-        guard isEmbeddedSdkInitialized else {
-            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
-        }
+        guard checkInitialization(reject) else { return }
         
-        guard let url = URL(string: url) else {
-            reject(EMBEDDED_REJECT_ERROR, "\(url) doesn’t represent a valid URL.", nil)
-            return
-        }
+        guard let url = parseURL(url, reject) else { return }
         
         Embedded.shared.bindPasskey(url: url) { result in
             switch result {
@@ -97,9 +107,7 @@ class BiSdkReactNative: RCTEventEmitter {
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ) {
-        guard isEmbeddedSdkInitialized else {
-            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
-        }
+        guard checkInitialization(reject) else { return }
         
         Embedded.shared.deletePasskey(for: Passkey.Id(id)) { result in
             switch result {
@@ -111,13 +119,43 @@ class BiSdkReactNative: RCTEventEmitter {
         }
     }
     
+    @objc func getAuthenticationContext(
+        _ url: String,
+        resolver resolve: @escaping RCTPromiseResolveBlock,
+        rejecter reject: @escaping RCTPromiseRejectBlock
+    ) {
+        guard checkInitialization(reject) else { return }
+        
+        guard let url = parseURL(url, reject) else { return }
+        
+        Embedded.shared.getAuthenticationContext(url: url){ result in
+            switch result {
+            case let .success(authContext):
+                let response: [String: Any] = [
+                    "authUrl": authContext.authUrl.absoluteString,
+                    "application": [
+                        "id": authContext.application.id.value,
+                        "displayName": authContext.application.displayName ?? "",
+                    ],
+                    "origin": [
+                        "sourceIp": authContext.origin.sourceIp ?? "",
+                        "userAgent": authContext.origin.userAgent ?? "",
+                        "geolocation": authContext.origin.geolocation ?? "",
+                        "referer": authContext.origin.referer ?? ""
+                    ]
+                ]
+                resolve(response)
+            case let .failure(error):
+                reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
+            }
+        }
+    }
+    
     @objc func getPasskeys(
         _ resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ) {
-        guard isEmbeddedSdkInitialized else {
-            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
-        }
+        guard checkInitialization(reject) else { return }
         
         Embedded.shared.getPasskeys() { result in
             switch result {
@@ -162,14 +200,9 @@ class BiSdkReactNative: RCTEventEmitter {
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ){
-        guard isEmbeddedSdkInitialized else {
-            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
-        }
+        guard checkInitialization(reject) else { return }
         
-        guard let url = URL(string: url) else {
-            reject(EMBEDDED_REJECT_ERROR, "\(url) \(INVALID_URL)", nil)
-            return
-        }
+        guard let url = parseURL(url, reject) else { return }
         
         resolve(Embedded.shared.isAuthenticateUrl(url))
     }
@@ -179,21 +212,73 @@ class BiSdkReactNative: RCTEventEmitter {
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock
     ){
-        guard isEmbeddedSdkInitialized else {
-            return reject(EMBEDDED_REJECT_ERROR, INITALIZATION_ERROR, nil)
-        }
+        guard checkInitialization(reject) else { return }
         
-        guard let url = URL(string: url) else {
-            reject(EMBEDDED_REJECT_ERROR, "\(url) \(INVALID_URL)", nil)
-            return
-        }
+        guard let url = parseURL(url, reject) else { return }
         
         resolve(Embedded.shared.isBindPasskeyUrl(url))
     }
     
+    @objc func redeemOtp(
+        _ url: String,
+        otp: String,
+        resolver resolve: @escaping RCTPromiseResolveBlock,
+        rejecter reject: @escaping RCTPromiseRejectBlock
+    ){
+        guard checkInitialization(reject) else { return }
+        
+        guard let url = parseURL(url, reject) else { return }
+        
+        Embedded.shared.redeemOtp(
+            url: url,
+            otp: otp
+        ){ result in
+            switch result {
+            case let .success(response):
+                switch response {
+                case let .success(authResponse):
+                    resolve(makeAuthenticateResponseDictionary(authResponse))
+                case let .failedOtp(otpChallengeResponse):
+                    resolve(makeOtpChallengeResponseDictionary(otpChallengeResponse))
+                }
+            case let .failure(error):
+                reject(EMBEDDED_REJECT_ERROR, error.localizedDescription, error)
+            }
+        }
+    }
+    
+    private func checkInitialization(_ reject: RCTPromiseRejectBlock) -> Bool {
+        guard isEmbeddedSdkInitialized else {
+            reject(EMBEDDED_REJECT_ERROR, INITIALIZATION_ERROR, nil)
+            return false
+        }
+        return true
+    }
+    
+    private func parseURL(_ url: String, _ reject: RCTPromiseRejectBlock) -> URL? {
+        guard let parsedURL = URL(string: url) else {
+            reject(EMBEDDED_REJECT_ERROR, "\(url) \(INVALID_URL)", nil)
+            return nil
+        }
+        return parsedURL
+    }
 }
 
 // MARK: HELPERS
+
+private func makeAuthenticateResponseDictionary(_ authResponse: AuthenticateResponse) -> [String: Any] {
+    return [
+        "message": authResponse.message ?? "",
+        "redirectUrl": authResponse.redirectUrl.absoluteString,
+        "passkeyBindingToken": authResponse.passkeyBindingToken ?? "",
+    ]
+}
+
+private func makeOtpChallengeResponseDictionary(_ otpChallengeResponse: OtpChallengeResponse) -> [String: Any]{
+    return [
+        "url": otpChallengeResponse.url.absoluteString,
+    ]
+}
 
 private func makePasskeyDictionary(_ passkey: Passkey) -> [String: Any] {
     return [
@@ -237,3 +322,4 @@ extension Passkey.State {
         }
     }
 }
+

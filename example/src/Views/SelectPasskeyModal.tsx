@@ -1,5 +1,6 @@
-import type { Passkey } from '@beyondidentity/bi-sdk-react-native';
-import { Text, View, Modal, StyleSheet, Pressable } from 'react-native';
+import React from "react";
+import type { Passkey } from "@beyondidentity/bi-sdk-react-native";
+import { Text, View, Modal, StyleSheet, Pressable } from "react-native";
 
 interface SelectPasskeyModalProps {
   modalVisible: boolean;
@@ -55,10 +56,10 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 20,
     padding: 35,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2,
@@ -71,21 +72,21 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 4,
-    borderColor: 'gray',
+    borderColor: "gray",
     borderWidth: 1,
     elevation: 3,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     margin: 5,
   },
   text: {
     fontSize: 16,
     lineHeight: 21,
     letterSpacing: 0.25,
-    color: 'black',
+    color: "black",
   },
   modalText: {
     marginBottom: 15,
     fontSize: 16,
-    textAlign: 'center',
+    textAlign: "center",
   },
 });

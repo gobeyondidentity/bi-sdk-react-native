@@ -2,25 +2,26 @@ import {
   AuthenticateResponse,
   Passkey,
   Embedded,
-} from '@beyondidentity/bi-sdk-react-native';
-import { URL } from 'react-native-url-polyfill';
-import React, { useState } from 'react';
-import { Text, ScrollView, View } from 'react-native';
-import { InAppBrowser } from 'react-native-inappbrowser-reborn';
-import ButtonCardView from './ButtonCardView';
-import SelectPasskeyModal from './SelectPasskeyModal';
-import ResponseLabelView from './ResponseLabelView';
-import s from './styles';
+} from "@beyondidentity/bi-sdk-react-native";
+import { URL } from "react-native-url-polyfill";
+import React, { useState } from "react";
+import { Text, ScrollView, View } from "react-native";
+import { InAppBrowser } from "react-native-inappbrowser-reborn";
+import ButtonCardView from "./ButtonCardView";
+import SelectPasskeyModal from "./SelectPasskeyModal";
+import ResponseLabelView from "./ResponseLabelView";
+import s from "./styles";
+import InputCardView from "./InputCardView";
 
 // Values are hardcode for demo purposes only. Some of these values should be dynamically generated.
 const BeyondIdentityAuthUrl = `https://auth-us.beyondidentity.com/v1/tenants/00012da391ea206d/realms/862e4b72cfdce072/applications/a8c0aa60-38e4-42b6-bd52-ef64aba5478b/authorize?response_type=code&client_id=KhSWSmfhZ6xCMz9yw7DpJcv5&redirect_uri=${encodeURIComponent(
-  'acme://'
+  "acme://"
 )}&scope=openid&state=random_state&code_challenge_method=S256&code_challenge=KmWGRa8zO-BtoyZZnct4kCxjCiM6xhZxtQBMrww6F5w`;
 const Auth0AuthUrl = `https://dev-pt10fbkg.us.auth0.com/authorize?connection=Example-App-Native&scope=openid&response_type=code&state=some_random_state&redirect_uri=${encodeURIComponent(
-  'acme://auth0'
+  "acme://auth0"
 )}&client_id=q1cubQfeZWnajq5YkeZVD3NauRqU4vNs&nonce=nonce&code_challenge_method=S256&code_challenge=d5VD805xzm8Zh42oS702e6brfBVFY0IwzbIac0CXHPI`;
 const OktaAuthUrl = `https://dev-43409302.okta.com/oauth2/v1/authorize?idp=0oa5rswruxTaPUcgl5d7&scope=openid&response_type=code&state=some_random_state&redirect_uri=${encodeURIComponent(
-  'acme://okta'
+  "acme://okta"
 )}&client_id=0oa5kipb8rdo4WCkf5d7&code_challenge_method=S256&code_challenge=r6FkKNRMjQx5lYPWrLw6TLX8hSRYiA2gK1wSfIGxW9k`;
 
 enum Flow {
@@ -36,15 +37,19 @@ export default function AuthenticateView() {
   const [passkeys, setPasskeys] = useState<Passkey[]>([]);
 
   // set auth redirectUrl to use after user selects a passkey
-  const [authUrl, setAuthUrl] = useState('');
+  const [authUrl, setAuthUrl] = useState("");
 
-  const [beyondIdentityResult, _setBeyondIdentityResult] = useState('');
-  const [oktaResult, _setOktaResult] = useState('');
-  const [auth0Result, _setAuth0Result] = useState('');
+  const [emailOtpUrl, setEmailOtpUrl] = useState("");
+
+  const [beyondIdentityResult, _setBeyondIdentityResult] = useState("");
+  const [oktaResult, _setOktaResult] = useState("");
+  const [auth0Result, _setAuth0Result] = useState("");
+  const [authContextResult, _setAuthContextResult] = useState("");
 
   const [auth0Loading, setAuth0Loading] = useState(false);
   const [beyondIdentityLoading, setBeyondIdentityLoading] = useState(false);
   const [oktaLoading, setOktaLoading] = useState(false);
+  const [authContextLoading, setAuthContextLoading] = useState(false);
 
   function setAuth0Result(result: string) {
     setAuth0Loading(false);
@@ -59,6 +64,11 @@ export default function AuthenticateView() {
   function setOktaResult(result: string) {
     setOktaLoading(false);
     _setOktaResult(result);
+  }
+
+  function setAuthContextResult(result: string) {
+    setAuthContextLoading(false);
+    _setAuthContextResult(result);
   }
 
   return (
@@ -81,6 +91,33 @@ export default function AuthenticateView() {
               setOktaResult
             );
           }}
+        />
+        <ButtonCardView
+          title="Authentication Context"
+          detail="Returns the Authentication Context for the current transaction.\nThe Authentication Context contains the Authenticator Config, Authentication Method Configuration, request origin, and the authenticating application."
+          buttonTitle="Authentication Context"
+          hideLabel={true}
+          onPress={async (_) => {
+            setAuthContextLoading(true);
+            let url = await getRedirectUrl(
+              Flow.BeyondIdentity,
+              BeyondIdentityAuthUrl,
+              true,
+              setAuthContextResult
+            );
+            try {
+              let authContext = await Embedded.getAuthenticationContext(url);
+              setAuthContextResult(JSON.stringify(authContext));
+            } catch (err) {
+              setAuthContextResult(
+                `Failed to get authentication context: ${err}`
+              );
+            }
+          }}
+        />
+        <ResponseLabelView
+          text={authContextResult}
+          isLoading={authContextLoading}
         />
         <ButtonCardView
           title="Authenticate with Beyond Identity"
@@ -145,6 +182,50 @@ export default function AuthenticateView() {
           }}
         />
         <ResponseLabelView text={oktaResult} isLoading={oktaLoading} />
+        <InputCardView
+          title="Authenticate with Email OTP"
+          detail="Try authenticating with Email OTP using Beyond Identity."
+          buttonTitle="Authenticate with Email OTP"
+          placeholder="Email"
+          keyboardType="email-address"
+          textContentType="emailAddress"
+          onPress={async (email, setResult) => {
+            let url = await getRedirectUrl(
+              Flow.BeyondIdentity,
+              BeyondIdentityAuthUrl,
+              true,
+              setAuthContextResult
+            );
+            try {
+              const result = await Embedded.authenticateOtp(url, email);
+              setEmailOtpUrl(result.url);
+              setResult(JSON.stringify(result, null, 2));
+            } catch (e) {
+              if (e instanceof Error) {
+                setResult(e.message as string);
+              }
+            }
+          }}
+        />
+        <InputCardView
+          title="Redeem with Email OTP"
+          detail="Try redeeming the OTP in your Email."
+          buttonTitle="Redeem with Email OTP"
+          placeholder="OTP"
+          keyboardType="default"
+          textContentType="none"
+          onPress={async (otp, setResult) => {
+            try {
+              console.log(emailOtpUrl, otp);
+              const result = await Embedded.redeemOtp(emailOtpUrl, otp);
+              setResult(JSON.stringify(result, null, 2));
+            } catch (e) {
+              if (e instanceof Error) {
+                setResult(e.message as string);
+              }
+            }
+          }}
+        />
       </View>
     </ScrollView>
   );
@@ -155,9 +236,9 @@ async function authenticateBeyondIdentityAsPrimaryIdp(
   setResult: (result: string) => void
 ) {
   let response = await fetch(url, {
-    method: 'GET',
+    method: "GET",
     headers: new Headers({
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     }),
   });
   const data = await response.json();
@@ -185,7 +266,12 @@ async function beginAuth(
     setResult(url.message as string);
   } else {
     setAuthUrl(url);
-    const passkeys = await Embedded.getPasskeys();
+    let passkeys: Passkey[] = [];
+    try {
+      passkeys = await Embedded.getPasskeys();
+    } catch (err) {
+      console.log("Failed to get passkeys:", err);
+    }
     setPasskeys(passkeys);
     handlePasskeys(flow, url, passkeys, setResult, setModalVisible);
   }
@@ -217,7 +303,7 @@ async function handlePasskeys(
   try {
     // No passkeys
     if (passkeys.length === 0) {
-      return setResult('No passkey found, bind a passkey first');
+      return setResult("No passkey found, bind a passkey first");
     }
     // Single passkey
     if (passkeys.length === 1) {
@@ -283,7 +369,7 @@ async function authenticateWithID(
       return e;
     }
   }
-  return new Error('unable to call Embedded.authenticate');
+  return new Error("unable to call Embedded.authenticate");
 }
 
 async function handleAuthResponse(
@@ -298,7 +384,6 @@ async function handleAuthResponse(
       if (response instanceof Error) {
         setBeyondIdentityResult(response.message as string);
       } else {
-        console.log('RESPONSE', response);
         if (response.redirectUrl) {
           let result = await makeTokenExchangeForBeyondIdentity(
             response.redirectUrl
@@ -352,16 +437,16 @@ async function startWebSession(
   url: string,
   ephemeralWebSession: boolean
 ): Promise<string | Error> {
-  let responseUrl = '';
+  let responseUrl = "";
   try {
     if (await InAppBrowser.isAvailable()) {
-      let response = await InAppBrowser.openAuth(url, 'acme://', {
+      let response = await InAppBrowser.openAuth(url, "acme://", {
         ephemeralWebSession: ephemeralWebSession,
         showTitle: false,
         enableUrlBarHiding: true,
         enableDefaultShare: false,
       });
-      if (response.type === 'success' && response.url) {
+      if (response.type === "success" && response.url) {
         responseUrl = response.url;
       } else {
         return new Error(
@@ -369,7 +454,7 @@ async function startWebSession(
         );
       }
     } else {
-      return new Error('InAppBrowser is NOT Available');
+      return new Error("InAppBrowser is NOT Available");
     }
   } catch (e) {
     if (e instanceof Error) {
@@ -383,9 +468,9 @@ async function startWebSession(
 // This is a downside to using the InAppBrowser library. After any successful response, another
 // selected users would pass.
 async function handleCachedResponse(url: string): Promise<string> {
-  if (url.includes('acme://okta')) {
+  if (url.includes("acme://okta")) {
     return await makeTokenExchangeForOkta(url);
-  } else if (url.includes('acme://auth0')) {
+  } else if (url.includes("acme://auth0")) {
     return await makeTokenExchangeForAuth0(url);
   } else {
     return `Url does not contain expected scheme: ${url}`;
@@ -398,20 +483,20 @@ async function makeTokenExchangeForBeyondIdentity(
   const parseableUrl = new URL(url);
 
   const form = {
-    code: parseableUrl.searchParams.get('code') ?? '',
+    code: parseableUrl.searchParams.get("code") ?? "",
     code_verifier:
-      'zkoPKpKiiqZWYu6YNjojYbLIVaVmOIEKWgWHWpogtMpuFS3Sot7UmV5k_W5Y1y3JQN4K7si9sOdQXhilNPIbDL87IEeg8qeesrTGNpKrUVu5RoIQzcpC8mn4kdbOwHvn',
-    grant_type: 'authorization_code',
-    client_id: 'KhSWSmfhZ6xCMz9yw7DpJcv5',
-    redirect_uri: 'acme://',
+      "zkoPKpKiiqZWYu6YNjojYbLIVaVmOIEKWgWHWpogtMpuFS3Sot7UmV5k_W5Y1y3JQN4K7si9sOdQXhilNPIbDL87IEeg8qeesrTGNpKrUVu5RoIQzcpC8mn4kdbOwHvn",
+    grant_type: "authorization_code",
+    client_id: "KhSWSmfhZ6xCMz9yw7DpJcv5",
+    redirect_uri: "acme://",
   };
 
   let response = await fetch(
-    'https://auth-us.beyondidentity.com/v1/tenants/00012da391ea206d/realms/862e4b72cfdce072/applications/a8c0aa60-38e4-42b6-bd52-ef64aba5478b/token',
+    "https://auth-us.beyondidentity.com/v1/tenants/00012da391ea206d/realms/862e4b72cfdce072/applications/a8c0aa60-38e4-42b6-bd52-ef64aba5478b/token",
     {
-      method: 'POST',
+      method: "POST",
       headers: new Headers({
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       }),
       body: makeFormBody(form),
     }
@@ -422,18 +507,18 @@ async function makeTokenExchangeForBeyondIdentity(
 
 async function makeTokenExchangeForAuth0(url: string): Promise<string> {
   const parseableUrl = new URL(url);
-  const code = parseableUrl.searchParams.get('code') ?? '';
-  let response = await fetch('https://dev-pt10fbkg.us.auth0.com/oauth/token', {
-    method: 'POST',
+  const code = parseableUrl.searchParams.get("code") ?? "";
+  let response = await fetch("https://dev-pt10fbkg.us.auth0.com/oauth/token", {
+    method: "POST",
     headers: new Headers({
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     }),
     body: JSON.stringify({
-      code: code ?? '',
-      code_verifier: 'niiSuW2PkdECSLQEKvw3kmGOpETP3GNIljZBH_UJc00',
-      client_id: 'q1cubQfeZWnajq5YkeZVD3NauRqU4vNs',
-      redirect_uri: 'acme://auth0',
-      grant_type: 'authorization_code',
+      code: code ?? "",
+      code_verifier: "niiSuW2PkdECSLQEKvw3kmGOpETP3GNIljZBH_UJc00",
+      client_id: "q1cubQfeZWnajq5YkeZVD3NauRqU4vNs",
+      redirect_uri: "acme://auth0",
+      grant_type: "authorization_code",
     }),
   });
   const data = await response.json();
@@ -444,19 +529,19 @@ async function makeTokenExchangeForOkta(url: string): Promise<string> {
   const parseableUrl = new URL(url);
 
   const form = {
-    code: parseableUrl.searchParams.get('code') ?? '',
-    code_verifier: 'jNaFbX47DcGJoY20v13FUeGYEllQ0jOlzR7XfEpJAsY',
-    grant_type: 'authorization_code',
+    code: parseableUrl.searchParams.get("code") ?? "",
+    code_verifier: "jNaFbX47DcGJoY20v13FUeGYEllQ0jOlzR7XfEpJAsY",
+    grant_type: "authorization_code",
   };
 
   let response = await fetch(
     `https://dev-43409302.okta.com/oauth2/v1/token?client_id=0oa5kipb8rdo4WCkf5d7&redirect_uri=${encodeURIComponent(
-      'acme://okta'
+      "acme://okta"
     )}`,
     {
-      method: 'POST',
+      method: "POST",
       headers: new Headers({
-        'Content-Type': 'application/x-www-form-urlencoded',
+        "Content-Type": "application/x-www-form-urlencoded",
       }),
       body: makeFormBody(form),
     }
@@ -470,8 +555,8 @@ function makeFormBody(form: Object): string {
     .map(
       (key) =>
         encodeURIComponent(key) +
-        '=' +
+        "=" +
         encodeURIComponent((form as Record<string, string>)[key])
     )
-    .join('&');
+    .join("&");
 }

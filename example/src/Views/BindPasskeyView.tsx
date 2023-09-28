@@ -1,5 +1,5 @@
-import { Embedded } from '@beyondidentity/bi-sdk-react-native';
-import InputCardView from './InputCardView';
+import { Embedded } from "@beyondidentity/bi-sdk-react-native";
+import InputCardView from "./InputCardView";
 
 interface BindPasskeyViewProps {
   title: string;
@@ -21,15 +21,14 @@ export default function BindPasskeyView({
     detail: detail,
     buttonTitle: buttonTitle,
     placeholder: placeholder,
-    autoCompleteType: 'username',
-    keyboardType: 'default',
-    textContentType: 'username',
+    keyboardType: "default",
+    textContentType: "username",
     onPress: (
       input: string,
       setResult: React.Dispatch<React.SetStateAction<string>>
     ) => {
-      if (input === '') {
-        return setResult('Please enter a username');
+      if (input === "") {
+        return setResult("Please enter a username");
       }
       makeBindRequest(input, endpoint, setResult);
     },
@@ -44,14 +43,14 @@ async function makeBindRequest(
   try {
     const body = JSON.stringify({
       username: username,
-      authenticator_type: 'native',
-      delivery_method: 'return',
+      authenticator_type: "native",
+      delivery_method: "return",
     });
 
     const response = await fetch(endpoint, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: body,
     });
@@ -64,7 +63,7 @@ async function makeBindRequest(
 
     const json = await response.json();
 
-    if ('error' in json) {
+    if ("error" in json) {
       return setResult(`An error has occured ${responseStatus}: ${json.error}`);
     }
 

@@ -1,0 +1,67 @@
+{
+  "buildFiles": [
+    "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
+    "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
+    "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/opt/android/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/.cxx/RelWithDebInfo/2a5q134k/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/opt/android/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/.cxx/RelWithDebInfo/2a5q134k/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "react_codegen_RNVectorIconsSpec::@479809fae146501fd34d": {
+      "artifactName": "react_codegen_RNVectorIconsSpec",
+      "abi": "x86",
+      "runtimeFiles": []
+    },
+    "react_codegen_safeareacontext::@7984cd80db47aa7b952a": {
+      "artifactName": "react_codegen_safeareacontext",
+      "abi": "x86",
+      "output": "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/build/intermediates/cxx/RelWithDebInfo/2a5q134k/obj/x86/libreact_codegen_safeareacontext.so",
+      "runtimeFiles": [
+        "/root/.gradle/caches/8.14.3/transforms/48f32c88ab848eeaa4d6425b771aa34b/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/root/.gradle/caches/8.14.3/transforms/cc20650cd391b22012dd468b7a30b8c4/transformed/react-android-0.81.4-release/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/root/.gradle/caches/8.14.3/transforms/cc20650cd391b22012dd468b7a30b8c4/transformed/react-android-0.81.4-release/prefab/modules/reactnative/libs/android.x86/libreactnative.so"
+      ]
+    },
+    "react_codegen_RNCWebViewSpec::@eb48929f9f7453740a6c": {
+      "artifactName": "react_codegen_RNCWebViewSpec",
+      "abi": "x86",
+      "runtimeFiles": []
+    },
+    "react_codegen_rnscreens::@25bcbd507e98d3a854ad": {
+      "artifactName": "react_codegen_rnscreens",
+      "abi": "x86",
+      "output": "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/build/intermediates/cxx/RelWithDebInfo/2a5q134k/obj/x86/libreact_codegen_rnscreens.so",
+      "runtimeFiles": [
+        "/root/.gradle/caches/8.14.3/transforms/cc20650cd391b22012dd468b7a30b8c4/transformed/react-android-0.81.4-release/prefab/modules/reactnative/libs/android.x86/libreactnative.so",
+        "/root/.gradle/caches/8.14.3/transforms/cc20650cd391b22012dd468b7a30b8c4/transformed/react-android-0.81.4-release/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/root/.gradle/caches/8.14.3/transforms/48f32c88ab848eeaa4d6425b771aa34b/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so"
+      ]
+    },
+    "appmodules::@6890427a1f51a3e7e1df": {
+      "artifactName": "appmodules",
+      "abi": "x86",
+      "output": "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/build/intermediates/cxx/RelWithDebInfo/2a5q134k/obj/x86/libappmodules.so",
+      "runtimeFiles": [
+        "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/build/intermediates/cxx/RelWithDebInfo/2a5q134k/obj/x86/libreact_codegen_safeareacontext.so",
+        "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/build/intermediates/cxx/RelWithDebInfo/2a5q134k/obj/x86/libreact_codegen_rnscreens.so",
+        "/root/.gradle/caches/8.14.3/transforms/48f32c88ab848eeaa4d6425b771aa34b/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/root/.gradle/caches/8.14.3/transforms/cc20650cd391b22012dd468b7a30b8c4/transformed/react-android-0.81.4-release/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/root/.gradle/caches/8.14.3/transforms/cc20650cd391b22012dd468b7a30b8c4/transformed/react-android-0.81.4-release/prefab/modules/reactnative/libs/android.x86/libreactnative.so"
+      ]
+    }
+  }
+}

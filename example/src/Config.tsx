@@ -11,5 +11,5 @@ export default {
     recoverEndpoint: "https://acme-cloud.byndid.com/recover-credential-binding-link",
     
     /// SDK version
-    sdkVersion: "2.0.1"
+    sdkVersion: "2.0.2"
 }

@@ -1,4 +1,5 @@
-import { SafeAreaView, ScrollView, Text } from "react-native";
+import { ScrollView, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Button } from "@rneui/themed";
 import Config from "../Config";
 import styles, { Color } from "./styles";

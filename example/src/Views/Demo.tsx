@@ -1,10 +1,10 @@
 import {
-  SafeAreaView,
   ScrollView,
   Text,
   KeyboardAvoidingView,
   Platform,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Embedded } from "@beyondidentity/bi-sdk-react-native";
 import BindPasskeyView from "./BindPasskeyView";
 import Config from "../Config";

@@ -1,0 +1,5 @@
+/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt
+/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt
+/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt
+/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/android/build/generated/source/codegen/jni/CMakeLists.txt
+/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt

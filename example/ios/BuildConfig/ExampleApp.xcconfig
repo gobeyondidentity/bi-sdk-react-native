@@ -1,6 +1,6 @@
 #include "Pods/Target Support Files/Pods-BiSdkReactNativeExample/Pods-BiSdkReactNativeExample.release.xcconfig"
 XCCONFIG_PRODUCT_BUNDLE_IDENTIFIER = com.bi.sdk.reactnative.example
-XCCONFIG_APP_VERSION = 2.0.1
+XCCONFIG_APP_VERSION = 2.0.2
 XCCONFIG_APP_BUILD_NUMBER = 0
 XCCONFIG_PROVISIONING_PROFILE_IDENTIFIER = SDK React Native Example App
 XCCONFIG_APP_SCHEME = acme

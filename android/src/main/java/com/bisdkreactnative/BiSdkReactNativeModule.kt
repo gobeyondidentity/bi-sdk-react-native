@@ -42,7 +42,7 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
   }
 
   override fun onActivityResult(
-    activity: Activity?,
+    activity: Activity,
     requestCode: Int,
     resultCode: Int,
     data: Intent?
@@ -55,7 +55,7 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
     }
   }
 
-  override fun onNewIntent(intent: Intent?) {
+  override fun onNewIntent(intent: Intent) {
   }
 
   @Suppress("DEPRECATION")
@@ -63,7 +63,7 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
     (reactApplicationContext.getSystemService(Context.KEYGUARD_SERVICE) as? KeyguardManager)
       ?.createConfirmDeviceCredentialIntent("Check", "Enter your pin or password")
       ?.let { intent ->
-        currentActivity?.startActivityForResult(intent, EMBEDDED_KEYGUARD_REQUEST)
+        reactApplicationContext.currentActivity?.startActivityForResult(intent, EMBEDDED_KEYGUARD_REQUEST)
       } ?: run {
       isLockSet = false
       answer(false, IllegalStateException("Can not authenticate with KeyGuard!"))
@@ -317,6 +317,7 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
   private fun makePasskeyMap(passkey: Passkey): WritableNativeMap {
     val map = WritableNativeMap()
     map.putString("id", passkey.id)
+    map.putString("passkeyId", passkey.passkeyId)
     map.putString("localCreated", passkey.localCreated.toString())
     map.putString("localUpdated", passkey.localUpdated.toString())
     map.putString("apiBaseUrl", passkey.apiBaseUrl.toString())

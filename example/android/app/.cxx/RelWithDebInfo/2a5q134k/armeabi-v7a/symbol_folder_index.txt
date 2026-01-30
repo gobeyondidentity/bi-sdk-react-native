@@ -1,0 +1,1 @@
+/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/build/intermediates/cxx/RelWithDebInfo/2a5q134k/obj/armeabi-v7a

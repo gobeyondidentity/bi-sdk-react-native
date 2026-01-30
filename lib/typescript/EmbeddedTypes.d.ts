@@ -79,6 +79,7 @@ interface Passkey {
      * The globally unique identifier of the passkey.
      */
     id: string;
+    passkeyId: string;
     /**
      * The time this passkey was created.
      */
@@ -154,17 +155,21 @@ interface PasskeyIdentity {
      */
     id: string;
     /**
-     * The display name of the identity.
-     */
-    displayName: string;
-    /**
      * The username of the identity.
      */
     username: string;
     /**
+     * The display name of the identity.
+     */
+    displayName?: string;
+    /**
      * The primary email address of the identity.
      */
-    primaryEmailAddress?: string;
+    emailAddress?: string;
+    /**
+     * The external Id address of the identity.
+     */
+    externalId?: string;
 }
 /**
  * Tenant information associated with a `Passkey`.

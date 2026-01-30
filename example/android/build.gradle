@@ -1,43 +1,43 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Load build properties
+def buildProperties = new Properties()
+def buildPropertiesFile = rootProject.file('buildProperties/build.properties')
+if (buildPropertiesFile.exists()) {
+    buildProperties.load(new FileInputStream(buildPropertiesFile))
+}
 
 buildscript {
     ext {
-        buildToolsVersion = "33.0.0"
+        buildToolsVersion = "36.0.0"
         minSdkVersion = 26
-        compileSdkVersion = 33
-        targetSdkVersion = 33
-
-        // We use NDK 25 which has both M1 support and is the side-by-side NDK version from AGP.
-        ndkVersion = "25.2.9519653"
+        compileSdkVersion = 36
+        kotlinVersion = "2.1.20"
+        targetSdkVersion = 36
+        ndkVersion = "27.1.12297006"
     }
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.4.2")
+        classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
     }
-
-    ext.loadProperties = { path ->
-        def properties = new Properties()
-        def propertiesFile = rootProject.file(path)
-        if (propertiesFile.exists()) {
-            propertiesFile.withReader('UTF-8') { reader ->
-                properties.load(reader)
-            }
-        }
-        println properties
-        return properties
-    }
-    ext.buildProperties = loadProperties("buildProperties/build.properties")
 }
 
 allprojects {
   repositories {
-    maven {
-      url buildProperties["BUILD_CONFIG_CLOUDSMITH_REPO_URL"]
+    // Only add the custom maven repository if the URL is not empty
+    if (buildProperties.containsKey("BUILD_CONFIG_CLOUDSMITH_REPO_URL") && 
+        buildProperties["BUILD_CONFIG_CLOUDSMITH_REPO_URL"]?.trim()) {
+      maven {
+        url buildProperties["BUILD_CONFIG_CLOUDSMITH_REPO_URL"]
+      }
     }
+    google()
+    mavenCentral()
     mavenLocal()
   }
 }
+
+apply plugin: "com.facebook.react.rootproject"

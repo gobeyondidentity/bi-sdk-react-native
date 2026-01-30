@@ -283,6 +283,7 @@ private func makeOtpChallengeResponseDictionary(_ otpChallengeResponse: OtpChall
 private func makePasskeyDictionary(_ passkey: Passkey) -> [String: Any] {
     return [
         "id" : passkey.id.value,
+        "passkeyId" : passkey.passkeyId.value,
         "localCreated" : passkey.localCreated.description,
         "localUpdated" : passkey.localUpdated.description,
         "apiBaseUrl" : passkey.apiBaseUrl.absoluteString,

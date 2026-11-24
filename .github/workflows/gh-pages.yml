@@ -22,10 +22,10 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Set up TypeScript # Fixes typedoc error
-        run: yarn add -D typescript
+        run: yarn add -D typescript@5.8.3
 
       - name: Set up TypeDoc
-        run: yarn add -D typedoc
+        run: yarn add -D typedoc@0.28.20
 
       - name: Install yarn dependencies # Fixes typedoc error
         run: yarn install
@@ -34,7 +34,7 @@ jobs:
         run: cd example && yarn install
 
       - name: Build TypeDoc
-        run: yarn typedoc --entryPointStrategy expand ./src
+        run: yarn typedoc --tsconfig tsconfig.build.json --entryPointStrategy expand ./src
 
       - name: Publish TypeDoc
         uses: JamesIves/github-pages-deploy-action@v4

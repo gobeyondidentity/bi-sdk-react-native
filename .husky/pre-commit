@@ -1,4 +1,5 @@
 #!/bin/sh
+# shellcheck source=/dev/null  # husky generates _/husky.sh on install
 . "$(dirname "$0")/_/husky.sh"
 
 yarn lint && yarn typescript

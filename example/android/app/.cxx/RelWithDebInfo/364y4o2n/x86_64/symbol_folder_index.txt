@@ -1,0 +1,1 @@
+/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/build/intermediates/cxx/RelWithDebInfo/364y4o2n/obj/x86_64

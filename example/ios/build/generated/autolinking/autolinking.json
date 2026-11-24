@@ -1,7 +1,7 @@
 {
   "root": "/Users/vagrant/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example",
   "reactNativePath": "/Users/vagrant/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native",
-  "reactNativeVersion": "0.81",
+  "reactNativeVersion": "0.88",
   "dependencies": {
     "@beyondidentity/bi-sdk-react-native": {
       "root": "/Users/vagrant/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/@beyondidentity/bi-sdk-react-native",
@@ -9,7 +9,7 @@
       "platforms": {
         "ios": {
           "podspecPath": "/Users/vagrant/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/@beyondidentity/bi-sdk-react-native/BeyondIdentityEmbeddedReactNative.podspec",
-          "version": "2.0.2",
+          "version": "2.2.0",
           "configurations": [],
           "scriptPhases": []
         },
@@ -57,7 +57,7 @@
       "platforms": {
         "ios": {
           "podspecPath": "/Users/vagrant/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec",
-          "version": "5.6.1",
+          "version": "5.10.1",
           "configurations": [],
           "scriptPhases": []
         },
@@ -85,7 +85,7 @@
       "platforms": {
         "ios": {
           "podspecPath": "/Users/vagrant/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/RNScreens.podspec",
-          "version": "4.16.0",
+          "version": "4.30.0",
           "configurations": [],
           "scriptPhases": []
         },
@@ -107,7 +107,12 @@
             "RNSScreenFooterComponentDescriptor",
             "RNSScreenContentWrapperComponentDescriptor",
             "RNSModalScreenComponentDescriptor",
-            "RNSBottomTabsComponentDescriptor"
+            "RNSTabsHostComponentDescriptor",
+            "RNSSafeAreaViewComponentDescriptor",
+            "RNSStackScreenComponentDescriptor",
+            "RNSStackHeaderConfigComponentDescriptor",
+            "RNSStackHeaderSubviewComponentDescriptor",
+            "RNSFormSheetHostComponentDescriptor"
           ],
           "cmakeListsPath": "/Users/vagrant/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
@@ -148,7 +153,7 @@
       "platforms": {
         "ios": {
           "podspecPath": "/Users/vagrant/go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-webview/react-native-webview.podspec",
-          "version": "13.16.0",
+          "version": "14.0.1",
           "configurations": [],
           "scriptPhases": []
         },
@@ -323,6 +328,44 @@
           "name": "--client-logs",
           "description": "[Deprecated] Enable plain text JavaScript log streaming for all connected apps. This feature is deprecated and will be removed in future.",
           "default": false
+        }
+      ]
+    },
+    {
+      "name": "spm [action]",
+      "description": "Set up or maintain Swift Package Manager support for the iOS/macOS app. Actions: add, update, deinit, scaffold. With no action: add (or update if SPM is already set up).",
+      "options": [
+        {
+          "name": "--version <string>",
+          "description": "React Native version (e.g. 0.80.0). Defaults to the version in node_modules/react-native/package.json."
+        },
+        {
+          "name": "--yes",
+          "description": "Skip the dirty-pbxproj confirmation prompt."
+        },
+        {
+          "name": "--xcodeproj <path>",
+          "description": "[add] Path to the .xcodeproj to inject SPM packages into (disambiguates when several exist)."
+        },
+        {
+          "name": "--productName <string>",
+          "description": "[add] App target to inject into (disambiguates when several exist)."
+        },
+        {
+          "name": "--deintegrate",
+          "description": "[add] Run `pod deintegrate` and strip React Native from the Podfile before injecting (CocoaPods → SwiftPM migration)."
+        },
+        {
+          "name": "--artifacts <path>",
+          "description": "[advanced] Local artifact root containing complete debug/ and release/ slots."
+        },
+        {
+          "name": "--download <string>",
+          "description": "[advanced] Artifact download policy: auto (default), skip, or force."
+        },
+        {
+          "name": "--skipCodegen",
+          "description": "[advanced] Skip the react-native codegen step."
         }
       ]
     },

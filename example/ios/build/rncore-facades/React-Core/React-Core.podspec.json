@@ -1,0 +1,106 @@
+{
+  "name": "React-Core",
+  "version": "0.88.0",
+  "summary": "Prebuilt facade for React-Core (code + headers live in React-Core-prebuilt).",
+  "homepage": "https://reactnative.dev/",
+  "license": "MIT",
+  "authors": "Meta Platforms, Inc. and its affiliates",
+  "platforms": {
+    "ios": "15.1"
+  },
+  "source": {
+    "git": "https://github.com/facebook/react-native.git"
+  },
+  "dependencies": {
+    "React-Core-prebuilt": []
+  },
+  "default_subspecs": [
+    "Default"
+  ],
+  "subspecs": [
+    {
+      "name": "Default",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "DevSupport",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTWebSocket",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "CoreModulesHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTActionSheetHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTAnimationHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTBlobHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTImageHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTLinkingHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTNetworkHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTPushNotificationHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTSettingsHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTTextHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    },
+    {
+      "name": "RCTVibrationHeaders",
+      "dependencies": {
+        "React-Core-prebuilt": []
+      }
+    }
+  ]
+}

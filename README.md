@@ -70,6 +70,8 @@ allprojects {
 }
 ```
 
+**Important:** For biometric authentication to work on Android, your Activity must extend `FragmentActivity` (e.g., `ReactActivity`). This is required because Android's `BiometricPrompt` API requires a `FragmentActivity` to display the biometric dialog.
+
 ### Using `expo`
 
 > :warning: This package [requires custom native code](https://docs.expo.io/workflow/customizing/) and can be used with [Development builds](https://docs.expo.dev/develop/development-builds/introduction/) or [prebuild](https://docs.expo.dev/workflow/prebuild/) and cannot be used with Expo Go.

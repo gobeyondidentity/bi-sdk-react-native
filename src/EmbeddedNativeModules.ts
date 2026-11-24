@@ -3,8 +3,9 @@ import { NativeEventEmitter, NativeModules, Platform } from 'react-native';
 import type { OtpChallengeResponse, Passkey, Success } from './EmbeddedTypes';
 
 class BILoggerEmitter extends NativeEventEmitter {
+  // `event` stays `string`: RN 0.88's generic addListener rejects a narrower override (TS2416)
   addListener(
-    event: 'BeyondIdentityLogger',
+    event: string,
     listener: (...args: any[]) => any,
     context?: any
   ) {

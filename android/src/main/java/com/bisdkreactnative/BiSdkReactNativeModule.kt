@@ -1,12 +1,6 @@
 package com.bisdkreactnative
 
-import android.app.Activity
-import android.app.Activity.RESULT_CANCELED
-import android.app.Activity.RESULT_OK
 import android.app.Application
-import android.app.KeyguardManager
-import android.content.Context
-import android.content.Intent
 import android.util.Log
 import com.beyondidentity.embedded.sdk.EmbeddedSdk
 import com.beyondidentity.embedded.sdk.models.AuthenticateResponse
@@ -20,7 +14,6 @@ import com.beyondidentity.embedded.sdk.models.State.REVOKED
 import com.facebook.react.bridge.*
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
 
-private const val EMBEDDED_KEYGUARD_REQUEST = 2314
 private const val INITIALIZE_ERROR = "Please call Embedded.initializeBiSdk first"
 private const val SUCCESS = "success"
 
@@ -29,45 +22,12 @@ private object Events {
 }
 
 class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
-  ReactContextBaseJavaModule(reactContext), ActivityEventListener {
-  init {
-    reactContext.addActivityEventListener(this)
-  }
+  ReactContextBaseJavaModule(reactContext) {
 
   private var isEmbeddedSdkInitialized = false
-  private var isLockSet = true
 
   override fun getName(): String {
     return "BiSdkReactNative"
-  }
-
-  override fun onActivityResult(
-    activity: Activity,
-    requestCode: Int,
-    resultCode: Int,
-    data: Intent?
-  ) {
-    if (requestCode == EMBEDDED_KEYGUARD_REQUEST) {
-      when (resultCode) {
-        RESULT_OK -> EmbeddedSdk.answer(true)
-        RESULT_CANCELED -> EmbeddedSdk.answer(false)
-      }
-    }
-  }
-
-  override fun onNewIntent(intent: Intent) {
-  }
-
-  @Suppress("DEPRECATION")
-  private val keyguardPrompt: ((Boolean, Exception) -> Unit) -> Unit = { answer ->
-    (reactApplicationContext.getSystemService(Context.KEYGUARD_SERVICE) as? KeyguardManager)
-      ?.createConfirmDeviceCredentialIntent("Check", "Enter your pin or password")
-      ?.let { intent ->
-        reactApplicationContext.currentActivity?.startActivityForResult(intent, EMBEDDED_KEYGUARD_REQUEST)
-      } ?: run {
-      isLockSet = false
-      answer(false, IllegalStateException("Can not authenticate with KeyGuard!"))
-    }
   }
 
   @ReactMethod
@@ -185,12 +145,12 @@ class BiSdkReactNativeModule(reactContext: ReactApplicationContext) :
     }
 
     EmbeddedSdk.init(
-      reactApplicationContext.applicationContext as Application,
-      keyguardPrompt,
-      { message -> sendEvent(Events.LOG, message) },
-      biometricAskPrompt,
-      allowedDomains.toArrayList().toList() as List<String>
+      app = reactApplicationContext.applicationContext as Application,
+      biometricAskPrompt = biometricAskPrompt,
+      logger = { message -> sendEvent(Events.LOG, message) },
+      allowedDomains = allowedDomains.toArrayList().toList() as List<String>,
     )
+    reactApplicationContext.currentActivity?.let { EmbeddedSdk.setActivity(it) }
     isEmbeddedSdkInitialized = true
 
     promise.resolve(SUCCESS)

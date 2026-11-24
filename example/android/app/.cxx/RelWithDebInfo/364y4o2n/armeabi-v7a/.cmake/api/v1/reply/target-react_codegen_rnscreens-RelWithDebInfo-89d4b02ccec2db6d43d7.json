@@ -1,0 +1,519 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/android/app/build/intermediates/cxx/RelWithDebInfo/364y4o2n/obj/armeabi-v7a/libreact_codegen_rnscreens.so"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_compile_options",
+			"target_compile_options",
+			"target_compile_reactnative_options",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
+			"/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native/ReactCommon/cmake-utils/react-native-flags.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 42,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 50,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 30,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 35,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 33,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-fexceptions"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-frtti"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-std=c++20"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-gnu-zero-variadic-macro-arguments"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-dollar-in-identifier-extension"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-DFOLLY_NO_CONFIG=1"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-DLOG_TAG=\\\"ReactNative\\\""
+				},
+				{
+					"backtrace" : 0,
+					"fragment" : "-DFOLLY_HAVE_CLOCK_GETTIME=1"
+				},
+				{
+					"backtrace" : 0,
+					"fragment" : "-DFOLLY_USE_LIBCPP=1"
+				},
+				{
+					"backtrace" : 0,
+					"fragment" : "-DFOLLY_CFG_NO_COROUTINES=1"
+				},
+				{
+					"backtrace" : 0,
+					"fragment" : "-DFOLLY_MOBILE=1"
+				},
+				{
+					"backtrace" : 0,
+					"fragment" : "-DFOLLY_HAVE_RECVMMSG=1"
+				},
+				{
+					"backtrace" : 0,
+					"fragment" : "-DFOLLY_HAVE_PTHREAD=1"
+				},
+				{
+					"backtrace" : 0,
+					"fragment" : "-DFOLLY_HAVE_XSI_STRERROR_R=1"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "HERMES_V1_ENABLED=1"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "RN_SERIALIZABLE_STATE"
+				},
+				{
+					"define" : "react_codegen_rnscreens_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 8,
+					"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni/."
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/root/.gradle/caches/9.6.0/transforms/c2949c08dceb6d88dfc40550d20a4cbb/transformed/react-android-0.88.0-release/prefab/modules/reactnative/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/root/.gradle/caches/9.6.0/transforms/c2949c08dceb6d88dfc40550d20a4cbb/transformed/react-android-0.88.0-release/prefab/modules/jsi/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/root/.gradle/caches/9.6.0/transforms/b938efea8d16eeeb5c25c2214d9f626a/transformed/fbjni-0.7.0/prefab/modules/fbjni/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30
+			],
+			"sysroot" : 
+			{
+				"path" : "/opt/android/ndk/28.2.13676358/toolchains/llvm/prebuilt/linux-x86_64/sysroot"
+			}
+		}
+	],
+	"id" : "react_codegen_rnscreens::@25bcbd507e98d3a854ad",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -Wl,--gc-sections",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/root/.gradle/caches/9.6.0/transforms/c2949c08dceb6d88dfc40550d20a4cbb/transformed/react-android-0.88.0-release/prefab/modules/reactnative/libs/android.armeabi-v7a/libreactnative.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/root/.gradle/caches/9.6.0/transforms/c2949c08dceb6d88dfc40550d20a4cbb/transformed/react-android-0.88.0-release/prefab/modules/jsi/libs/android.armeabi-v7a/libjsi.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/root/.gradle/caches/9.6.0/transforms/b938efea8d16eeeb5c25c2214d9f626a/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.armeabi-v7a/libfbjni.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-latomic -lm",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX",
+		"sysroot" : 
+		{
+			"path" : "/opt/android/ndk/28.2.13676358/toolchains/llvm/prebuilt/linux-x86_64/sysroot"
+		}
+	},
+	"name" : "react_codegen_rnscreens",
+	"nameOnDisk" : "libreact_codegen_rnscreens.so",
+	"paths" : 
+	{
+		"build" : "rnscreens_autolinked_build",
+		"source" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSFormSheetHostShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSFormSheetHostState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSFullWindowOverlayShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSModalScreenShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSSafeAreaViewShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSSafeAreaViewState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenShadowNodeCommitHook.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderConfigShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderConfigState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderSubviewShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenStackHeaderSubviewState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSScreenState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSSplitScreenShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSStackHeaderConfigShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSStackHeaderConfigState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSStackHeaderItemShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSStackHeaderItemState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSStackHeaderSubviewShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSStackHeaderSubviewState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSStackScreenShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSStackScreenState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSTabsBottomAccessoryShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSTabsHostShadowNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/common/cpp/react/renderer/components/rnscreens/RNSTabsHostState.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/src/main/jni/rnscreens.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/ComponentDescriptors.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/Props.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/ShadowNodes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "/root/.go/src/gitlab.com/zeropw/zero/clients/external_sdks/bi-sdk-react-native/example/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/States.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

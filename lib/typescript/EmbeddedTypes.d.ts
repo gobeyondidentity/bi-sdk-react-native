@@ -79,6 +79,9 @@ interface Passkey {
      * The globally unique identifier of the passkey.
      */
     id: string;
+    /**
+     * The external (cloud) identifier of the passkey.
+     */
     passkeyId: string;
     /**
      * The time this passkey was created.

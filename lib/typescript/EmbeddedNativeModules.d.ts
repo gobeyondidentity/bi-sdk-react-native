@@ -1,7 +1,7 @@
 import { NativeEventEmitter } from 'react-native';
 import type { OtpChallengeResponse, Passkey, Success } from './EmbeddedTypes';
 declare class BILoggerEmitter extends NativeEventEmitter {
-    addListener(event: 'BeyondIdentityLogger', listener: (...args: any[]) => any, context?: any): import("react-native").EmitterSubscription;
+    addListener(event: string, listener: (...args: any[]) => any, context?: any): import("react-native").EventSubscription;
     removeListener(event: 'BeyondIdentityLogger'): void;
 }
 declare const LoggerEventEmitter: BILoggerEmitter;

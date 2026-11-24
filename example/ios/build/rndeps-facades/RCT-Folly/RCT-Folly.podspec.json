@@ -1,0 +1,34 @@
+{
+  "name": "RCT-Folly",
+  "version": "2024.11.18.00",
+  "summary": "Prebuilt facade for RCT-Folly (code + headers live in ReactNativeDependencies).",
+  "homepage": "https://reactnative.dev/",
+  "license": "MIT",
+  "authors": "Meta Platforms, Inc. and its affiliates",
+  "platforms": {
+    "ios": "15.1"
+  },
+  "source": {
+    "git": "https://github.com/facebook/react-native.git"
+  },
+  "dependencies": {
+    "ReactNativeDependencies": []
+  },
+  "default_subspecs": [
+    "Default"
+  ],
+  "subspecs": [
+    {
+      "name": "Default",
+      "dependencies": {
+        "ReactNativeDependencies": []
+      }
+    },
+    {
+      "name": "Fabric",
+      "dependencies": {
+        "ReactNativeDependencies": []
+      }
+    }
+  ]
+}
